@@ -154,6 +154,15 @@ footer > div, .attention {
 }
 
 @media screen and (max-width: 650px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2, h3 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 14px;
+    }
     /* .menu {
         display: none;
     }
