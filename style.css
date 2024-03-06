@@ -176,4 +176,8 @@ footer {
     .hamburger {
         display: block;
     }
+    .index, .middle {
+        display: block;
+        flex-direction: column-reverse;
+    }
 }
