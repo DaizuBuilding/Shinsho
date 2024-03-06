@@ -1,0 +1,6 @@
+.list {
+    width: 30%;
+}
+.list > p {
+    margin-left: 20px;
+}
