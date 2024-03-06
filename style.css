@@ -12,7 +12,7 @@ header {
     padding: 20px 10%;
     width: 80%;
 }
-.logo > img {
+.logo > a > img {
     height: 60px;
 }
 .menu {
