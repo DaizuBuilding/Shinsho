@@ -36,13 +36,13 @@ header {
     width: 45%;
 }
 .hamburger > span:nth-of-type(1) {
-    top:15px; 
+    top:22px; 
 }
 .hamburger > span:nth-of-type(2) {
-    top:23px;
+    top:30px;
 }
 .hamburger > span:nth-of-type(3) {
-    top:31px;
+    top:38px;
 }
 .hamburger.active > span:nth-of-type(1) {
     top: 18px;
