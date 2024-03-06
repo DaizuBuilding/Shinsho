@@ -19,50 +19,48 @@ header {
 .hamburger {
     display: none;
 }
-/*.hamburger {
-    display: none;
-    margin: 20px 10% 0 0;
-    position: relative;
-    background:#303030;
-    cursor: pointer;
-    width: 60px;
-    height:60px;
-    border-radius: 5px;
-}
-.hamburger > span {
-    display: inline-block;
-    transition: all .4s;
+
+.hamburgerbutton {
     position: absolute;
-    left: 14px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #06183f;
+}
+.hamburgerbutton > span, .hamburgerbutton > span:before, .hamburgerbutton span:after {
+    content: '';
+    display: block;
     height: 3px;
-    border-radius: 2px;
-    background: #ffffff;
-    width: 45%;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
 }
-.hamburger > span:nth-of-type(1) {
-    top:20px; 
+.hamburgerbutton > span:before {
+    bottom: 8px;
 }
-.hamburger > span:nth-of-type(2) {
-    top:28px;
+.hamburgerbutton > span:after {
+    top: 8px;
 }
-.hamburger > span:nth-of-type(3) {
-    top:36px;
+#hamburgercheck:checked ~ .menu-btn span {
+    background-color: #ffffff00;
 }
-.hamburger.active > span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
+#hamburgercheck:checked ~ .hamburgerbutton > span::before {
+    bottom: 0;
+    transform: rotate(45deg);
 }
-.hamburger.active > span:nth-of-type(2) {
-    opacity: 0;
+#hamburgercheck:checked ~ .hamburgerbutton > span::after {
+    top: 0;
+    transform: rotate(-45deg);
 }
-.hamburger.active > span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-} */
+#hamburgercheck {
+    display: none;
+}
 .menu {
     width: 80%;
     padding: 0 10%;
