@@ -17,6 +17,9 @@ header {
 }
 .hamburger {
     display: none;
+}
+/*.hamburger {
+    display: none;
     margin: 20px 10% 0 0;
     position: relative;
     background:#303030;
@@ -58,7 +61,7 @@ header {
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
-}
+} */
 .menu {
     width: 80%;
     padding: 0 10%;
@@ -151,7 +154,7 @@ footer > div, .attention {
 }
 
 @media screen and (max-width: 650px) {
-    .menu {
+    /* .menu {
         display: none;
     }
     .hamburger {
@@ -160,5 +163,8 @@ footer > div, .attention {
     header {
         display: flex;
         justify-content: space-between;
+    } */
+    .menu > a {
+        display: block;
     }
 }
