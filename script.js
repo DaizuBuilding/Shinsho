@@ -6,7 +6,8 @@ fetch("/Shinsho/footer.html")
   .then((response) => response.text())
   .then((data) => document.querySelector(".footer").innerHTML = data);
 
-var hamburgermenu = document.getElementsByClassName("hamburger");
+var hamburger = document.getElementsByClassName("hamburger");
+var hamburgermenu = hamburger[0];
 console.log(hamburgermenu);
 if (hamburgermenu) {
     hamburgermenu.addEventListener('click', function() {
