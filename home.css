@@ -1,0 +1,36 @@
+.middle > .pic > img {
+    width: 100%;
+}
+.pic {
+    position: relative;
+}
+.pic > .desc {
+    position: absolute;
+    left: 10%;
+    bottom: 75px;
+}
+.desc {
+    padding: 20px 40px;
+    background-color: #000000cc;
+    color: #ffffff;
+}
+.desc > h3 {
+    font-size: 20px;
+}
+.line {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+.line > p {
+    position: absolute;
+    left: 150px;
+}
+.date {
+    text-align: right;
+}
+.type {
+    width: 100px;
+    text-align: center;
+    background-color: #36ecaf;
+}
