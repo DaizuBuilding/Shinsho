@@ -154,6 +154,9 @@ footer > div, .attention {
 }
 
 @media screen and (max-width: 650px) {
+    .logo > a > img {
+        height: 40px;
+    }
     h1 {
         font-size: 24px;
     }
