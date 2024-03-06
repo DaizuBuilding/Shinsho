@@ -1,4 +1,6 @@
-document.querySelector('.hamburger').addEventListener('click', function(){
-    this.classList.toggle('active');
-    document.querySelector('.menu').classList.toggle('appear');
-});
+function hamburger() {
+    document.querySelector('.hamburger').addEventListener('click', function(){
+        this.classList.toggle('active');
+        document.querySelector('.menu').classList.toggle('appear');
+    });
+}

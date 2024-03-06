@@ -4,4 +4,5 @@ fetch("/Shinsho/header.html")
 
 fetch("/Shinsho/footer.html")
   .then((response) => response.text())
-  .then((data) => document.querySelector(".footer").innerHTML = data);
+  .then((data) => document.querySelector(".footer").innerHTML = data)
+  .then(hamburger());
