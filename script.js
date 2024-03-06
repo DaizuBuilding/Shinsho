@@ -7,8 +7,10 @@ fetch("/Shinsho/footer.html")
   .then((data) => document.querySelector(".footer").innerHTML = data);
 
 var hamburgermenu = document.getElementById('hamburgermenu');
+console.log(hamburgermenu);
 if (hamburgermenu) {
     hamburgermenu.addEventListener('click', function() {
         hamburgermenu.classList.toggle('active');
+        console.log(hamburgermenu);
     });
 }

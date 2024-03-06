@@ -17,7 +17,7 @@ header {
 }
 .hamburger {
     display: none;
-    margin-right: 10%;
+    margin: 20px 10% 0 0;
     position: relative;
     background:#303030;
     cursor: pointer;
