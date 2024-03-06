@@ -47,7 +47,7 @@ header {
 .hamburgerbutton > span:after {
     top: 8px;
 }
-#hamburgercheck:checked ~ .hamburgerbutton span {
+#hamburgercheck:checked ~ .hamburgerbutton > span {
     background-color: #ffffff00;
 }
 #hamburgercheck:checked ~ .hamburgerbutton > span::before {
