@@ -38,12 +38,16 @@ header {
     margin: 50px 10%;
 }
 h1 {
-    width: calc(100% - 40px);
+    width: 100%;
     padding: 0 20px;
+    box-sizing: border-box;
     margin-bottom: 20px;
     border-bottom: solid 1px #303030;
     border-left: solid 5px #06183f;
     color: #202020;
+}
+h2 {
+    width: 100%;
 }
 footer > div, .attention {
     padding: 30px 10%;
@@ -53,8 +57,9 @@ footer > div, .attention {
 .attention {
     padding: 0 10% 20px 10%;
 }
-footer > div > h3 {
+.adress > p {
     margin-bottom: 20px;
+    font-size: 20px;
 }
 .copyright {
     padding: 5px 0;
