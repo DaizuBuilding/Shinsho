@@ -15,6 +15,50 @@ header {
 .logo > a > img {
     height: 60px;
 }
+.hamburger {
+    display: none;
+    margin-right: 10%;
+    position: relative;
+    background:#303030;
+    cursor: pointer;
+    width: 60px;
+    height:60px;
+    border-radius: 5px;
+}
+.hamburger > span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #ffffff;
+    width: 45%;
+}
+.hamburger > span:nth-of-type(1) {
+    top:15px; 
+}
+.hamburger > span:nth-of-type(2) {
+    top:23px;
+}
+.hamburger > span:nth-of-type(3) {
+    top:31px;
+}
+.hamburger.active > span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+.hamburger.active > span:nth-of-type(2) {
+    opacity: 0;
+}
+.hamburger.active > span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
 .menu {
     width: 80%;
     padding: 0 10%;
@@ -104,4 +148,17 @@ footer > div, .attention {
     text-align: center;
     background-color: #06183f;
     color: #ffffff;
+}
+
+@media screen and (max-width: 650px) {
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
 }
