@@ -176,10 +176,10 @@ footer {
     .hamburger {
         display: block;
     }
-    .flex {
-        display: block;
-    }
-    .index, .middle {
+    .content .flex {
         flex-direction: column-reverse;
+    }
+    .index, .main {
+        width: 100%;
     }
 }
