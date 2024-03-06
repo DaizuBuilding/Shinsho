@@ -47,7 +47,7 @@ header {
 .hamburgerbutton > span:after {
     top: 8px;
 }
-#hamburgercheck:checked ~ .menu-btn span {
+#hamburgercheck:checked ~ .hamburgerbutton span {
     background-color: #ffffff00;
 }
 #hamburgercheck:checked ~ .hamburgerbutton > span::before {
@@ -57,6 +57,9 @@ header {
 #hamburgercheck:checked ~ .hamburgerbutton > span::after {
     top: 0;
     transform: rotate(-45deg);
+}
+#hamburgercheck:checked ~ .menu {
+    display: block;
 }
 #hamburgercheck {
     display: none;
@@ -169,9 +172,6 @@ footer > div, .attention {
         display: none;
     }
     .hamburger {
-        display: block;
-    }
-    .menu {
         display: block;
     }
 }
