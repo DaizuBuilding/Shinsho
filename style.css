@@ -63,12 +63,6 @@ header {
 #hamburgercheck {
     display: none;
 }
-.hamburgermenu > .menu {
-    display: none;
-}
-.hamburgermenu > .menu > a {
-    border-bottom: 1px solid #e1e1e1;
-}
 .menu {
     width: 80%;
     padding: 0 10%;
@@ -175,6 +169,9 @@ footer > div, .attention {
     }
     .menu {
         display: none;
+    }
+    .menu > a {
+        border-bottom: solid 1px #e1e1e1;
     }
     .hamburger {
         display: block;
