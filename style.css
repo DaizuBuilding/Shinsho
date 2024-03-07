@@ -17,9 +17,6 @@ header {
     height: 60px;
     display: block;
 }
-.hamburger > input, .hamburger > label {
-    display: none;
-}
 .hamburgerbutton {
     position: absolute;
     top: 10px;
@@ -155,6 +152,11 @@ footer {
     color: #ffffff;
 }
 
+@media screen and (min-width: 650px) {
+    .hamburger > input, .hamburger > label {
+        display: none;
+    }
+}
 @media screen and (max-width: 650px) {
     header {
         border-bottom: solid 1px #303030;
@@ -176,9 +178,6 @@ footer {
     }
     .menu > a {
         border-bottom: solid 1px #e1e1e1;
-    }
-    .hamburger > input, .hamburger > label {
-        display: block;
     }
     .content.flex {
         flex-direction: column-reverse;
