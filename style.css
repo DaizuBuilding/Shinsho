@@ -158,6 +158,7 @@ h2 {
     text-decoration: underline;
 }
 .index > div > p {
+    margin-left: 15px;
     position: relative;
 }
 .main {
