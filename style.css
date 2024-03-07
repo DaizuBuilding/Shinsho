@@ -84,7 +84,8 @@ header {
     margin: 50px 10%;
 }
 .place {
-    margin-left: 10%;
+    padding: 10px 10%;
+    background-color: #e1e1e1;
 }
 h1 {
     width: 100%;
