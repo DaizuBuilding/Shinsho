@@ -16,7 +16,7 @@ header {
 .logo > a > img {
     height: 60px;
 }
-.hamburger {
+.hamburger > input, .hamburger > label {
     display: none;
 }
 .hamburgerbutton {
