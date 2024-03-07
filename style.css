@@ -83,6 +83,9 @@ header {
 .content {
     margin: 50px 10%;
 }
+.place {
+    margin-left: 10%;
+}
 h1 {
     width: 100%;
     padding: 10px 20px;
