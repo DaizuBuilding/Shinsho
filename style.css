@@ -179,7 +179,11 @@ footer {
     .menu > a {
         border-bottom: solid 1px #e1e1e1;
     }
+    .flex {
+        display: block;
+    }
     .content.flex {
+        display: flex;
         flex-direction: column-reverse;
     }
     .index, .main {
