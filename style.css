@@ -155,6 +155,9 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+    header {
+        border-bottom: solid 1px #303030;
+    }
     .logo > a > img {
         height: 40px;
     }
