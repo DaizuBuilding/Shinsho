@@ -177,7 +177,7 @@ footer {
     .menu > a {
         border-bottom: solid 1px #e1e1e1;
     }
-    .hamburger {
+    .hamburger > input, .hamburger > label {
         display: block;
     }
     .content.flex {
