@@ -95,6 +95,7 @@ h1 {
     border-bottom: solid 1px #303030;
     border-left: solid 5px #06183f;
     color: #202020;
+    font-size: 30px;
 }
 h2 {
     width: 100%;
@@ -103,6 +104,7 @@ h2 {
     margin: 20px 0;
     background-color: #e1e1e1;
     border-bottom: 2px solid #06183f;
+    font-size: 20px;
 }
 .flex {
     display: flex;
@@ -115,7 +117,7 @@ h2 {
     margin-left: 20px;
     position: relative;
 }
-.list > p::before {
+.list > p::before, .index > div > p::before {
     counter-increment: list;
     content: "";
     display: block;
@@ -154,6 +156,9 @@ h2 {
 }
 .index > h4 > a:hover {
     text-decoration: underline;
+}
+.index > div > p {
+    position: relative;
 }
 .main {
     width: 80%;
