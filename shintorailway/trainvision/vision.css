@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 1920px;
+    height: 1080px;
+}
+img {
+    position: fixed;
+}
+
+/* バックグラウンド */
+#background {
+    top: 0;
+    left: 0;
+}
+
+/* ヘッダー左サイド */
+#traintype {
+    top: 60px;
+    left: 40px;
+}
+#destination {
+    top: px;
+    left: 50px;
+}
+#yuki {
+    bottom: 780px;
+    right: px;
+}
+
+/* ヘッダーメイン */
+#line {
+    top: 60px;
+    left: px;
+}
+#next {
+    bottom: 780px;
+    left: px;
+}
+#headernumbering {
+    bottom: 780px;
+    left: px;
+}
+#headerstaname {
+    bottom: 780px;
+    left: px;
+}
+
+/* 路線色ボーダー */
+#lineborder {
+    top: 320px;
+    left: 0;
+}
