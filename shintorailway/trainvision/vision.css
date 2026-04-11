@@ -48,6 +48,12 @@ img {
     left: 900px;
 }
 
+/* 号車 */
+#carno_text {
+    top: 30px;
+    left: 1690px;
+}
+
 /* 路線色ボーダー */
 #lineborder {
     top: 320px;
