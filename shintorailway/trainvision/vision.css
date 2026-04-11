@@ -22,30 +22,30 @@ img {
     left: 40px;
 }
 #destination {
-    top: px;
-    left: 50px;
+    top: 140px;
+    left: 70px;
 }
 #yuki {
     bottom: 780px;
-    right: px;
+    right: 1440px;
 }
 
 /* ヘッダーメイン */
 #line {
     top: 60px;
-    left: px;
+    left: 620px;
 }
 #next {
     bottom: 780px;
-    left: px;
+    left: 620px;
 }
 #headernumbering {
     bottom: 780px;
-    left: px;
+    left: 760px;
 }
 #headerstaname {
     bottom: 780px;
-    left: px;
+    left: 900px;
 }
 
 /* 路線色ボーダー */
