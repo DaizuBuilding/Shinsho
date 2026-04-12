@@ -1,4 +1,4 @@
-const divisions = document.getElementsByClassName('division');
+const divisions = document.querySelectorAll('.division');
 let currentIndex = 0;
 
 function switchClass() {
