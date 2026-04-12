@@ -15,7 +15,7 @@ function stationChange() {
 
 
 function switchClass() {
-    stationnumber = 6;
+    stationnumber = 3;
     stationChange();
 
     // 全てのクラスを一旦削除
