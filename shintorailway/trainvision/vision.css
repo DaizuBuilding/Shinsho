@@ -35,6 +35,14 @@ img {
     bottom: 780px;
     right: 1440px;
 }
+.for {
+    top: 140px;
+    left: 70px;
+}
+#en > .destination {
+    top: 200px;
+    left: 70;
+}
 
 /* ヘッダーメイン */
 .line {
