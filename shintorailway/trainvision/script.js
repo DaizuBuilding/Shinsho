@@ -10,6 +10,7 @@ headerStaNames.forEach(img => {
     const base = img.dataset.base;
     console.log(base);
     console.log(stationnumber);
+    console.log('${base}${stationnumber}.png')
     img.src = '${base}${stationnumber}.png';
 });
 
