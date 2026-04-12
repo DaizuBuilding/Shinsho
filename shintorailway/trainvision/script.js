@@ -9,6 +9,7 @@ const headerStaNames = document.querySelectorAll('.headerstaname');
 headerStaNames.forEach(img => {
     const base = img.dataset.base;
     console.log(base);
+    console.log(stationnumber);
     img.src = '${base}${stationnumber}.png';
 });
 
