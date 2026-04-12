@@ -6,23 +6,26 @@ let stationnumber = 6;
 // const headerNumberings = document.querySelectorAll('.headernumbering');
 const headerStaNames = document.querySelectorAll('.headerstaname');
 
-headerStaNames.forEach(img => {
-    const base = img.dataset.base;
-    console.log(base);
-    console.log(stationnumber);
-    console.log(`${base}${stationnumber}.png`);
-    img.src = `${base}${stationnumber}.png`;
-});
+function stationChange() {
+    headerStaNames.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}${stationnumber}.png`;
+    });
+}
+
 
 function switchClass() {
-  // 全てのクラスを一旦削除
-  divisions.forEach(div => div.classList.remove('displayed'));
+    stationnumber = 6;
+    stationChange();
 
-  // 現在の要素にだけクラス付与
-  divisions[currentIndex].classList.add('displayed');
+    // 全てのクラスを一旦削除
+    divisions.forEach(div => div.classList.remove('displayed'));
 
-  // 次のインデックスへ（ループさせる）
-  currentIndex = (currentIndex + 1) % divisions.length;
+    // 現在の要素にだけクラス付与
+    divisions[currentIndex].classList.add('displayed');
+
+    // 次のインデックスへ（ループさせる）
+    currentIndex = (currentIndex + 1) % divisions.length;
 }
 
 // 初回実行
