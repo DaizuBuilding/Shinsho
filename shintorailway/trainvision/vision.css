@@ -9,6 +9,9 @@ html {
 img {
     position: fixed;
 }
+.hidden {
+    display: none;
+}
 
 /* バックグラウンド */
 #background {
