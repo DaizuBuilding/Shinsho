@@ -9,8 +9,11 @@ html {
 img {
     position: fixed;
 }
-.hidden {
+.division {
     display: none;
+}
+.displayed {
+    display: block;
 }
 
 /* バックグラウンド */
