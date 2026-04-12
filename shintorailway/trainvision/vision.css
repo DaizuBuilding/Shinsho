@@ -23,45 +23,45 @@ img {
 }
 
 /* ヘッダー左サイド */
-#traintype {
+.traintype {
     top: 40px;
     left: 60px;
 }
-#destination {
+.destination {
     top: 140px;
     left: 70px;
 }
-#yuki {
+.yuki {
     bottom: 780px;
     right: 1440px;
 }
 
 /* ヘッダーメイン */
-#line {
+.line {
     top: 50px;
     left: 620px;
 }
-#next {
+.next {
     bottom: 780px;
     left: 620px;
 }
-#headernumbering {
+.headernumbering {
     bottom: 780px;
     left: 760px;
 }
-#headerstaname {
+.headerstaname {
     bottom: 760px;
     left: 900px;
 }
 
 /* 号車 */
-#carno_text {
+.carno_text {
     top: 30px;
     left: 1690px;
 }
 
 /* 路線色ボーダー */
-#lineborder {
+.lineborder {
     top: 320px;
     left: 0;
 }

@@ -1,6 +1,16 @@
 const divisions = document.querySelectorAll('.division');
 let currentIndex = 0;
 
+let stationnumber = 6;
+
+// const headerNumberings = document.querySelectorAll('.headernumbering');
+const headerStaNames = document.querySelectorAll('.headerstaname');
+
+headerStaNames.forEach(img => {
+    const base = img.dataset.base;
+    img.src = '${base}${stationnumber}.png';
+});
+
 function switchClass() {
   // 全てのクラスを一旦削除
   divisions.forEach(div => div.classList.remove('displayed'));
