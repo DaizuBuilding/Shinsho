@@ -16,6 +16,13 @@ img {
     display: block;
 }
 
+#shintorailway {
+    z-index: 999;
+}
+.hidden {
+    display: none;
+}
+
 /* バックグラウンド */
 #background {
     top: 0;

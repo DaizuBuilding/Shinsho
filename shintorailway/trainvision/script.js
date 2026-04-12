@@ -31,5 +31,7 @@ function switchClass() {
 // 初回実行
 switchClass();
 
+document.getElementById('shintorailway').classList.add('hidden');
+
 // 指定時間ごとに繰り返す（例：1秒）
 setInterval(switchClass, 3000);
