@@ -15,6 +15,10 @@ img {
 .displayed {
     display: block;
 }
+#carno {
+    bottom: 970px;
+    right: 60px;
+}
 
 #shintorailway {
     z-index: 999;
@@ -43,12 +47,8 @@ img {
     right: 1440px;
 }
 .for {
-    top: 140px;
+    top: 80px;
     left: 70px;
-}
-#en > .destination {
-    top: 200px;
-    left: 70;
 }
 
 /* ヘッダーメイン */
