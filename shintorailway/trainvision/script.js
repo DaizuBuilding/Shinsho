@@ -6,6 +6,8 @@ let destinationNumber = 0;
 function changeStation(number) {
     stationNumber = number;
     destinationNumber = gettingNumber(number);
+    console.log(stationNumber);
+    console.log(destinationNumber);
     stationChange();
 }
 
@@ -81,6 +83,8 @@ const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 
 function stationChange() {
+    console.log(stationNumber);
+    console.log(destinationNumber);
     headerNumberings.forEach(img => {
         const base = img.dataset.base;
         img.src = `${base}SS_${stationNumber}.png`;
