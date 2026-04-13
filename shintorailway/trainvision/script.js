@@ -3,6 +3,7 @@ window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 
 let stationNumber = 1;
 let destinationNumber = 0;
 let lineNumber = 0;
+let lineNameFull;
 
 function changeData(stanumber, linnumber) {
     stationNumber = stanumber;
@@ -20,6 +21,7 @@ let currentIndex = 0;
 
 
 function gettingNumber(stanum) {
+    let desnum;
     //stationNumber = 12;
     //destinationNumber = 0;
 
@@ -38,6 +40,7 @@ function gettingNumber(stanum) {
 }
 
 function gettingLineNameFull(num) {
+    let lname;
     switch(num) {
         case 0:
             lname = "Sakuradai_Inbound";
