@@ -1,6 +1,6 @@
 window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600px, height = 400px');
 
-let stationNumber = 0;
+let stationNumber = 1;
 let destinationNumber = 0;
 
 function changeStation(number) {
