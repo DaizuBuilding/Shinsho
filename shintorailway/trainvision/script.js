@@ -53,7 +53,7 @@ function gettingLineNameFull(num) {
 function gettingSakuradaiDestination(num) {
     let snum;
 
-    if (num > 1) { snum = 0; }
+    if (num > 1) { snum = 0; } else { snum = num; }
 
     return snum;
 }
