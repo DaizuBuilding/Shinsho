@@ -4,7 +4,7 @@ let stationNumber = 1;
 let destinationNumber = 0;
 let lineNumber = 0;
 
-function changeStation(stanumber, linnumber) {
+function changeData(stanumber, linnumber) {
     stationNumber = stanumber;
     destinationNumber = gettingNumber(stanumber);
     lineNameFull = gettingLineNameFull(linnumber);

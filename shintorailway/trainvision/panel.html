@@ -9,7 +9,17 @@
     </head>
     <body>
         <h1>トレインビジョン操作パネル</h1>
-        <p>次　駅：
+        <p class="line">路　線：
+            <select id="selectline">
+                <option value="0">桜台線（外回り）</option>
+                <option value="1">桜台線（内回り）</option>
+                <option value="2">河島線</option>
+                <option value="3">築石線</option>
+                <option value="4">中央線</option>
+                <option value="5">街道線</option>
+            </select>
+        </p>
+        <p class="sta">次　駅：
             <select id="selectsta">
                 <option value="1">００００１　新　祥</option>
                 <option value="2">００００２　神　崎</option>
@@ -52,7 +62,7 @@
                     document.getElementById('error').innerHTML = 'ビジョン画面が開かれていません。次のサイトにアクセスしてください：https://daizubuilding.github.io/Shinsho/shintorailway/trainvision/';
                     return false;
                 }
-                window.opener.changeStation(document.getElementById('selectsta').value);
+                window.opener.changeData(document.getElementById('selectsta').value, document.getElementById('selectline').value);
             }
         </script>
     </body>

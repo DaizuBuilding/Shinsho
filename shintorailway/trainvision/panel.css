@@ -21,14 +21,17 @@ select {
     width: 300px;
     height: 30px;
 }
-p {
+p.line {
     top: 70px;
 }
-a {
+p.sta {
     top: 140px;
+}
+a {
+    top: 210px;
     text-decoration: underline;
 }
 p#error {
-    top: 200px;
+    top: 280px;
     color: red;
 }
