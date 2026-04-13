@@ -14,63 +14,63 @@ const divisions = document.querySelectorAll('.division');
 let currentIndex = 0;
 
 
-function gettingNumber() {
+function gettingNumber(stanum) {
     //stationNumber = 12;
     //destinationNumber = 0;
 
-    switch (stationNumber) {
+    switch (stanum) {
         case 26:
         case 27:
         case 1:
-            destinationNumber = 0;
+            desnum = 0;
             break;
         case 2:
         case 3:
-            destinationNumber = 1;
+            desnum = 1;
             break;
         case 4:
         case 5:
-            destinationNumber = 2;
+            desnum = 2;
             break;
         case 6:
         case 7:
         case 8:
-            destinationNumber = 3;
+            desnum = 3;
             break;
         case 9:
         case 10:
         case 11:
         case 12:
-            destinationNumber = 4;
+            desnum = 4;
             break;
         case 13: 
         case 14: 
         case 15:
-            destinationNumber = 5;
+            desnum = 5;
             break;
         case 16:
         case 17:
-            destinationNumber = 6;
+            desnum = 6;
             break;
         case 18:
         case 19:
         case 20:
-            destinationNumber = 7;
+            desnum = 7;
             break;
         case 21:
         case 22:
-            destinationNumber = 8;
+            desnum = 8;
             break;
         case 23:
         case 24:
         case 25:
-            destinationNumber = 9;
+            desnum = 9;
             break;
         default:
-            destinationNumber = 0;
+            desnum = 0;
     }
 
-    return destinationNumber;
+    return desnum;
 }
 
 
