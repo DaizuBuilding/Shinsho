@@ -95,8 +95,8 @@ function stationChange() {
 }
 
 function switchClass() {
-    gettingNumber(); // 番号取得（いずれ削除する）
-    stationChange(); // 駅変更（いずれ削除する）
+    // gettingNumber(); // 番号取得（いずれ削除する）
+    // stationChange(); // 駅変更（いずれ削除する）
 
     // 全てのクラスを一旦削除
     divisions.forEach(div => div.classList.remove('displayed'));
