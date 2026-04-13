@@ -2,7 +2,7 @@ window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 
 
 let stationNumber = 1;
 let destinationNumber = 0;
-let lineNumber = 0;
+let lineNumber = 1;
 let lineNameFull = "";
 
 // パネルからのデータ取得
@@ -37,29 +37,14 @@ function gettingNumber(stanum) {
 // 路線名をフルで取得
 function gettingLineNameFull(num) {
     let lname;
-    switch(num) {
-        case 0:
-            lname = "Sakuradai_Inbound";
-            break;
-        case 1:
-            lname = "Sakuradai_Outbound";
-            break;
-        case 2: 
-            lname = "Kawashima";
-            break;
-        case 3:
-            lname = "Tsukushi";
-            break;
-        case 4:
-            lname = "Chuo";
-            break;
-        case 5:
-            lname = "Kaido";
-            break;
-        default: 
-            lname = "Sakuradai_Outbound";
-            break;
-    }
+    
+    if (num == 0) { lname = "Sakuradai_Inbound" }
+    if (num == 1) { lname = "Sakuradai_Outbound" }
+    if (num == 2) { lname = "Kawashima" }
+    if (num == 3) { lname = "Tsukushi" }
+    if (num == 4) { lname = "Chuo" }
+    if (num == 5) { lname = "Kaido" }
+
     return lname;
 }
 
