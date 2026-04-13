@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex" />
+        <title>トレインビジョン操作パネル</title>
+        <link rel="stylesheet" href="./panel.css">
+    </head>
+    <body>
+        <h1>トレインビジョン操作パネル</h1>
+        <p>次駅：
+            <select id="selectsta">
+                <option value="1">新　祥</option>
+                <option value="2">神　崎</option>
+                <option value="3">京　橋</option>
+                <option value="4">柳　島</option>
+                <option value="5">弁天橋</option>
+                <option value="6">板屋橋</option>
+                <option value="7">藤　崎</option>
+                <option value="8">石坂町</option>
+                <option value="9">深　田</option>
+                <option value="10">岩　橋</option>
+                <option value="11">日向町</option>
+                <option value="12">桜　台</option>
+                <option value="13">愛　市</option>
+                <option value="14">鶴　里</option>
+                <option value="15">村松町</option>
+                <option value="16">菊野坂</option>
+                <option value="17">築　石</option>
+                <option value="18">西築石</option>
+                <option value="19">代官町</option>
+                <option value="20">西　塚</option>
+                <option value="21">本　郷</option>
+                <option value="22">常磐台</option>
+                <option value="23">高野台</option>
+                <option value="24">春日町</option>
+                <option value="25">上落合</option>
+                <option value="26">茅　橋</option>
+                <option value="27">伏　見</option>
+            </select>
+        </p>
+        <a id="update">トレインビジョンを更新する</a>
+        <p id="error"></p>
+        <script>
+            document.getElementById('update').addEventListener('click', returnWindow);
+
+            console.log(document.getElementById('selectsta').value);
+
+            function returnWindow() {
+                if (!window.opener || window.opener.closed) {
+                    document.getElementById('error').innerHTML = 'ビジョン画面が開かれていません。次のサイトにアクセスしてください：https://daizubuilding.github.io/Shinsho/shintorailway/trainvision/';
+                    return false;
+                }
+                window.opener.changeStation(document.getElementById('selectsta').value);
+                console.log(document.getElementById('selectsta').value);
+            }
+        </script>
+    </body>
+</html>

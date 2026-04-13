@@ -1,7 +1,12 @@
+window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600px, height = 400px');
+
 let stationNumber = 0;
 let destinationNumber = 0;
 
-
+function changeStation(number) {
+    stationNumber = number;
+    gettingNumber();
+}
 
 console.log(stationNumber);
 
@@ -10,8 +15,8 @@ let currentIndex = 0;
 
 
 function gettingNumber() {
-    stationNumber = 12;
-    destinationNumber = 0;
+    //stationNumber = 12;
+    //destinationNumber = 0;
 
     switch (stationNumber) {
         case 26:
