@@ -14,13 +14,7 @@ function changeData(stanumber, linnumber) {
     stationChange();
 }
 
-console.log(stationNumber);
-console.log(destinationNumber);
-
-const divisions = document.querySelectorAll('.division');
-let currentIndex = 0;
-
-
+// 行き先番号の取得
 function gettingNumber(stanum) {
     let desnum;
     //stationNumber = 12;
@@ -40,6 +34,7 @@ function gettingNumber(stanum) {
     return desnum;
 }
 
+// 路線名をフルで取得
 function gettingLineNameFull(num) {
     let lname;
     switch(num) {
@@ -68,6 +63,7 @@ function gettingLineNameFull(num) {
     return lname;
 }
 
+// 路線および駅情報の変更
 
 const headerLines = document.querySelectorAll('.line');
 const headerNumberings = document.querySelectorAll('.headernumbering');
@@ -96,16 +92,16 @@ function stationChange() {
     });
 }
 
-function switchClass() {
-    // gettingNumber(); // 番号取得（いずれ削除する）
-    // stationChange(); // 駅変更（いずれ削除する）
+// 言語切り替え
 
+const divisions = document.querySelectorAll('.division');
+let currentIndex = 0;
+
+function switchClass() {
     // 全てのクラスを一旦削除
     divisions.forEach(div => div.classList.remove('displayed'));
-
     // 現在の要素にだけクラス付与
     divisions[currentIndex].classList.add('displayed');
-
     // 次のインデックスへ（ループさせる）
     currentIndex = (currentIndex + 1) % divisions.length;
 }
@@ -115,5 +111,5 @@ switchClass();
 
 document.getElementById('shintorailway').classList.add('hidden');
 
-// 指定時間ごとに繰り返す（例：1秒）
+// 3 秒ごとに繰り返す
 setInterval(switchClass, 3000);
