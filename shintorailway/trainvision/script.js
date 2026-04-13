@@ -23,16 +23,16 @@ function gettingNumber(stanum, linnum) {
     //destinationNumber = 0;
 
     if (linnum == 0) {
-        if (stanum >= 25) { desnum = 0; }
-        else if (stanum >= 22) { desnum = 9; }
-        else if (stanum >= 20) { desnum = 8; }
-        else if (stanum >= 17) { desnum = 7; }
-        else if (stanum >= 15) { desnum = 6; }
-        else if (stanum >= 12) { desnum = 5; }
-        else if (stanum >= 8) { desnum = 4; }
-        else if (stanum >= 5) { desnum = 3; }
-        else if (stanum >= 3) { desnum = 2; }
-        else if (stanum >= 1) { desnum = 1; }
+        if (stanum >= 25) { desnum = 9; }
+        else if (stanum >= 22) { desnum = 8; }
+        else if (stanum >= 20) { desnum = 7; }
+        else if (stanum >= 17) { desnum = 6; }
+        else if (stanum >= 15) { desnum = 5; }
+        else if (stanum >= 12) { desnum = 4; }
+        else if (stanum >= 8) { desnum = 3; }
+        else if (stanum >= 5) { desnum = 2; }
+        else if (stanum >= 3) { desnum = 1; }
+        else if (stanum >= 1) { desnum = 0; }
     } else {
         if (stanum == 1 || stanum >= 26) { desnum = 0; }
         else if (stanum >= 23) { desnum = 9; }
