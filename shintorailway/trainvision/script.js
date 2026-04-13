@@ -2,10 +2,13 @@ window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 
 
 let stationNumber = 1;
 let destinationNumber = 0;
+let lineNumber = 0;
 
-function changeStation(number) {
-    stationNumber = number;
-    destinationNumber = gettingNumber(number);
+function changeStation(stanumber, linnumber) {
+    stationNumber = stanumber;
+    destinationNumber = gettingNumber(stanumber);
+    lineNameFull = gettingLineNameFull(linnumber);
+    console.log(lineNameFull);
     stationChange();
 }
 
@@ -32,6 +35,32 @@ function gettingNumber(stanum) {
     else if (stanum >= 2) { desnum = 1; }
 
     return desnum;
+}
+
+function gettingLineNameFull(num) {
+    switch(num) {
+        case 0:
+            lname = "Sakuradai_Inbound";
+            break;
+        case 1:
+            lname = "Sakuradai_Outbound";
+            break;
+        case 2: 
+            lname = "Kawashima";
+            break;
+        case 3:
+            lname = "Tsukushi";
+            break;
+        case 4:
+            lname = "Chuo";
+            break;
+        case 5:
+            lname = "Kaido";
+            break;
+        default: 
+            lname = "Sakuradai_Outbound";
+            break;
+    }
 }
 
 
