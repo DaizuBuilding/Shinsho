@@ -1,4 +1,4 @@
-window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600px, height = 400px');
+window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
 
 let stationNumber = 1;
 let destinationNumber = 0;
@@ -6,8 +6,6 @@ let destinationNumber = 0;
 function changeStation(number) {
     stationNumber = number;
     destinationNumber = gettingNumber(number);
-    console.log(stationNumber);
-    console.log(destinationNumber);
     stationChange();
 }
 
@@ -33,59 +31,6 @@ function gettingNumber(stanum) {
     else if (stanum >= 4) { desnum = 2; }
     else if (stanum >= 2) { desnum = 1; }
 
-    /* switch (stanum) {
-        
-        /* case 26:
-        case 27:
-        case 1:
-            desnum = 0;
-            break;
-        case 2:
-        case 3:
-            desnum = 1;
-            break;
-        case 4:
-        case 5:
-            desnum = 2;
-            break;
-        case 6:
-        case 7:
-        case 8:
-            desnum = 3;
-            break;
-        case 9:
-        case 10:
-        case 11:
-        case 12:
-            desnum = 4;
-            break;
-        case 13: 
-        case 14: 
-        case 15:
-            desnum = 5;
-            break;
-        case 16:
-        case 17:
-            desnum = 6;
-            break;
-        case 18:
-        case 19:
-        case 20:
-            desnum = 7;
-            break;
-        case 21:
-        case 22:
-            desnum = 8;
-            break;
-        case 23:
-        case 24:
-        case 25:
-            desnum = 9;
-            break;
-        default:
-            desnum = 0;
-    } */
-
     return desnum;
 }
 
@@ -95,8 +40,6 @@ const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 
 function stationChange() {
-    console.log(stationNumber);
-    console.log(destinationNumber);
     headerNumberings.forEach(img => {
         const base = img.dataset.base;
         img.src = `${base}SS_${stationNumber}.png`;

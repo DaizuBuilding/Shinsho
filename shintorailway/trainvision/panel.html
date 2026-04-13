@@ -9,38 +9,38 @@
     </head>
     <body>
         <h1>トレインビジョン操作パネル</h1>
-        <p>次駅：
+        <p>次　駅：
             <select id="selectsta">
-                <option value="1">新　祥</option>
-                <option value="2">神　崎</option>
-                <option value="3">京　橋</option>
-                <option value="4">柳　島</option>
-                <option value="5">弁天橋</option>
-                <option value="6">板屋橋</option>
-                <option value="7">藤　崎</option>
-                <option value="8">石坂町</option>
-                <option value="9">深　田</option>
-                <option value="10">岩　橋</option>
-                <option value="11">日向町</option>
-                <option value="12">桜　台</option>
-                <option value="13">愛　市</option>
-                <option value="14">鶴　里</option>
-                <option value="15">村松町</option>
-                <option value="16">菊野坂</option>
-                <option value="17">築　石</option>
-                <option value="18">西築石</option>
-                <option value="19">代官町</option>
-                <option value="20">西　塚</option>
-                <option value="21">本　郷</option>
-                <option value="22">常磐台</option>
-                <option value="23">高野台</option>
-                <option value="24">春日町</option>
-                <option value="25">上落合</option>
-                <option value="26">茅　橋</option>
-                <option value="27">伏　見</option>
+                <option value="1">００００１　新　祥</option>
+                <option value="2">００００２　神　崎</option>
+                <option value="3">００００３　京　橋</option>
+                <option value="4">００００４　柳　島</option>
+                <option value="5">００００５　弁天橋</option>
+                <option value="6">００００６　板屋橋</option>
+                <option value="7">００００７　藤　崎</option>
+                <option value="8">００００８　石坂町</option>
+                <option value="9">００００９　深　田</option>
+                <option value="10">０００１０　岩　橋</option>
+                <option value="11">０００１１　日向町</option>
+                <option value="12">０００１２　桜　台</option>
+                <option value="13">０００１３　愛　市</option>
+                <option value="14">０００１４　鶴　里</option>
+                <option value="15">０００１５　村松町</option>
+                <option value="16">０００１６　菊野坂</option>
+                <option value="17">０００１７　築　石</option>
+                <option value="18">０００１８　西築石</option>
+                <option value="19">０００１９　代官町</option>
+                <option value="20">０００２０　西　塚</option>
+                <option value="21">０００２１　本　郷</option>
+                <option value="22">０００２２　常磐台</option>
+                <option value="23">０００２３　高野台</option>
+                <option value="24">０００２４　春日町</option>
+                <option value="25">０００２５　上落合</option>
+                <option value="26">０００２６　茅　橋</option>
+                <option value="27">０００２７　伏　見</option>
             </select>
         </p>
-        <a id="update">トレインビジョンを更新する</a>
+        <a id="update">更　新</a>
         <p id="error"></p>
         <script>
             document.getElementById('update').addEventListener('click', returnWindow);
@@ -53,7 +53,6 @@
                     return false;
                 }
                 window.opener.changeStation(document.getElementById('selectsta').value);
-                console.log(document.getElementById('selectsta').value);
             }
         </script>
     </body>

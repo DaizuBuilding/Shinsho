@@ -3,6 +3,32 @@
     padding: 0;
 }
 html {
-    width: 900px;
-    height: 600px;
+    width: 600px;
+    height: 400px;
+}
+body {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 0 20px;
+}
+p, a {
+    position: fixed;
+}
+h1 {
+    text-align: center;
+}
+select {
+    width: 300px;
+    height: 30px;
+}
+p {
+    top: 70px;
+}
+a {
+    top: 140px;
+    text-decoration: underline;
+}
+p#error {
+    top: 200px;
+    color: red;
 }
