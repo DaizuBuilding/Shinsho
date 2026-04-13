@@ -9,7 +9,7 @@ let sakuradaiDestinationNumber = 0;
 // パネルからのデータ取得
 function changeData(stanumber, linnumber) {
     stationNumber = stanumber;
-    destinationNumber = gettingNumber(stanumber);
+    destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
     console.log(lineNameFull); // テスト用
@@ -17,22 +17,35 @@ function changeData(stanumber, linnumber) {
 }
 
 // 行き先番号の取得
-function gettingNumber(stanum) {
+function gettingNumber(stanum, linnum) {
     let desnum;
     //stationNumber = 12;
     //destinationNumber = 0;
 
-    if (stanum == 1 || stanum >= 26) { desnum = 0; }
-    else if (stanum >= 23) { desnum = 9; }
-    else if (stanum >= 21) { desnum = 8; }
-    else if (stanum >= 18) { desnum = 7; }
-    else if (stanum >= 16) { desnum = 6; }
-    else if (stanum >= 13) { desnum = 5; }
-    else if (stanum >= 9) { desnum = 4; }
-    else if (stanum >= 6) { desnum = 3; }
-    else if (stanum >= 4) { desnum = 2; }
-    else if (stanum >= 2) { desnum = 1; }
-
+    if (linnum == 0) {
+        if (stanum >= 25) { desnum = 0; }
+        else if (stanum >= 22) { desnum = 9; }
+        else if (stanum >= 20) { desnum = 8; }
+        else if (stanum >= 17) { desnum = 7; }
+        else if (stanum >= 15) { desnum = 6; }
+        else if (stanum >= 12) { desnum = 5; }
+        else if (stanum >= 8) { desnum = 4; }
+        else if (stanum >= 5) { desnum = 3; }
+        else if (stanum >= 3) { desnum = 2; }
+        else if (stanum >= 1) { desnum = 1; }
+    } else {
+        if (stanum == 1 || stanum >= 26) { desnum = 0; }
+        else if (stanum >= 23) { desnum = 9; }
+        else if (stanum >= 21) { desnum = 8; }
+        else if (stanum >= 18) { desnum = 7; }
+        else if (stanum >= 16) { desnum = 6; }
+        else if (stanum >= 13) { desnum = 5; }
+        else if (stanum >= 9) { desnum = 4; }
+        else if (stanum >= 6) { desnum = 3; }
+        else if (stanum >= 4) { desnum = 2; }
+        else if (stanum >= 2) { desnum = 1; }
+    }
+    
     return desnum;
 }
 
@@ -50,6 +63,7 @@ function gettingLineNameFull(num) {
     return lname;
 }
 
+// 行き先番号 2 桁目（桜台線行き先番号）の値設定
 function gettingSakuradaiDestination(num) {
     let snum;
 
