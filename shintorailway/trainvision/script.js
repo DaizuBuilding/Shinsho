@@ -5,11 +5,12 @@ let destinationNumber = 0;
 let lineNumber = 0;
 let lineNameFull = "";
 
+// パネルからのデータ取得
 function changeData(stanumber, linnumber) {
     stationNumber = stanumber;
     destinationNumber = gettingNumber(stanumber);
     lineNameFull = gettingLineNameFull(linnumber);
-    console.log(lineNameFull);
+    console.log(lineNameFull); // テスト用
     stationChange();
 }
 
@@ -68,19 +69,27 @@ function gettingLineNameFull(num) {
 }
 
 
+const headerLines = document.querySelectorAll('.line');
 const headerNumberings = document.querySelectorAll('.headernumbering');
 const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 
 function stationChange() {
+    headerLines.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}${lineNameFull}.png`;
+    });
+
     headerNumberings.forEach(img => {
         const base = img.dataset.base;
         img.src = `${base}SS_${stationNumber}.png`;
     });
+
     headerStaNames.forEach(img => {
         const base = img.dataset.base;
         img.src = `${base}${stationNumber}.png`;
     });
+
     destinations.forEach(img => {
         const base = img.dataset.base;
         img.src = `${base}91${destinationNumber}.png`;
