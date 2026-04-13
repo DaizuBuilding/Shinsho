@@ -6,6 +6,7 @@ let destinationNumber = 0;
 function changeStation(number) {
     stationNumber = number;
     destinationNumber = gettingNumber(number);
+    stationChange();
 }
 
 console.log(stationNumber);
