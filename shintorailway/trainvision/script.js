@@ -4,12 +4,14 @@ let stationNumber = 1;
 let destinationNumber = 0;
 let lineNumber = 1;
 let lineNameFull = "";
+let sakuradaiDestinationNumber = 0;
 
 // パネルからのデータ取得
 function changeData(stanumber, linnumber) {
     stationNumber = stanumber;
     destinationNumber = gettingNumber(stanumber);
     lineNameFull = gettingLineNameFull(linnumber);
+    sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
     console.log(lineNameFull); // テスト用
     stationChange();
 }
@@ -37,7 +39,7 @@ function gettingNumber(stanum) {
 // 路線名をフルで取得
 function gettingLineNameFull(num) {
     let lname;
-    
+
     if (num == 0) { lname = "Sakuradai_Inbound" }
     if (num == 1) { lname = "Sakuradai_Outbound" }
     if (num == 2) { lname = "Kawashima" }
@@ -46,6 +48,14 @@ function gettingLineNameFull(num) {
     if (num == 5) { lname = "Kaido" }
 
     return lname;
+}
+
+function gettingSakuradaiDestination(num) {
+    let snum;
+
+    if (num > 1) { snum = 0; }
+
+    return snum;
 }
 
 // 路線および駅情報の変更
@@ -73,7 +83,7 @@ function stationChange() {
 
     destinations.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}91${destinationNumber}.png`;
+        img.src = `${base}9${sakuradaiDestinationNumber}${destinationNumber}.png`;
     });
 }
 
