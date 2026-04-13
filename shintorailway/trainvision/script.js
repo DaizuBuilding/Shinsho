@@ -10,6 +10,7 @@ function changeStation(number) {
 }
 
 console.log(stationNumber);
+console.log(destinationNumber);
 
 const divisions = document.querySelectorAll('.division');
 let currentIndex = 0;
