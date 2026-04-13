@@ -22,8 +22,20 @@ function gettingNumber(stanum) {
     //stationNumber = 12;
     //destinationNumber = 0;
 
-    switch (stanum) {
-        case 26:
+    if (stanum == 1 || stanum >= 26) { desnum = 0; }
+    else if (stanum >= 23) { desnum = 9; }
+    else if (stanum >= 21) { desnum = 8; }
+    else if (stanum >= 18) { desnum = 7; }
+    else if (stanum >= 16) { desnum = 6; }
+    else if (stanum >= 13) { desnum = 5; }
+    else if (stanum >= 9) { desnum = 4; }
+    else if (stanum >= 6) { desnum = 3; }
+    else if (stanum >= 4) { desnum = 2; }
+    else if (stanum >= 2) { desnum = 1; }
+
+    /* switch (stanum) {
+        
+        /* case 26:
         case 27:
         case 1:
             desnum = 0;
@@ -72,7 +84,7 @@ function gettingNumber(stanum) {
             break;
         default:
             desnum = 0;
-    }
+    } */
 
     return desnum;
 }
