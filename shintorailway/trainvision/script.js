@@ -5,7 +5,7 @@ let destinationNumber = 0;
 
 function changeStation(number) {
     stationNumber = number;
-    gettingNumber();
+    destinationNumber = gettingNumber(number);
 }
 
 console.log(stationNumber);
@@ -69,6 +69,8 @@ function gettingNumber() {
         default:
             destinationNumber = 0;
     }
+
+    return destinationNumber;
 }
 
 
