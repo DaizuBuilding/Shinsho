@@ -6,14 +6,25 @@ let lineNumber = 1;
 let lineNameFull = "";
 let sakuradaiDestinationNumber = 0;
 let carNo = 0;
+let lin = 0;
 
-const announcements = ['./announcement/00100.wav', './announcement/00201.wav', './announcement/00301.wav', './announcement/stations/00017.wav', './announcement/00597.wav', './announcement/00600.wav', './announcement/stations/00017.wav', './announcement/stations/00017.wav', './announcement/00702.wav'];
+function settingAnnouncement(stanum, linnum) {
+    if (linnum == 0) { lin = '00302' }
+    if (linnum == 1) { lin = '00301' }
+    if (linnum == 2 || linnum == 3) { lin = 'lines/Shinto_SK' }
+    if (linnum == 4 || linnum == 5) { lin = 'lines/Shinto_ST' }
+    if (linnum == 6 || linnum == 7) { lin = 'lines/Shinto_SC' }
+    if (linnum == 8 || linnum == 9) { lin = 'lines/Shinto_SA' }
+    const announcements = ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/${lin}.wav`, './announcement/stations/00017.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
+    announce(announcements);
+}
+
 let announcementIndex = 0;
 
-function announce() {
+function announce(script) {
     console.log(announcementIndex);
-    if (announcementIndex < announcements.length) {
-        const audio = new Audio(announcements[announcementIndex]);
+    if (announcementIndex < script.length) {
+        const audio = new Audio(script[announcementIndex]);
         audio.play();
         audio.onended = () => {
             announcementIndex++;
@@ -33,7 +44,7 @@ function changeData(stanumber, linnumber, carnumber) {
     stationChange();
     announcementIndex = 0;
     console.log(announcementIndex);
-    announce();
+    settingAnnouncement(stanumber, linnumber);
 }
 
 // 行き先番号の取得
