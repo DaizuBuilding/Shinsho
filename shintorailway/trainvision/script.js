@@ -7,6 +7,9 @@ let lineNameFull = "";
 let sakuradaiDestinationNumber = 0;
 let carNo = 0;
 let lin = 0;
+let thanks = '';
+let thisTrainIs = '';
+let announceDestination = '';
 
 function settingAnnouncement(stanum, linnum) {
     if (linnum == 0) { lin = '00302' }
@@ -15,7 +18,12 @@ function settingAnnouncement(stanum, linnum) {
     if (linnum == 4 || linnum == 5) { lin = 'lines/Shinto_ST' }
     if (linnum == 6 || linnum == 7) { lin = 'lines/Shinto_SC' }
     if (linnum == 8 || linnum == 9) { lin = 'lines/Shinto_SA' }
-    let announcements = ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/${lin}.wav`, './announcement/stations/17.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
+    if ([1, 3, 5, 8, 12, 15, 17, 20, 22, 25].includes(stanum)) {
+        thanks = './announcement/00100.wav';
+        thisTrainIs = './announcement/00201.wav';
+        announceDestination = '`./announcement/${lin}.wav`';
+    }
+    let announcements = [`${thanks}`, `${thisTrain}`, announceDestination, './announcement/stations/17.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
     announce(announcements);
 }
 
