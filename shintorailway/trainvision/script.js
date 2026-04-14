@@ -14,7 +14,7 @@ function changeData(stanumber, linnumber, carnumber) {
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
     carNo = carnumber;
-    console.log(carNo); // テスト用
+    // console.log(carNo); // テスト用
     stationChange();
 }
 
