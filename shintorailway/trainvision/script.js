@@ -35,7 +35,8 @@ function announce(script) {
 
 // パネルからのデータ取得
 function changeData(stanumber, linnumber, carnumber) {
-    // audio.pause();
+    audio.pause();
+    audio = null;
     stationNumber = stanumber;
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
