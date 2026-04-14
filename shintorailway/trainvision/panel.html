@@ -13,10 +13,14 @@
             <select id="selectline">
                 <option value="0">桜台線（内回り）</option>
                 <option value="1">桜台線（外回り）</option>
-                <option value="2">河島線</option>
-                <option value="3">築石線</option>
-                <option value="4">中央線</option>
-                <option value="5">街道線</option>
+                <option value="2">河島線（北　行）</option>
+                <option value="3">河島線（南　行）</option>
+                <option value="4">築石線（上　り）</option>
+                <option value="5">築石線（下　り）</option>
+                <option value="6">中央線（上　り）</option>
+                <option value="7">中央線（下　り）</option>
+                <option value="8">街道線（北　行）</option>
+                <option value="9">街道線（南　行）</option>
             </select>
         </p>
         <p class="sta">次　駅：
@@ -50,6 +54,26 @@
                 <option value="27">０００２７　伏　見</option>
             </select>
         </p>
+        <p class="car">号　車：
+            <select id="selectcar">
+                <option value="1">０１号車</option>
+                <option value="2">０２号車</option>
+                <option value="3">０３号車</option>
+                <option value="4">０４号車</option>
+                <option value="5">０５号車</option>
+                <option value="6">０６号車</option>
+                <option value="7">０７号車</option>
+                <option value="8">０８号車</option>
+                <option value="9">０９号車</option>
+                <option value="10">１０号車</option>
+                <option value="11">１１号車</option>
+                <option value="12">１２号車</option>
+                <option value="13">１３号車</option>
+                <option value="14">１４号車</option>
+                <option value="15">１５号車</option>
+                <option value="16">１６号車</option>
+            </select>
+        </p>
         <a id="update">更　新</a>
         <p id="error"></p>
         <script>
@@ -62,7 +86,7 @@
                     document.getElementById('error').innerHTML = 'ビジョン画面が開かれていません。次のサイトにアクセスしてください：https://daizubuilding.github.io/Shinsho/shintorailway/trainvision/';
                     return false;
                 }
-                window.opener.changeData(document.getElementById('selectsta').value, document.getElementById('selectline').value);
+                window.opener.changeData(document.getElementById('selectsta').value, document.getElementById('selectline').value, document.getElementById('selectcar').value);
             }
         </script>
     </body>

@@ -27,11 +27,14 @@ p.line {
 p.sta {
     top: 140px;
 }
-a {
+p.car {
     top: 210px;
+}
+a {
+    top: 280px;
     text-decoration: underline;
 }
 p#error {
-    top: 280px;
+    top: 350px;
     color: red;
 }

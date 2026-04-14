@@ -5,14 +5,16 @@ let destinationNumber = 0;
 let lineNumber = 1;
 let lineNameFull = "";
 let sakuradaiDestinationNumber = 0;
+let carNo = 0;
 
 // パネルからのデータ取得
-function changeData(stanumber, linnumber) {
+function changeData(stanumber, linnumber, carnumber) {
     stationNumber = stanumber;
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
-    console.log(lineNameFull); // テスト用
+    carNo = carnumber;
+    console.log(carNo); // テスト用
     stationChange();
 }
 
@@ -55,10 +57,14 @@ function gettingLineNameFull(num) {
 
     if (num == 0) { lname = "Sakuradai_Inbound" }
     if (num == 1) { lname = "Sakuradai_Outbound" }
-    if (num == 2) { lname = "Kawashima" }
-    if (num == 3) { lname = "Tsukushi" }
-    if (num == 4) { lname = "Chuo" }
-    if (num == 5) { lname = "Kaido" }
+    if (num == 2) { lname = "Kawashima_North" }
+    if (num == 3) { lname = "Kawashima_South" }
+    if (num == 4) { lname = "Tsukushi_Up" }
+    if (num == 5) { lname = "Tsukushi_Down" }
+    if (num == 6) { lname = "Chuo_Up" }
+    if (num == 7) { lname = "Chuo_Down" }
+    if (num == 8) { lname = "Kaido_North" }
+    if (num == 9) { lname = "Kaido_South" }
 
     return lname;
 }
