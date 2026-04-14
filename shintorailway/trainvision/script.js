@@ -16,15 +16,12 @@ function settingAnnouncement(stanum, linnum) {
     if (linnum == 6 || linnum == 7) { lin = 'lines/Shinto_SC' }
     if (linnum == 8 || linnum == 9) { lin = 'lines/Shinto_SA' }
     const announcements = ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/${lin}.wav`, './announcement/stations/17.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
-    console.log(announcements);
     announce(announcements);
 }
 
 let announcementIndex = 0;
 
 function announce(script) {
-    console.log(announcementIndex);
-    console.log(script);
     if (announcementIndex < script.length) {
         const audio = new Audio(script[announcementIndex]);
         audio.play();
@@ -45,7 +42,6 @@ function changeData(stanumber, linnumber, carnumber) {
     // console.log(carNo); // テスト用
     stationChange();
     announcementIndex = 0;
-    console.log(announcementIndex);
     settingAnnouncement(stanumber, linnumber);
 }
 
