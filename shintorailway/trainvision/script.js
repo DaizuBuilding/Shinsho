@@ -7,6 +7,21 @@ let lineNameFull = "";
 let sakuradaiDestinationNumber = 0;
 let carNo = 0;
 
+const announcements = ['./announcement/00100.wav', './announcement/00201.wav', './announcement/00301.wav', './announcement/stations/00017.wav', './announcement/00597.wav', './announcement/00600.wav', './announcement/stations/00017.wav', './announcement/stations/00017.wav', './announcement/00702.wav'];
+let announcementIndex = 0;
+
+function announce() {
+    if (announcementIndex < announcements.length) {
+        const audio = new Audio(announcements[announcementIndex]);
+        audio.play();
+        audio.onended = () => {
+            announcementIndex++;
+            announce();
+        };
+    }
+}
+announce();
+
 // パネルからのデータ取得
 function changeData(stanumber, linnumber, carnumber) {
     stationNumber = stanumber;
