@@ -11,6 +11,7 @@ const announcements = ['./announcement/00100.wav', './announcement/00201.wav', '
 let announcementIndex = 0;
 
 function announce() {
+    console.log(announcementIndex);
     if (announcementIndex < announcements.length) {
         const audio = new Audio(announcements[announcementIndex]);
         audio.play();
@@ -31,6 +32,7 @@ function changeData(stanumber, linnumber, carnumber) {
     // console.log(carNo); // テスト用
     stationChange();
     announcementIndex = 0;
+    console.log(announcementIndex);
     announce();
 }
 
