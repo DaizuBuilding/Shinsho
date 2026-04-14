@@ -84,6 +84,7 @@ const headerLines = document.querySelectorAll('.line');
 const headerNumberings = document.querySelectorAll('.headernumbering');
 const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
+const carNos = document.getElementById('carno');
 
 function stationChange() {
     headerLines.forEach(img => {
@@ -105,6 +106,8 @@ function stationChange() {
         const base = img.dataset.base;
         img.src = `${base}9${sakuradaiDestinationNumber}${destinationNumber}.png`;
     });
+
+    carNos.src = `${base}${carNo}.png`;
 }
 
 // 言語切り替え
