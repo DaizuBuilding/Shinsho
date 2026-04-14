@@ -30,6 +30,7 @@ function changeData(stanumber, linnumber, carnumber) {
     carNo = carnumber;
     // console.log(carNo); // テスト用
     stationChange();
+    announcementIndex = 0;
     announce();
 }
 
