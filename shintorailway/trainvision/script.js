@@ -20,7 +20,6 @@ function announce() {
         };
     }
 }
-announce();
 
 // パネルからのデータ取得
 function changeData(stanumber, linnumber, carnumber) {
@@ -31,6 +30,7 @@ function changeData(stanumber, linnumber, carnumber) {
     carNo = carnumber;
     // console.log(carNo); // テスト用
     stationChange();
+    announce();
 }
 
 // 行き先番号の取得
