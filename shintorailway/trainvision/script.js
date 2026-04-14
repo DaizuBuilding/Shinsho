@@ -107,7 +107,7 @@ function stationChange() {
         img.src = `${base}9${sakuradaiDestinationNumber}${destinationNumber}.png`;
     });
 
-    carNos.src = `${base}${carNo}.png`;
+    carNos.src = `${carNos.dataset.base}${carNo}.png`;
 }
 
 // 言語切り替え
