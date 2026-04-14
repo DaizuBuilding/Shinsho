@@ -9,7 +9,6 @@ let carNo = 0;
 let lin = 0;
 
 function settingAnnouncement(stanum, linnum) {
-    audio.pause();
     if (linnum == 0) { lin = '00302' }
     if (linnum == 1) { lin = '00301' }
     if (linnum == 2 || linnum == 3) { lin = 'lines/Shinto_SK' }
@@ -36,7 +35,7 @@ function announce(script) {
 
 // パネルからのデータ取得
 function changeData(stanumber, linnumber, carnumber) {
-    if (audio !== null) { audio.pause(); }
+    if (audio != null) { audio.pause(); }
     stationNumber = stanumber;
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
