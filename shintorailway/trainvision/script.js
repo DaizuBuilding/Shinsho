@@ -23,7 +23,7 @@ function settingAnnouncement(stanum, linnum) {
         thisTrainIs = './announcement/00201.wav';
         announceDestination = '`./announcement/${lin}.wav`';
     }
-    let announcements = [`${thanks}`, `${thisTrain}`, announceDestination, './announcement/stations/17.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
+    let announcements = [`${thanks}`, `${thisTrainIs}`, announceDestination, './announcement/stations/17.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
     announce(announcements);
 }
 
