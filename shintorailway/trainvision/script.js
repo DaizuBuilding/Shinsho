@@ -20,10 +20,11 @@ function settingAnnouncement(stanum, linnum) {
 }
 
 let announcementIndex = 0;
+let audio = null;
 
 function announce(script) {
     if (announcementIndex < script.length) {
-        const audio = new Audio(script[announcementIndex]);
+        audio = new Audio(script[announcementIndex]);
         audio.play();
         audio.onended = () => {
             announcementIndex++;
@@ -34,6 +35,7 @@ function announce(script) {
 
 // パネルからのデータ取得
 function changeData(stanumber, linnumber, carnumber) {
+    audio.pause();
     stationNumber = stanumber;
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
