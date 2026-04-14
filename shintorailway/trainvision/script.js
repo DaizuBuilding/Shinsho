@@ -21,9 +21,9 @@ function settingAnnouncement(stanum, linnum) {
     if ([1, 3, 5, 8, 12, 15, 17, 20, 22, 25].includes(stanum)) {
         thanks = './announcement/00100.wav';
         thisTrainIs = './announcement/00201.wav';
-        announceDestination = '`./announcement/${lin}.wav`';
+        announceDestination = './announcement/' + lin + '.wav';
     }
-    let announcements = [`${thanks}`, `${thisTrainIs}`, announceDestination, './announcement/stations/17.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
+    let announcements = [thanks, thisTrainIs, announceDestination, './announcement/stations/17.wav', './announcement/00597.wav', './announcement/00600.wav', `./announcement/stations/${stanum}.wav`, `./announcement/stations/${stanum}.wav`, './announcement/00702.wav'];
     announce(announcements);
 }
 
