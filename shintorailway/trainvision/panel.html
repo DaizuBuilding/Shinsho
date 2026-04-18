@@ -79,6 +79,9 @@
         <p id="error"></p>
         <script>
             let digit = 0;
+            let selectStaP = Number(document.getElementById('selectsta').value) + digit;
+            let selectLineP = Number(document.getElementById('selectline').value);
+            let selectCarP = Number(document.getElementById('selectcar').value);
             document.getElementById('update').addEventListener('click', returnWindow);
             document.getElementById('departure').addEventListener('click', () => {digit = 1;});
 
@@ -89,7 +92,7 @@
                     document.getElementById('error').innerHTML = 'ビジョン画面が開かれていません。次のサイトにアクセスしてください：https://daizubuilding.github.io/Shinsho/shintorailway/trainvision/';
                     return false;
                 }
-                window.opener.changeData(document.getElementById('selectsta').value + digit, document.getElementById('selectline').value + digit, document.getElementById('selectcar').value + digit);
+                window.opener.changeData(selectStaP, selectLineP, selectCarP);
             }
         </script>
     </body>
