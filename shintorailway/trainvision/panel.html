@@ -80,7 +80,10 @@
         <script>
             let digit = 0;
             document.getElementById('update').addEventListener('click', returnWindow);
-            document.getElementById('departure').addEventListener('click', () => {digit = 1;});
+            document.getElementById('departure').addEventListener('click', () => {
+                digit = 1;
+                returnWindow();
+            });
 
             console.log(document.getElementById('selectsta').value);
 
