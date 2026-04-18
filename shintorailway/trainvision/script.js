@@ -45,7 +45,7 @@ function announce(script) {
 // パネルからのデータ取得
 function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
-    stationNumber = Number(stanumber);
+    stationNumber = gettingStationNumber(stanumber);
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
@@ -54,6 +54,14 @@ function changeData(stanumber, linnumber, carnumber) {
     stationChange();
     announcementIndex = 0;
     settingAnnouncement(stanumber, linnumber);
+}
+
+// 駅番号の調整
+function gettingStationNumber(stanum) {
+    let snum;
+
+    if (stanum > 27) { snum = 1; } else { snum = stanum; }
+    return snum;
 }
 
 // 行き先番号の取得
