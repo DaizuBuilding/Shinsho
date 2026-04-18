@@ -10,6 +10,7 @@ let lin = 0;
 let thanks = '';
 let thisTrainIs = '';
 let announceDestination = '';
+let destSign = 1;
 
 function settingAnnouncement(stanum, linnum) {
     if (linnum == 0) { lin = '00302' }
@@ -122,6 +123,10 @@ const headerNumberings = document.querySelectorAll('.headernumbering');
 const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 const carNos = document.getElementById('carno');
+const stationNames1 = document.querySelectorAll('.ssname1');
+const stationNames2 = document.querySelectorAll('.ssname2');
+const stationNames3 = document.querySelectorAll('.ssname3');
+const stationNames4 = document.querySelectorAll('.ssname4');
 
 function stationChange() {
     headerLines.forEach(img => {
@@ -145,6 +150,23 @@ function stationChange() {
     });
 
     carNos.src = `${carNos.dataset.base}${carNo}.png`;
+
+    stationNames1.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}${stationNumber}.png`;
+    });
+    stationNames2.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}${stationNumber + (1 * destSign)}.png`;
+    });
+    stationNames3.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}${stationNumber + (2 * destSign)}.png`;
+    });
+    stationNames4.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}${stationNumber + (3 * destSign)}.png`;
+    });
 }
 
 // 言語切り替え
