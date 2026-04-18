@@ -34,6 +34,9 @@ a {
     top: 280px;
     text-decoration: underline;
 }
+#departure {
+    left: 200px;
+}
 p#error {
     top: 350px;
     color: red;

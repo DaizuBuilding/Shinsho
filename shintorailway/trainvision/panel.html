@@ -75,9 +75,12 @@
             </select>
         </p>
         <a id="update">更　新</a>
+        <a id="departure">発　車</a>
         <p id="error"></p>
         <script>
+            let digit = 0;
             document.getElementById('update').addEventListener('click', returnWindow);
+            document.getElementById('departure').addEventListener('click', () => {digit = 1;});
 
             console.log(document.getElementById('selectsta').value);
 
@@ -86,7 +89,7 @@
                     document.getElementById('error').innerHTML = 'ビジョン画面が開かれていません。次のサイトにアクセスしてください：https://daizubuilding.github.io/Shinsho/shintorailway/trainvision/';
                     return false;
                 }
-                window.opener.changeData(document.getElementById('selectsta').value, document.getElementById('selectline').value, document.getElementById('selectcar').value);
+                window.opener.changeData(document.getElementById('selectsta').value + digit, document.getElementById('selectline').value + digit, document.getElementById('selectcar').value + digit);
             }
         </script>
     </body>
