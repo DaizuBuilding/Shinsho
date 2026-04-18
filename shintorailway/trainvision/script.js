@@ -157,7 +157,7 @@ function stationChange() {
     });
     stationNames2.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}${stationNumber + 1 * destSign}.png`;
+        img.src = `${base}${stationNumber + (1 * destSign - 0)}.png`;
     });
     stationNames3.forEach(img => {
         const base = img.dataset.base;
