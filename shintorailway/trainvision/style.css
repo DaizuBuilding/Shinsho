@@ -95,3 +95,45 @@ img {
     left: 0;
     animation: blink 1s step-start infinite;
 }
+
+.ssname1 {
+    right: 920px;
+    top: 800px;
+    height: 100px;
+}
+.ssname2 {
+    right: 820px;
+    top: 660px;
+    height: 80px;
+}
+.ssname3 {
+    right: 720px;
+    top: 530px;
+    height: 70px;
+}
+.ssname4 {
+    right: 620px;
+    top: 420px;
+    height: 60px;
+}
+
+.sspoint1 {
+    left: 1140px;
+    top: 820px;
+    height: 100px;
+}
+.sspoint2 {
+    left: 1250px;
+    top: 680px;
+    height: 80px;
+}
+.sspoint3 {
+    left: 1360px;
+    top: 550px;
+    height: 70px;
+}
+.sspoint4 {
+    left: 1480px;
+    top: 440px;
+    height: 60px;
+}
