@@ -6,7 +6,8 @@ fetch(url).then(function(response) {
     return response.json();
 }).then(function(json) {
     data = json;
-})
+    console.log(data);
+});
 
 console.log(data);
 console.log(data[0].number);
