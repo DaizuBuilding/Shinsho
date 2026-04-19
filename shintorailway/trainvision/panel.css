@@ -40,13 +40,13 @@ a {
     margin: 0 20px;
     background-color: #176184;
 }
-#departure {
+#arrive {
     right: 200px;
 }
-#arrive {
+#stopping {
     right: 100px;
 }
-#stopping {
+#departure {
     right: 0;
 }
 p#error {
