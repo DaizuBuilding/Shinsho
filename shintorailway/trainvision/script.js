@@ -1,10 +1,11 @@
 window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
 
-async function loadJson() {
-  const response = await fetch('./informations.json');
-  const data = await response.json();
+async function loadInfo() {
+    const response = await fetch('./informations.json');
+    const data = await response.json();
 
-  console.log(data); // OK
+    console.log(data);
+    console.log(data[0]);
 }
 
 loadJson();
