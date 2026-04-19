@@ -21,7 +21,7 @@ async function loadInfo(stanum, linnum) {
     const data = await response.json();
 
 
-    stopsLength = data.typesinfo[1].stops.length;
+    // stopsLength = data.typesinfo[1].stops.length;
     // console.log(gettingStationNumber(stanum + stopsLength - 1));
     // stationNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].number;
     // terminalDigit = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].terminal;
@@ -70,12 +70,13 @@ async function changeData(stanumber, linnumber, carnumber) {
     const data = await loadInfo(Number(stanumber), linnumber);
     stationNumber = gettingStationNumber(stanumber);
     console.log(stationNumber);
+    stopsLength = data.typesinfo[1].stops.length;
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
     carNo = carnumber;
-    terminalDigit = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].terminal;
-    announceNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 2)].terminal;
+    terminalDigit = data.stationsinfo[gettingStationNumber(stanumber + stopsLength)].terminal;
+    announceNumber = data.stationsinfo[gettingStationNumber(stanumber + stopsLength - 2)].terminal;
     // console.log(carNo); // テスト用
     stationChange();
     announcementIndex = 0;
