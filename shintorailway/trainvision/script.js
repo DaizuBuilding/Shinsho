@@ -135,6 +135,7 @@ const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
 const stationNames3 = document.querySelectorAll('.ssname3');
 const stationNames4 = document.querySelectorAll('.ssname4');
+const nexts = document.querySelectorAll('.next');
 
 function stationChange() {
     headerLines.forEach(img => {
@@ -175,6 +176,26 @@ function stationChange() {
         const base = img.dataset.base;
         img.src = `${base}${stationNumber + 3 * destSign}.png`;
     });
+    nexts.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}next.png`;
+    });
+}
+
+// 到着
+function arriving() {
+    nexts.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}soon.png`;
+    });
+}
+
+// 停車中
+function stopping() {
+    nexts.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}now.png`;
+    })
 }
 
 // 言語切り替え

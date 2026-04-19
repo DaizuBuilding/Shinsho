@@ -9,13 +9,17 @@ html {
 body {
     background-color: #333333;
     color: #ffffff;
-    padding: 0 20px;
 }
 p, a {
     position: fixed;
 }
+p {
+    margin: 0 20px;
+}
 h1 {
     text-align: center;
+    padding: 4px 0;
+    background-color: #176184;
 }
 select {
     width: 300px;
@@ -32,7 +36,9 @@ p.car {
 }
 a {
     top: 280px;
-    text-decoration: underline;
+    padding: 20px;
+    margin: 0 20px;
+    background-color: #176184;
 }
 #departure {
     left: 200px;
