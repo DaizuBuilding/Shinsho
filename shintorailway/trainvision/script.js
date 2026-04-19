@@ -1,5 +1,15 @@
 window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
 
+const url = './informations.json';
+var data;
+fetch(url).then(function(response) {
+    return response.json();
+}).then(function(json) {
+    data = json;
+})
+
+console.log(data[0].number);
+
 let stationNumber = 1;
 let destinationNumber = 0;
 let lineNumber = 1;
