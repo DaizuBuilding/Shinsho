@@ -8,7 +8,7 @@ async function loadInfo() {
     console.log(data[0]);
 }
 
-loadJson();
+loadInfo();
 
 let stationNumber = 1;
 let destinationNumber = 0;
