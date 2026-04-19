@@ -21,13 +21,13 @@ async function loadInfo(stanum, linnum) {
 
 
     stopsLength = data.typesinfo[1].stops.length;
-    console.log(gettingStationNumber(num + stopsLength - 1));
-    stationNumber = data.stationsinfo[gettingStationNumber(num + stopsLength - 1)].number;
-    announceNumber = data.stationsinfo[gettingStationNumber(num + stopsLength - 2)].terminal;
+    console.log(gettingStationNumber(stanum + stopsLength - 1));
+    stationNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 1)].number;
+    announceNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 2)].terminal;
 
     console.log(data);
     console.log(data.typesinfo[1].stops.length);
-    console.log(data.stationsinfo[gettingStationNumber(num + 1)].number);
+    console.log(data.stationsinfo[gettingStationNumber(stanum + 1)].number);
 }
 
 function settingAnnouncement(stanum, linnum) {
