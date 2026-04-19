@@ -166,15 +166,15 @@ function stationChange() {
     });
     stationNames2.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}${stationNumber + (1 * destSign - 0)}.png`;
+        img.src = `${base}${gettingStationNumber(stationNumber + 1 * destSign)}.png`;
     });
     stationNames3.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}${stationNumber + 2 * destSign}.png`;
+        img.src = `${base}${gettingStationNumber(stationNumber + 2 * destSign)}.png`;
     });
     stationNames4.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}${stationNumber + 3 * destSign}.png`;
+        img.src = `${base}${gettingStationNumber(stationNumber + 3 * destSign)}.png`;
     });
     nexts.forEach(img => {
         const base = img.dataset.base;
