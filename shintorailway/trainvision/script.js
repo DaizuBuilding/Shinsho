@@ -22,14 +22,14 @@ async function loadInfo(stanum, linnum) {
 
 
     stopsLength = data.typesinfo[1].stops.length;
-    console.log(gettingStationNumber(stanum + stopsLength - 1));
+    // console.log(gettingStationNumber(stanum + stopsLength - 1));
     // stationNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].number;
     terminalDigit = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].terminal;
     announceNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 2)].terminal;
 
     console.log(data);
     console.log(data.typesinfo[1].stops.length);
-    console.log(data.stationsinfo[gettingStationNumber(stanum + 1)].number);
+    // console.log(data.stationsinfo[gettingStationNumber(stanum + 1)].number);
 }
 
 function settingAnnouncement(stanum, linnum) {
@@ -67,6 +67,7 @@ function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
     loadInfo(stanumber, linnumber);
     stationNumber = gettingStationNumber(stanumber);
+    console.log(stationNumber);
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
