@@ -30,6 +30,8 @@ async function loadInfo(stanum, linnum) {
     console.log(data);
     console.log(data.typesinfo[1].stops.length);
     // console.log(data.stationsinfo[gettingStationNumber(stanum + 1)].number);
+
+    return await response.json();
 }
 
 function settingAnnouncement(stanum, linnum) {
@@ -63,9 +65,9 @@ function announce(script) {
 }
 
 // パネルからのデータ取得
-function changeData(stanumber, linnumber, carnumber) {
+async function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
-    loadInfo(stanumber, linnumber);
+    await loadInfo(Number(stanumber), linnumber);
     stationNumber = gettingStationNumber(stanumber);
     console.log(stationNumber);
     destinationNumber = gettingNumber(stanumber, linnumber);
