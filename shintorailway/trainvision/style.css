@@ -20,8 +20,11 @@ img {
     right: 60px;
 }
 
-#shintorailway {
+#loading {
     z-index: 999;
+}
+#loading > p {
+    text-align: center;
 }
 .hidden {
     display: none;

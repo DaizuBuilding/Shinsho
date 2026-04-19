@@ -1,4 +1,6 @@
-window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
+document.getElementById('loading').addEventListener('click', () => {
+    window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
+});
 
 
 let stationNumber = 1;
@@ -68,9 +70,9 @@ function announce(script) {
 async function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
     const data = await loadInfo(Number(stanumber), linnumber);
+    stopsLength = data.typesinfo[1].stops.length;
     stationNumber = gettingStationNumber(stanumber);
     console.log(stationNumber);
-    stopsLength = data.typesinfo[1].stops.length;
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
@@ -85,7 +87,7 @@ async function changeData(stanumber, linnumber, carnumber) {
 
 // 駅番号の調整
 function gettingStationNumber(stanum) {
-    let snum = stanum % stopsLength;
+    let snum = Number(stanum) % stopsLength;
 
     // if (stanum > stopsLength) { snum = stanum % stopsLength; } else { snum = stanum; }
     return snum;
@@ -209,7 +211,7 @@ function stationChange() {
         img.src = `${base}next.png`;
     });
 
-    document.getElementById('shintorailway').classList.add('hidden');
+    document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 
 // 到着
