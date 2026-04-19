@@ -1,15 +1,5 @@
 window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
 
-async function loadInfo() {
-    const response = await fetch('./informations.json');
-    const data = await response.json();
-
-    console.log(data);
-    console.log(data[0]);
-    console.log(data[0].terminal);
-}
-
-loadInfo();
 
 let stationNumber = 1;
 let destinationNumber = 0;
@@ -18,10 +8,26 @@ let lineNameFull = "";
 let sakuradaiDestinationNumber = 0;
 let carNo = 0;
 let lin = 0;
+let announceNumber = 0;
 let thanks = '';
 let thisTrainIs = '';
 let announceDestination = '';
 let destSign = 1;
+let stopsLength;
+
+async function loadInfo(num) {
+    const response = await fetch('./informations.json');
+    const data = await response.json();
+
+    stopsLength = data.typesinfo[1].stops.length;
+    stationNumber = data.stationsinfo[gettingStationNumber(num + stopsLength - 1)].number;
+    announceNumber = data.stationsinfo[gettingStationNumber(num + stopsLength - 2)].terminal;
+
+    console.log(data);
+    console.log(data.typesinfo[1].stops.length);
+    console.log(data.stationsinfo[gettingStationNumber(num + 1)].number);
+}
+loadInfo();
 
 function settingAnnouncement(stanum, linnum) {
     if (linnum == 0) { lin = '00302' }
@@ -149,6 +155,7 @@ const stationNames4 = document.querySelectorAll('.ssname4');
 const nexts = document.querySelectorAll('.next');
 
 function stationChange() {
+    
     headerLines.forEach(img => {
         const base = img.dataset.base;
         img.src = `${base}${lineNameFull}.png`;
@@ -191,6 +198,8 @@ function stationChange() {
         const base = img.dataset.base;
         img.src = `${base}next.png`;
     });
+
+    document.getElementById('shintorailway').classList.add('hidden');
 }
 
 // 到着
@@ -225,8 +234,6 @@ function switchClass() {
 
 // 初回実行
 switchClass();
-
-document.getElementById('shintorailway').classList.add('hidden');
 
 // 3 秒ごとに繰り返す
 setInterval(switchClass, 3000);
