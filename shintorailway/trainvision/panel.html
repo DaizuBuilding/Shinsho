@@ -103,7 +103,7 @@
                     document.getElementById('error').innerHTML = 'ビジョン画面が開かれていません。次のサイトにアクセスしてください：https://daizubuilding.github.io/Shinsho/shintorailway/trainvision/';
                     return false;
                 }
-                document.getElementById('selectsta').value = Number(document.getElementById('selectsta').value) + digit;
+                document.getElementById('selectsta').value = window.opener.gettingStationNumber(Number(document.getElementById('selectsta').value) + digit);
                 window.opener.changeData(Number(document.getElementById('selectsta').value), document.getElementById('selectline').value, document.getElementById('selectcar').value);
             }
         </script>
