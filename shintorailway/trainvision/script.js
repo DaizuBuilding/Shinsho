@@ -31,7 +31,7 @@ async function loadInfo(stanum, linnum) {
     console.log(data.typesinfo[1].stops.length);
     // console.log(data.stationsinfo[gettingStationNumber(stanum + 1)].number);
 
-    return await data;
+    return data;
 }
 
 function settingAnnouncement(stanum, linnum) {
@@ -67,17 +67,18 @@ function announce(script) {
 // パネルからのデータ取得
 async function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
-    await loadInfo(Number(stanumber), linnumber);
-    stationNumber = gettingStationNumber(stanumber);
-    console.log(stationNumber);
-    destinationNumber = gettingNumber(stanumber, linnumber);
-    lineNameFull = gettingLineNameFull(linnumber);
-    sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
-    carNo = carnumber;
-    // console.log(carNo); // テスト用
-    stationChange();
-    announcementIndex = 0;
-    settingAnnouncement(stanumber, linnumber);
+    loadInfo(Number(stanumber), linnumber).then(data => {
+        stationNumber = gettingStationNumber(stanumber);
+        console.log(stationNumber);
+        destinationNumber = gettingNumber(stanumber, linnumber);
+        lineNameFull = gettingLineNameFull(linnumber);
+        sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
+        carNo = carnumber;
+        // console.log(carNo); // テスト用
+        stationChange();
+        announcementIndex = 0;
+        settingAnnouncement(stanumber, linnumber);
+    });
 }
 
 // 駅番号の調整
