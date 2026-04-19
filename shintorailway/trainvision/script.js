@@ -14,6 +14,7 @@ let thisTrainIs = '';
 let announceDestination = '';
 let destSign = 1;
 let stopsLength;
+let terminalDigit = 0;
 
 async function loadInfo(stanum, linnum) {
     const response = await fetch('./informations.json');
@@ -22,7 +23,8 @@ async function loadInfo(stanum, linnum) {
 
     stopsLength = data.typesinfo[1].stops.length;
     console.log(gettingStationNumber(stanum + stopsLength - 1));
-    stationNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 1)].number;
+    // stationNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].number;
+    terminalDigit = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].terminal;
     announceNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 2)].terminal;
 
     console.log(data);
@@ -77,9 +79,9 @@ function changeData(stanumber, linnumber, carnumber) {
 
 // 駅番号の調整
 function gettingStationNumber(stanum) {
-    let snum;
+    let snum = stanum % stopsLength;
 
-    if (stanum > 27) { snum = 1; } else { snum = stanum; }
+    // if (stanum > stopsLength) { snum = stanum % stopsLength; } else { snum = stanum; }
     return snum;
 }
 
