@@ -31,7 +31,7 @@ async function loadInfo(stanum, linnum) {
     console.log(data.typesinfo[1].stops.length);
     // console.log(data.stationsinfo[gettingStationNumber(stanum + 1)].number);
 
-    return await response.json();
+    return await data;
 }
 
 function settingAnnouncement(stanum, linnum) {
