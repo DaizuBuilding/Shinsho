@@ -1,14 +1,13 @@
 window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
 
-var info;
-async function fetchData() {
-  const data = await fetch("informations.json");
-  console.log(data);
-  info = await data.json();
-  console.log(info);
+async function loadJson() {
+  const response = await fetch('./informations.json');
+  const data = await response.json();
+
+  console.log(data); // OK
 }
-fetchData();
-console.log(info);
+
+loadJson();
 
 let stationNumber = 1;
 let destinationNumber = 0;
