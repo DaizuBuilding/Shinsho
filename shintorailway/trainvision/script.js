@@ -6,6 +6,7 @@ async function loadInfo() {
 
     console.log(data);
     console.log(data[0]);
+    console.log(data[0].terminal);
 }
 
 loadInfo();
