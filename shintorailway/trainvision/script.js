@@ -19,7 +19,9 @@ async function loadInfo(num) {
     const response = await fetch('./informations.json');
     const data = await response.json();
 
+
     stopsLength = data.typesinfo[1].stops.length;
+    console.log(gettingStationNumber(num + stopsLength - 1));
     stationNumber = data.stationsinfo[gettingStationNumber(num + stopsLength - 1)].number;
     announceNumber = data.stationsinfo[gettingStationNumber(num + stopsLength - 2)].terminal;
 
