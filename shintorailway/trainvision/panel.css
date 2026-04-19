@@ -41,7 +41,13 @@ a {
     background-color: #176184;
 }
 #departure {
-    left: 200px;
+    right: 200px;
+}
+#arrive {
+    right: 100px;
+}
+#stopping {
+    right: 0;
 }
 p#error {
     top: 350px;
