@@ -24,11 +24,11 @@ async function loadInfo(stanum, linnum) {
     stopsLength = data.typesinfo[1].stops.length;
     // console.log(gettingStationNumber(stanum + stopsLength - 1));
     // stationNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].number;
-    terminalDigit = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].terminal;
-    announceNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 2)].terminal;
+    // terminalDigit = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].terminal;
+    // announceNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 2)].terminal;
 
-    console.log(data);
-    console.log(data.typesinfo[1].stops.length);
+    // console.log(data);
+    // console.log(data.typesinfo[1].stops.length);
     // console.log(data.stationsinfo[gettingStationNumber(stanum + 1)].number);
 
     return data;
@@ -67,18 +67,19 @@ function announce(script) {
 // パネルからのデータ取得
 async function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
-    loadInfo(Number(stanumber), linnumber).then(data => {
-        stationNumber = gettingStationNumber(stanumber);
-        console.log(stationNumber);
-        destinationNumber = gettingNumber(stanumber, linnumber);
-        lineNameFull = gettingLineNameFull(linnumber);
-        sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
-        carNo = carnumber;
-        // console.log(carNo); // テスト用
-        stationChange();
-        announcementIndex = 0;
-        settingAnnouncement(stanumber, linnumber);
-    });
+    const data = await loadInfo(Number(stanumber), linnumber);
+    stationNumber = gettingStationNumber(stanumber);
+    console.log(stationNumber);
+    destinationNumber = gettingNumber(stanumber, linnumber);
+    lineNameFull = gettingLineNameFull(linnumber);
+    sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
+    carNo = carnumber;
+    terminalDigit = data.stationsinfo[gettingStationNumber(stanum + stopsLength)].terminal;
+    announceNumber = data.stationsinfo[gettingStationNumber(stanum + stopsLength - 2)].terminal;
+    // console.log(carNo); // テスト用
+    stationChange();
+    announcementIndex = 0;
+    settingAnnouncement(stanumber, linnumber);
 }
 
 // 駅番号の調整
