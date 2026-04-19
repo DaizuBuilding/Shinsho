@@ -1,7 +1,7 @@
 window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
 
 async function fetchData() {
-  const data = await fetch("information.json");
+  const data = await fetch("informations.json");
   console.log(data);
   const res = await data.json();
   console.log(res);
