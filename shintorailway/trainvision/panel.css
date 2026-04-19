@@ -39,12 +39,14 @@ a {
     padding: 20px;
     margin: 0 20px;
     background-color: #176184;
+    width: 60px;
+    text-align: center;
 }
 #arrive {
-    right: 200px;
+    right: 240px;
 }
 #stopping {
-    right: 100px;
+    right: 120px;
 }
 #departure {
     right: 0;
