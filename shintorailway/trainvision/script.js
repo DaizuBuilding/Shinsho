@@ -15,7 +15,7 @@ let announceDestination = '';
 let destSign = 1;
 let stopsLength;
 
-async function loadInfo(num) {
+async function loadInfo(stanum, linnum) {
     const response = await fetch('./informations.json');
     const data = await response.json();
 
@@ -29,7 +29,6 @@ async function loadInfo(num) {
     console.log(data.typesinfo[1].stops.length);
     console.log(data.stationsinfo[gettingStationNumber(num + 1)].number);
 }
-loadInfo();
 
 function settingAnnouncement(stanum, linnum) {
     if (linnum == 0) { lin = '00302' }
@@ -64,6 +63,7 @@ function announce(script) {
 // パネルからのデータ取得
 function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
+    loadInfo(stanumber, linnumber);
     stationNumber = gettingStationNumber(stanumber);
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
