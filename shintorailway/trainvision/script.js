@@ -8,6 +8,7 @@ fetch(url).then(function(response) {
     data = json;
 })
 
+console.log(data);
 console.log(data[0].number);
 
 let stationNumber = 1;
