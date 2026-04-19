@@ -87,6 +87,9 @@ async function changeData(stanumber, linnumber, carnumber) {
 
 // 駅番号の調整
 function gettingStationNumber(stanum) {
+    console.log(stanum);
+    console.log(stopsLength);
+    console.log(stanum % stopsLength);
     let snum = Number(stanum) % stopsLength;
 
     // if (stanum > stopsLength) { snum = stanum % stopsLength; } else { snum = stanum; }
