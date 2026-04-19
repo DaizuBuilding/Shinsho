@@ -8,7 +8,7 @@ async function fetchData() {
   console.log(info);
 }
 fetchData();
-console.log(info[0]);
+console.log(info);
 
 let stationNumber = 1;
 let destinationNumber = 0;
