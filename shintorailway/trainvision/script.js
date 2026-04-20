@@ -73,6 +73,8 @@ async function changeData(stanumber, linnumber, carnumber) {
     stopsLength = data.typesinfo[1].stops.length;
     stationNumber = gettingStationNumber(stanumber, stopsLength);
     console.log(stationNumber);
+    console.log(data.typesinfo[1].stops);
+    console.log(data.typesinfo[1].stops.length);
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
