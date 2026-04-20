@@ -91,8 +91,7 @@ async function changeData(stanumber, linnumber, carnumber) {
 }
 
 // 駅番号の調整
-async function gettingStationNumber(stanum, linnum, lth) {
-    informations = await loadInfo(stanum, linnum);
+function gettingStationNumber(stanum, linnum, lth) {
     const index = ((stanum - 1) % lth + lth) % lth;
     return informations.typesinfo[1].stops[index];
 }
