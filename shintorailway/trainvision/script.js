@@ -89,7 +89,8 @@ async function changeData(stanumber, linnumber, carnumber) {
 
 // 駅番号の調整
 function gettingStationNumber(stanum, lth) {
-    return stanum % lth;
+    const index = ((stanum - 1) % lth + lth) % lth;
+    return data.stypesinfo[1].stops[index];
 }
 
 // 行き先番号の取得
