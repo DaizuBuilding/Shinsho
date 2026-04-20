@@ -17,6 +17,7 @@ let announceDestination = '';
 let destSign = 1;
 let stopsLength;
 let terminalDigit = 0;
+let informations;
 
 async function loadInfo(stanum, linnum) {
     const response = await fetch('./informations.json');
@@ -69,18 +70,17 @@ function announce(script) {
 // パネルからのデータ取得
 async function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
-    const data = await loadInfo(Number(stanumber), linnumber);
-    stopsLength = data.typesinfo[1].stops.length;
+    stopsLength = informations.typesinfo[1].stops.length;
     stationNumber = gettingStationNumber(stanumber, stopsLength);
     console.log(stationNumber);
-    console.log(data.typesinfo[1].stops);
-    console.log(data.typesinfo[1].stops.length);
+    console.log(informations.typesinfo[1].stops);
+    console.log(informations.typesinfo[1].stops.length);
     destinationNumber = gettingNumber(stanumber, linnumber);
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
     carNo = carnumber;
-    terminalDigit = data.stationsinfo[gettingStationNumber(stanumber + stopsLength, stopsLength)].terminal;
-    announceNumber = data.stationsinfo[gettingStationNumber(stanumber + stopsLength - 2, stopsLength)].terminal;
+    terminalDigit = informations.stationsinfo[gettingStationNumber(stanumber + stopsLength, stopsLength)].terminal;
+    announceNumber = informations.stationsinfo[gettingStationNumber(stanumber + stopsLength - 2, stopsLength)].terminal;
     // console.log(carNo); // テスト用
     stationChange();
     announcementIndex = 0;
@@ -90,7 +90,7 @@ async function changeData(stanumber, linnumber, carnumber) {
 // 駅番号の調整
 function gettingStationNumber(stanum, lth) {
     const index = ((stanum - 1) % lth + lth) % lth;
-    return data.stypesinfo[1].stops[index];
+    return informations.stypesinfo[1].stops[index];
 }
 
 // 行き先番号の取得
