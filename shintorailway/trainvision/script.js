@@ -70,6 +70,7 @@ function announce(script) {
 // パネルからのデータ取得
 async function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
+    informations = await loadInfo(stanumber, linnumber);
     stopsLength = informations.typesinfo[1].stops.length;
     stationNumber = gettingStationNumber(stanumber, stopsLength);
     console.log(stationNumber);
