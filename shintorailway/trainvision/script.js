@@ -72,7 +72,7 @@ async function changeData(stanumber, linnumber, carnumber) {
     if (audio != null) { audio.pause(); }
     informations = await loadInfo(stanumber, linnumber);
     stopsLength = informations.typesinfo[1].stops.length;
-    stationNumber = gettingStationNumber(stanumber, stopsLength);
+    stationNumber = gettingStationNumber(stanumber, linnumber, stopsLength);
     console.log(stationNumber);
     console.log(informations.typesinfo[1].stops);
     console.log(informations.typesinfo[1].stops.length);
@@ -80,8 +80,8 @@ async function changeData(stanumber, linnumber, carnumber) {
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
     carNo = carnumber;
-    terminalDigit = informations.stationsinfo[gettingStationNumber(stanumber + stopsLength, stopsLength)].terminal;
-    announceNumber = informations.stationsinfo[gettingStationNumber(stanumber + stopsLength - 2, stopsLength)].terminal;
+    terminalDigit = informations.stationsinfo[gettingStationNumber(stanumber + stopsLength, linnumber, stopsLength)].terminal;
+    announceNumber = informations.stationsinfo[gettingStationNumber(stanumber + stopsLength - 2, linnumber, stopsLength)].terminal;
     // console.log(carNo); // テスト用
     stationChange();
     announcementIndex = 0;
@@ -89,7 +89,8 @@ async function changeData(stanumber, linnumber, carnumber) {
 }
 
 // 駅番号の調整
-function gettingStationNumber(stanum, lth) {
+async function gettingStationNumber(stanum, linnum, lth) {
+    informations = await loadInfo(stanum, linnum);
     const index = ((stanum - 1) % lth + lth) % lth;
     return informations.typesinfo[1].stops[index];
 }
@@ -197,15 +198,15 @@ function stationChange() {
     });
     stationNames2.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}${gettingStationNumber(stationNumber + 1 * destSign, stopsLength)}.png`;
+        img.src = `${base}${gettingStationNumber(stationNumber + 1 * destSign, lineNumber, stopsLength)}.png`;
     });
     stationNames3.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}${gettingStationNumber(stationNumber + 2 * destSign, stopsLength)}.png`;
+        img.src = `${base}${gettingStationNumber(stationNumber + 2 * destSign, lineNumber, stopsLength)}.png`;
     });
     stationNames4.forEach(img => {
         const base = img.dataset.base;
-        img.src = `${base}${gettingStationNumber(stationNumber + 3 * destSign, stopsLength)}.png`;
+        img.src = `${base}${gettingStationNumber(stationNumber + 3 * destSign, lineNumber, stopsLength)}.png`;
     });
     nexts.forEach(img => {
         const base = img.dataset.base;
