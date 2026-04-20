@@ -80,6 +80,7 @@ async function changeData(stanumber, linnumber, carnumber) {
     lineNameFull = gettingLineNameFull(linnumber);
     sakuradaiDestinationNumber = gettingSakuradaiDestination(linnumber);
     carNo = carnumber;
+    console.log(informations.stationsinfo[gettingStationNumber(stanumber, linnumber, stopsLength)]);
     terminalDigit = informations.stationsinfo[gettingStationNumber(stanumber, linnumber, stopsLength)].terminal;
     announceNumber = informations.stationsinfo[gettingStationNumber(stanumber - 1, linnumber, stopsLength)].terminal;
     // console.log(carNo); // テスト用
