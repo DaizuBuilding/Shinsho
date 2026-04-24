@@ -24,10 +24,6 @@ async function getJson(stanum, linenum) {
     const data = await response.json();
     informations = await data;
 
-    console.log(data);
-    console.log(data.typesinfo);
-    console.log(lineIndex);
-    console.log(data.typesinfo[lineIndex]);
     lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
@@ -37,11 +33,8 @@ async function getJson(stanum, linenum) {
 
 // パネルからのデータ取得と変更
 async function changeData(stanum, linenum, typenum, destnum, carnum) {
-    console.log(linenum);
-    console.log(typenum);
     lineIndex = setLineIndex(linenum, typenum, destnum);
-    console.log(lineIndex);
-    await getJson(); // Json データ取得
+    await getJson(stanum, linenum); // Json データ取得
     stationIndex = stanum;
     typeNumber = typenum;
     destinationNumber = setDestinationNumber(stanum, linenum, typenum, destnum);
@@ -53,7 +46,6 @@ function setLineIndex(linenum, typenum, destnum) {
     let num = '00';
     if (linenum == 0) { num = String(linenum) + String(typenum); }
     if (linenum > 0) { num = String(linenum) + String(destnum); }
-    console.log(num);
     return num;
 }
 
