@@ -24,8 +24,9 @@ img {
     position: fixed;
     z-index: 999;
 }
-#loading > p {
-    text-align: center;
+#loadinginfo {
+    top: 720px;
+    left: 0;
 }
 .hidden {
     display: none;
@@ -80,7 +81,7 @@ img {
 }
 
 /* 路線色ボーダー */
-.lineborder {
+.lineborder > img {
     top: 320px;
     left: 0;
 }
