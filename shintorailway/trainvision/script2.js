@@ -27,17 +27,15 @@ async function getJson(stanum, linenum) {
     lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
-    console.log(stationIndex);
-    terminalDigit = data.stationsinfo[stationIndex].terminal; // 主要駅判定
+    terminalDigit = data.stationsinfo[adjustStationIndex(stanum)].terminal; // 主要駅判定
     terminalDigitBack = data.stationsinfo[adjustStationIndex(stanum - 1)].terminal; // 1 つ前の主要駅判定
 }
 
 // パネルからのデータ取得と変更
 async function changeData(stanum, linenum, typenum, destnum, carnum) {
     lineIndex = setLineIndex(linenum, typenum, destnum);
-    stationIndex = adjustStationIndex(stanum);
-    console.log(stationIndex);
     await getJson(stanum, linenum); // Json データ取得
+    stationIndex = adjustStationIndex(stanum);
     lineNumber = linenum;
     typeNumber = typenum;
     destinationNumber = setDestinationNumber(stationIndex, linenum, typenum, destnum);
@@ -54,7 +52,6 @@ function setLineIndex(linenum, typenum, destnum) {
 
 // 停車駅インデックスの調整
 function adjustStationIndex(num) {
-    console.log(num);
     return (Number(num) + stopsLength) % stopsLength;
 }
 
