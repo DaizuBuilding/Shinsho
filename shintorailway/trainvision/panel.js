@@ -24,5 +24,5 @@ function returnWindow() {
     } else {
         error.innerHTML = '';
     }
-    window.opener.changeData(Number(document.getElementById('selectsta').value) - 1, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectcar').value);
+    window.opener.changeData(Number(document.getElementById('selectsta').value) - 1, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
 }
