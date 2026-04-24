@@ -51,7 +51,7 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
 
 function setLineIndex(linenum, typenum, destnum) {
     let num = '00';
-    if (linenum == 0) { num = toString(linenum) + toString(typenum); }
+    if (Number(linenum) == 0) { num = toString(linenum) + toString(typenum); }
     if (linenum > 0) { num = toString(linenum) + toString(destnum); }
     console.log(num);
     return num;
