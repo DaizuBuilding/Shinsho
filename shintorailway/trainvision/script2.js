@@ -58,7 +58,7 @@ function adjustStationIndex(num) {
 // 行き先番号
 function setDestinationNumber(stanum, linenum, typenum, destnum) {
     let num;
-    if (linenum == 1) {
+    if (linenum == 0) {
         if (typenum == 0) {
             if (stanum >= 25) { num = 9; }
             else if (stanum >= 22) { num = 8; }
