@@ -36,6 +36,7 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
     lineIndex = setLineIndex(linenum, typenum, destnum);
     await getJson(stanum, linenum); // Json データ取得
     stationIndex = stanum;
+    lineNumber = linenum;
     typeNumber = typenum;
     destinationNumber = setDestinationNumber(stanum, linenum, typenum, destnum);
     carNo = carnum;
