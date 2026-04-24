@@ -40,6 +40,7 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
     console.log(linenum);
     console.log(typenum);
     lineIndex = setLineIndex(linenum, typenum, destnum);
+    console.log(lineIndex);
     await getJson(); // Json データ取得
     stationIndex = stanum;
     typeNumber = typenum;
