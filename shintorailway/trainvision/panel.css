@@ -28,11 +28,17 @@ select {
 p.line {
     top: 70px;
 }
+p.type {
+    top: 110px;
+}
+p.destination {
+    top: 150px;
+}
 p.sta {
-    top: 140px;
+    top: 190px;
 }
 p.car {
-    top: 210px;
+    top: 230px;
 }
 a {
     top: 280px;
