@@ -28,7 +28,7 @@ async function getJson(stanum, linenum) {
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
     terminalDigit = data.stationsinfo[stanum].terminal; // 主要駅判定
-    terminalDigitBack = data.stationsinfo[adjustStationIndex(stanum) + 1].terminal; // 1 つ前の主要駅判定
+    terminalDigitBack = data.stationsinfo[adjustStationIndex(stanum - 1)].terminal; // 1 つ前の主要駅判定
 }
 
 // パネルからのデータ取得と変更
@@ -52,7 +52,7 @@ function setLineIndex(linenum, typenum, destnum) {
 
 // 停車駅インデックスの調整
 function adjustStationIndex(num) {
-    return num % stopsLength;
+    return (Number(num) + stopsLength) % stopsLength;
 }
 
 // 行き先番号
