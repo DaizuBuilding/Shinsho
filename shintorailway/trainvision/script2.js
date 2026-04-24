@@ -25,7 +25,7 @@ async function getJson(stanum, linenum) {
     informations = await data;
 
     console.log(data);
-    await console.log(data);
+    console.log(data.typesinfo);
     console.log(data.typesinfo[lineIndex]);
     await console.log(data.typesinfo[lineIndex]);
     lineName = `${data.typesinfo[toString(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
