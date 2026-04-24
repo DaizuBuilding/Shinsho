@@ -158,7 +158,7 @@ function stopping() {
 
 // アナウンス設定
 function setAnnouncement() {
-    const announce;
+    // const announce;
 }
 
 // 言語切り替え
