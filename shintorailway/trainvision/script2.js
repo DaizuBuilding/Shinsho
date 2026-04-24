@@ -28,7 +28,7 @@ async function getJson(stanum, linenum) {
     console.log(data.typesinfo);
     console.log(lineIndex);
     console.log(data.typesinfo[lineIndex]);
-    lineName = `${data.typesinfo[toString(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
+    lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
     terminalDigit = data.stationsinfo[stanum].terminal; // 主要駅判定
@@ -51,8 +51,8 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
 
 function setLineIndex(linenum, typenum, destnum) {
     let num = '00';
-    if (Number(linenum) == 0) { num = toString(linenum) + toString(typenum); }
-    if (linenum > 0) { num = toString(linenum) + toString(destnum); }
+    if (linenum == 0) { num = String(linenum) + String(typenum); }
+    if (linenum > 0) { num = String(linenum) + String(destnum); }
     console.log(num);
     return num;
 }
