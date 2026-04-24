@@ -34,8 +34,8 @@ async function getJson(stanum, linenum) {
 // パネルからのデータ取得と変更
 async function changeData(stanum, linenum, typenum, destnum, carnum) {
     lineIndex = setLineIndex(linenum, typenum, destnum);
-    await getJson(stanum, linenum); // Json データ取得
     stationIndex = adjustStationIndex(stanum);
+    await getJson(stanum, linenum); // Json データ取得
     lineNumber = linenum;
     typeNumber = typenum;
     destinationNumber = setDestinationNumber(stationIndex, linenum, typenum, destnum);
