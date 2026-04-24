@@ -60,16 +60,16 @@ function setDestinationNumber(stanum, linenum, typenum, destnum) {
     let num;
     if (linenum == 0) {
         if (typenum == 0) {
-            if (stanum >= 25) { num = 9; }
-            else if (stanum >= 22) { num = 8; }
-            else if (stanum >= 20) { num = 7; }
-            else if (stanum >= 17) { num = 6; }
-            else if (stanum >= 15) { num = 5; }
-            else if (stanum >= 12) { num = 4; }
-            else if (stanum >= 8) { num = 3; }
-            else if (stanum >= 5) { num = 2; }
-            else if (stanum >= 3) { num = 1; }
-            else if (stanum >= 1) { num = 0; }
+            if (stanum >= 24) { num = 9; }
+            else if (stanum >= 21) { num = 8; }
+            else if (stanum >= 19) { num = 7; }
+            else if (stanum >= 16) { num = 6; }
+            else if (stanum >= 14) { num = 5; }
+            else if (stanum >= 11) { num = 4; }
+            else if (stanum >= 7) { num = 3; }
+            else if (stanum >= 4) { num = 2; }
+            else if (stanum >= 2) { num = 1; }
+            else if (stanum >= 0) { num = 0; }
         } else if (typenum == 1) {
             if (stanum == 0 || stanum >= 25) { num = 0; }
             else if (stanum >= 22) { num = 9; }
