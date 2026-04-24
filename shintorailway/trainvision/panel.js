@@ -8,9 +8,11 @@ document.getElementById('departure').addEventListener('click', () => {
     returnWindow();
 });
 document.getElementById('arrive').addEventListener('click', () => {
+    digit = 0;
     window.opener.arriving();
 });
 document.getElementById('stopping').addEventListener('click', () => {
+    digit = 0;
     window.opener.stopping();
 })
 
@@ -24,5 +26,6 @@ function returnWindow() {
     } else {
         error.innerHTML = '';
     }
-    window.opener.changeData(Number(document.getElementById('selectsta').value) - 1, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
+    let stanumber = Number(document.getElementById('selectsta').value) += digit;
+    window.opener.changeData(stanumber - 1, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
 }
