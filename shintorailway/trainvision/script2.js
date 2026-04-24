@@ -27,7 +27,7 @@ async function getJson(stanum, linenum) {
     lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
-    terminalDigit = data.stationsinfo[stanum].terminal; // 主要駅判定
+    terminalDigit = data.stationsinfo[stationIndex].terminal; // 主要駅判定
     terminalDigitBack = data.stationsinfo[adjustStationIndex(stanum - 1)].terminal; // 1 つ前の主要駅判定
 }
 
@@ -35,10 +35,10 @@ async function getJson(stanum, linenum) {
 async function changeData(stanum, linenum, typenum, destnum, carnum) {
     lineIndex = setLineIndex(linenum, typenum, destnum);
     await getJson(stanum, linenum); // Json データ取得
-    stationIndex = stanum;
+    stationIndex = adjustStationIndex(stanum);
     lineNumber = linenum;
     typeNumber = typenum;
-    destinationNumber = setDestinationNumber(stanum, linenum, typenum, destnum);
+    destinationNumber = setDestinationNumber(stationIndex, linenum, typenum, destnum);
     carNo = carnum;
     visionChange();
 }
