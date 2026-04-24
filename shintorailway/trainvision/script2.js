@@ -24,7 +24,7 @@ async function getJson(stanum, linenum) {
     const data = await response.json();
     informations = await data;
 
-    lineName = `${data.typesinfo[lineIndex].line}_${data.typesinfo[lineIndex].name}`; // 路線名
+    lineName = `${data.typesinfo[toString(lineIndex)].line}_${data.typesinfo[toString(lineIndex)].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
     terminalDigit = data.stationsinfo[stanum].terminal; // 主要駅判定
