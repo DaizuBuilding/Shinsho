@@ -54,6 +54,7 @@ function setLineIndex(linenum, typenum, destnum) {
 
 // 停車駅インデックスの調整
 function adjustStationIndex(num) {
+    console.log(num);
     return (Number(num) + stopsLength) % stopsLength;
 }
 
