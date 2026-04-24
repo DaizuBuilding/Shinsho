@@ -26,6 +26,6 @@ function returnWindow() {
     } else {
         error.innerHTML = '';
     }
-    let stanumber = Number(document.getElementById('selectsta').value) += digit;
+    let stanumber = Number(document.getElementById('selectsta').value) + digit;
     window.opener.changeData(stanumber - 1, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
 }
