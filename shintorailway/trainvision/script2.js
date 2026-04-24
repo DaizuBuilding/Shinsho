@@ -71,16 +71,16 @@ function setDestinationNumber(stanum, linenum, typenum, destnum) {
             else if (stanum >= 3) { num = 1; }
             else if (stanum >= 1) { num = 0; }
         } else if (typenum == 1) {
-            if (stanum == 1 || stanum >= 26) { num = 0; }
-            else if (stanum >= 23) { num = 9; }
-            else if (stanum >= 21) { num = 8; }
-            else if (stanum >= 18) { num = 7; }
-            else if (stanum >= 16) { num = 6; }
-            else if (stanum >= 13) { num = 5; }
-            else if (stanum >= 9) { num = 4; }
-            else if (stanum >= 6) { num = 3; }
-            else if (stanum >= 4) { num = 2; }
-            else if (stanum >= 2) { num = 1; }
+            if (stanum == 0 || stanum >= 25) { num = 0; }
+            else if (stanum >= 22) { num = 9; }
+            else if (stanum >= 20) { num = 8; }
+            else if (stanum >= 17) { num = 7; }
+            else if (stanum >= 15) { num = 6; }
+            else if (stanum >= 12) { num = 5; }
+            else if (stanum >= 8) { num = 4; }
+            else if (stanum >= 5) { num = 3; }
+            else if (stanum >= 3) { num = 2; }
+            else if (stanum >= 1) { num = 1; }
         }
     } else { num = destnum; }
 
