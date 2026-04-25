@@ -51,7 +51,7 @@
     "stationsinfo": [
         {
             "number": 1,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -59,7 +59,7 @@
         },
         {
             "number": 2,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -67,7 +67,7 @@
         },
         {
             "number": 3,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -75,7 +75,7 @@
         },
         {
             "number": 4,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -83,7 +83,7 @@
         },
         {
             "number": 5,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -91,7 +91,7 @@
         },
         {
             "number": 6,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -99,7 +99,7 @@
         },
         {
             "number": 7,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -107,7 +107,7 @@
         },
         {
             "number": 8,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -115,7 +115,7 @@
         },
         {
             "number": 9,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -123,7 +123,7 @@
         },
         {
             "number": 10,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -131,7 +131,7 @@
         },
         {
             "number": 11,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -139,7 +139,7 @@
         },
         {
             "number": 12,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -147,7 +147,7 @@
         },
         {
             "number": 13,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -155,7 +155,7 @@
         },
         {
             "number": 14,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -163,7 +163,7 @@
         },
         {
             "number": 15,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -171,7 +171,7 @@
         },
         {
             "number": 16,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -179,7 +179,7 @@
         },
         {
             "number": 17,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -187,7 +187,7 @@
         },
         {
             "number": 18,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -195,7 +195,7 @@
         },
         {
             "number": 19,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -203,7 +203,7 @@
         },
         {
             "number": 20,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -211,7 +211,7 @@
         },
         {
             "number": 21,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -219,7 +219,7 @@
         },
         {
             "number": 22,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -227,7 +227,7 @@
         },
         {
             "number": 23,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -235,7 +235,7 @@
         },
         {
             "number": 24,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -243,7 +243,7 @@
         },
         {
             "number": 25,
-            "terminal": 1,
+            "terminal": true,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -251,7 +251,7 @@
         },
         {
             "number": 26,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
@@ -259,7 +259,7 @@
         },
         {
             "number": 27,
-            "terminal": 0,
+            "terminal": false,
             "door": 0,
             "transfer": [
                 "Shinto"
