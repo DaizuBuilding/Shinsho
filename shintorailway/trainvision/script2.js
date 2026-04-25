@@ -176,11 +176,11 @@ function setAnnouncementScript() {
 // アナウンス放送
 function announce(script) {
     console.log(script);
-    if (announcementIndex < script.length) {
-        audio = new Audio(script[announcementIndex]);
+    if (announceIndex < script.length) {
+        audio = new Audio(script[announceIndex]);
         audio.play();
         audio.onended = () => {
-            announcementIndex++;
+            announceIndex++;
             announce(script);
         };
     }
