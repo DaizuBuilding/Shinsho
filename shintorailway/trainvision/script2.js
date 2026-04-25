@@ -188,8 +188,8 @@ function announce(script) {
 // 時刻表示
 function clock() {
     let time = new Date();
-    let hour = time.getHours();
-    let minute = time.getMinutes();
+    let hour = String(time.getHours()).padStart(2, '0');
+    let minute = String(time.getMinutes()).padStart(2, '0');
     document.getElementById('clock').innerHTML = hour + ':' + minute;
 }
 setInterval('clock()', 1000);
