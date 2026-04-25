@@ -17,6 +17,7 @@ let informations; // informations.json
 
 let announceScript; // アナウンス原稿
 let announceIndex; // アナウンスインデックス
+let audio = null; // audio インスタンス
 
 // Json 読み込み
 async function getJson(stanum, linenum) {
