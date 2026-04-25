@@ -16,7 +16,7 @@ let terminalDigitBack = 0; // 1 つ前の主要駅判定
 let informations; // informations.json
 
 let announceScript; // アナウンス原稿
-let announceIndex; // アナウンスインデックス
+let announceIndex = 0; // アナウンスインデックス
 let audio = null; // audio インスタンス
 
 // Json 読み込み
