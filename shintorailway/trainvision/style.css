@@ -24,7 +24,9 @@ img {
     z-index: 100;
     top: 30px;
     right: 280px;
+    color: #ffffff;
     line-height: 80px;
+    font-size: 80px;
     font-family: 'Myriad Pro Semibold', 'Myriad', 'Frutiger Medium', 'Frutiger', 'Segoe UI', sans-serif;
 }
 
