@@ -33,6 +33,7 @@ async function getJson(stanum, linenum) {
 
 // パネルからのデータ取得と変更
 async function changeData(stanum, linenum, typenum, destnum, carnum) {
+    if (audio != null) { audio.pause(); }
     lineIndex = setLineIndex(linenum, typenum, destnum);
     await getJson(stanum, linenum); // Json データ取得
     stationIndex = adjustStationIndex(stanum);
@@ -158,9 +159,29 @@ function stopping() {
     });
 }
 
-// アナウンス設定
-function setAnnouncement() {
-    // const announce;
+// アナウンス原稿
+let aLineName = '';
+let aLineDestination = '';
+function setAnnouncementScript() {
+    if (lineNumber == 0) { aLineName = lineName } else { aLineName = lineNumbering; }
+    aLineDestination = `'destination/'${lineNumber}${typeNumber}${destinationNumber}`;
+    let aStationInfo = `'./announcement/00100.wav', './announcement/00201.wav', './announcement/lines/Shinto_${aLineName}.wav', './announcement/${aLineDestination}.wav'`;
+    let announceScript = [aStationInfo, './announcement/00600.wav', `'./announcement/stations/${stationIndex}.wav'`, `'./announcement/stations/${stationIndex}.wav'`, './announcement/00701.wav'];
+    console.log(announceScript);
+    announce(announceScript);
+}
+
+// アナウンス放送
+function announce(script) {
+    console.log(script);
+    if (announcementIndex < script.length) {
+        audio = new Audio(script[announcementIndex]);
+        audio.play();
+        audio.onended = () => {
+            announcementIndex++;
+            announce(script);
+        };
+    }
 }
 
 // 時刻表示
