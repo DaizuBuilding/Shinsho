@@ -167,7 +167,7 @@ let aLineDestination = '';
 function setAnnouncementScript() {
     if (lineNumber == 0) { aLineName = lineName } else { aLineName = lineNumbering; }
     aLineDestination = `'destination/'${lineNumber}${typeNumber}${destinationNumber}`;
-    let announceScript = [...(terminalDigitBack ? ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/lines/Shinto_${aLineName}.wav`, `./announcement/${aLineDestination}.wav`] : []), './announcement/00600.wav', `'./announcement/stations/${stationIndex + 1}.wav'`, `'./announcement/stations/${stationIndex + 1}.wav'`, './announcement/00701.wav'];
+    let announceScript = [...(terminalDigitBack ? ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/lines/Shinto_${aLineName}.wav`, `./announcement/${aLineDestination}.wav`] : []), './announcement/00600.wav', `./announcement/stations/${stationIndex + 1}.wav`, `./announcement/stations/${stationIndex + 1}.wav`, './announcement/00701.wav'];
     console.log(announceScript);
     announce(announceScript);
 }
