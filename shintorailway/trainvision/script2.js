@@ -170,13 +170,11 @@ function setAnnouncementScript() {
     aLineDestination = `'destination/'${lineNumber}${typeNumber}${destinationNumber}`;
     console.log(aLineDestination);
     let announceScript = [...(terminalDigitBack ? ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/lines/Shinto_${aLineName}.wav`, `./announcement/${aLineDestination}.wav`] : []), './announcement/00600.wav', `./announcement/stations/${stationIndex + 1}.wav`, `./announcement/stations/${stationIndex + 1}.wav`, './announcement/00702.wav'];
-    console.log(announceScript);
     announce(announceScript);
 }
 
 // アナウンス放送
 function announce(script) {
-    console.log(script);
     if (announceIndex < script.length) {
         audio = new Audio(script[announceIndex]);
         audio.play();
