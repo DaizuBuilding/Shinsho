@@ -166,7 +166,9 @@ function setAnnouncement() {
 // 時刻表示
 function clock() {
     let time = new Date();
-    document.getElementById('clock').innerHTML = time.getHours(); + ':' + time.getMinutes();
+    let hour = time.getHours();
+    let minute = time.getMinutes();
+    document.getElementById('clock').innerHTML = hour + ':' + minute;
 }
 setInterval('clock()', 1000);
 
