@@ -19,6 +19,14 @@ img {
     bottom: 970px;
     right: 60px;
 }
+#clock {
+    position: fixed;
+    z-index: 100;
+    top: 30px;
+    right: 280px;
+    line-height: 80px;
+    font-family: 'Myriad Pro Semibold', 'Myriad', 'Frutiger Medium', 'Frutiger', 'Segoe UI', sans-serif;
+}
 
 #loading {
     position: fixed;

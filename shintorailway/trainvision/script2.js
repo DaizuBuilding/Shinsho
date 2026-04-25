@@ -43,6 +43,7 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
     visionChange();
 }
 
+// 路線インデックスの設定
 function setLineIndex(linenum, typenum, destnum) {
     let num = '00';
     if (linenum == 0) { num = String(linenum) + String(typenum); }
@@ -161,6 +162,13 @@ function stopping() {
 function setAnnouncement() {
     // const announce;
 }
+
+// 時刻表示
+function clock() {
+    let time = new Date();
+    document.getElementById('clock').innerHTML = time.getHours(); + ':' + time.getMinutes();
+}
+setInterval('clock()', 1000);
 
 // 言語切り替え
 const divisions = document.querySelectorAll('.division');
