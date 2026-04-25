@@ -43,6 +43,7 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
     destinationNumber = setDestinationNumber(stationIndex, linenum, typenum, destnum);
     carNo = carnum;
     visionChange();
+    announceIndex = 0;
     setAnnouncementScript();
 }
 
