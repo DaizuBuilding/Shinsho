@@ -64,9 +64,10 @@ function updateDestinationOptions() {
 }
 
 function updateStationOptions() {
-    console.log(StationsInfos);
     selectsta.innerHTML = '';
-    const stopinfo = typesInfos[String(selectline.value) + String(selecttype.value)].stops;
+    let num = String(selectline.value) + String(selecttype.value)
+    console.log(num);
+    const stopinfo = typesInfos[num].stops;
     let k = 0;
     stopinfo.forEach(s => {
         console.log(s);
