@@ -35,20 +35,21 @@ function updateOptions() {
     selecttype.innerHTML = '';
     selectdestination.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
+    const destinfo = linesInfos[selectline.value].types[selecttype.value].destination;
     console.log(lineinfo);
     let i = 0;
-    lineinfo.forEach(t => {
+    lineinfo.forEach(l => {
         const typeoption = document.createElement('option');
         typeoption.value = i;
-        typeoption.text = t.type;
+        typeoption.text = l.type;
         i++;
         selecttype.add(typeoption);
     });
     let j = 0;
-    lineinfo.forEach(d => {
+    destinfo.forEach(d => {
         const destoption = document.createElement('option');
         destoption.value = j;
-        destoption.text = d.destination;
+        destoption.text = d
         j++;
         selectdestination.add(destoption);
     })
