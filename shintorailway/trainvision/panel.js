@@ -27,9 +27,9 @@ async function getInformations() {
     informations = data;
 
     linesInfos = data.linesinfo;
-
-    updateOptions();
 }
+
+await getInformations();
 
 selecttype.innerHTML = '';
 
