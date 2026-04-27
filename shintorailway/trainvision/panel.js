@@ -30,9 +30,8 @@ async function getInformations() {
 }
 getInformations();
 
-selecttype.innerHTML = '';
-
 function updateOptions() {
+    selecttype.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
     let i = 0;
     lineinfo.forEach(type => {
