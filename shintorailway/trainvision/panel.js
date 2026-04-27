@@ -28,6 +28,8 @@ async function getInformations() {
     informations = data;
 
     linesInfos = data.linesinfo;
+    typesInfos = data.typesinfo;
+    StationsInfos = data.stationsinfo;
 }
 getInformations();
 
@@ -54,9 +56,23 @@ function updateDestinationOptions() {
     destinfo.forEach(d => {
         const destoption = document.createElement('option');
         destoption.value = j;
-        destoption.text = d
+        destoption.text = d;
         j++;
         selectdestination.add(destoption);
+    });
+    updateStationOptions();
+}
+
+function updateStationOptions() {
+    selectsta.innerHTML = '';
+    const stopinfo = typesInfos[String(selectline.value) + String(selecttype.value)].stops;
+    let k = 0;
+    stopinfo.forEach(s => {
+        const stopoption = document.createElement('option');
+        stopoption.value = k;
+        stopoption.text = `${String(StationsInfos[s].number).padStart(5, '0')}_${StationsInfos[s].name}`;
+        k++;
+        selectdestination.add(stopoption);
     });
 }
 
@@ -71,5 +87,5 @@ function returnWindow() {
         error.innerHTML = '';
     }
     document.getElementById('selectsta').value = Number(document.getElementById('selectsta').value) + digit;
-    window.opener.changeData(document.getElementById('selectsta').value - 1, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
+    window.opener.changeData(document.getElementById('selectsta').value, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
 }
