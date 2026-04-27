@@ -65,7 +65,7 @@ function updateDestinationOptions() {
 
 function updateStationOptions() {
     selectsta.innerHTML = '';
-    let num = String(selectline.value) + String(selecttype.value)
+    let num = String(selectline.value) + String(selecttype.value);
     console.log(num);
     const stopinfo = typesInfos[num].stops;
     let k = 0;
@@ -79,7 +79,10 @@ function updateStationOptions() {
     });
 }
 
-console.log(document.getElementById('selectsta').value);
+function adjustStationIndex(num) {
+    let len = typesInfos[String(selectline.value) + String(selecttype.value)].stops.length;
+    return (num + len) % len;
+}
 
 function returnWindow() {
     const error = document.getElementById('error');
@@ -89,7 +92,7 @@ function returnWindow() {
     } else {
         error.innerHTML = '';
     }
-    document.getElementById('selectsta').value = Number(document.getElementById('selectsta').value) + digit;
+    document.getElementById('selectsta').value = adjustStationIndex(Number(document.getElementById('selectsta').value) + digit);
     window.opener.changeData(document.getElementById('selectsta').value, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
 }
 
