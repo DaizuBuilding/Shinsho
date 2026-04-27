@@ -34,11 +34,12 @@ getInformations();
 function updateOptions() {
     selecttype.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
+    console.log(lineinfo);
     let i = 0;
-    lineinfo.forEach(type => {
+    lineinfo.forEach(t => {
         const option = document.createElement('option');
         option.value = i;
-        option.text = [type].type;
+        option.text = t.type;
         i++;
         selecttype.add(option);
     });
