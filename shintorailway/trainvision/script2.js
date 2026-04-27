@@ -117,11 +117,11 @@ function visionChange() {
     });
     headerNumberings.forEach(img => { // ナンバリング
         const base = img.dataset.base;
-        img.src = `${base}${lineNumbering}_${stationIndex + 1}.png`;
+        img.src = `${base}${lineNumbering}_${adjustStationIndex(stationIndex + 1)}.png`;
     });
     headerStaNames.forEach(img => { // ヘッダー駅名表示
         const base = img.dataset.base;
-        img.src = `${base}${stationIndex + 1}.png`;
+        img.src = `${base}${adjustStationIndex(stationIndex + 1)}.png`;
     });
     destinations.forEach(img => { // 行先
         const base = img.dataset.base;
@@ -173,7 +173,7 @@ let aLineDestination = '';
 function setAnnouncementScript() {
     if (lineNumber == 0) { aLineName = lineName } else { aLineName = lineNumbering; }
     aLineDestination = `destination/${lineNumber}${typeNumber}${destinationNumber}`;
-    let announceScript = [...(terminalDigitBack ? ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/lines/Shinto_${aLineName}.wav`, `./announcement/${aLineDestination}.mp3`] : []), './announcement/00600.wav', `./announcement/stations/${stationIndex + 1}.wav`, `./announcement/stations/${stationIndex + 1}.wav`, './announcement/00702.wav'];
+    let announceScript = [...(terminalDigitBack ? ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/lines/Shinto_${aLineName}.wav`, `./announcement/${aLineDestination}.mp3`] : []), './announcement/00600.wav', `./announcement/stations/${adjustStationIndex(stationIndex + 1)}.wav`, `./announcement/stations/${adjustStationIndex(stationIndex + 1)}.wav`, './announcement/00702.wav'];
     announce(announceScript);
 }
 
