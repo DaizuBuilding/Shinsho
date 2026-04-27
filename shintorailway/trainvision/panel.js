@@ -21,9 +21,9 @@ let selecttype = document.getElementById('selecttype');
 
 let informations;
 let linesInfos;
-function getInformations() {
-    const response = fetch('./informations.json');
-    const data = response.json();
+async function getInformations() {
+    const response = await fetch('./informations.json');
+    const data = await response.json();
     informations = data;
 
     linesInfos = data.linesinfo;
