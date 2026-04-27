@@ -75,7 +75,7 @@ function updateStationOptions() {
         stopoption.value = k;
         stopoption.text = `${String(StationsInfos[s - 1].number).padStart(5, '0')}_${StationsInfos[s - 1].name}`;
         k++;
-        selectdestination.add(stopoption);
+        selectsta.add(stopoption);
     });
 }
 
