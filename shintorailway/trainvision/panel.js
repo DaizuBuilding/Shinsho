@@ -35,6 +35,7 @@ function updateOptions() {
     selecttype.innerHTML = '';
     selectdestination.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
+    console.log(selecttype.value);
     const destinfo = linesInfos[selectline.value].types[selecttype.value].destination;
     console.log(lineinfo);
     let i = 0;
