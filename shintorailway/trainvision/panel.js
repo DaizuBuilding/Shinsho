@@ -33,16 +33,25 @@ getInformations();
 
 function updateOptions() {
     selecttype.innerHTML = '';
+    selectdestination.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
     console.log(lineinfo);
     let i = 0;
     lineinfo.forEach(t => {
-        const option = document.createElement('option');
-        option.value = i;
-        option.text = t.type;
+        const typeoption = document.createElement('option');
+        typeoption.value = i;
+        typeoption.text = t.type;
         i++;
-        selecttype.add(option);
+        selecttype.add(typeoption);
     });
+    let j = 0;
+    lineinfo.forEach(d => {
+        const destoption = document.createElement('option');
+        destoption.value = j;
+        destoption.text = d.destination;
+        j++;
+        selectdestination.add(destoption);
+    })
     // if (document.getElementById('selectline').value == 0) {
         // const lineinfo = linesInfos[0].types;
         // let i = 0;

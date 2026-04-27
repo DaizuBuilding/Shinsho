@@ -15,7 +15,16 @@
         },
         {
             "name": "河島線",
-            "types": ["各駅停車", "快速"]
+            "types": [
+                {
+                    "type": "各駅停車",
+                    "destination": ["浅木"]
+                },
+                {
+                    "type": "快速",
+                    "destination": ["浅木"]
+                }
+            ]
         }
     ],
     "typesinfo": {
