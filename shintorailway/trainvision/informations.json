@@ -51,6 +51,7 @@
     "stationsinfo": [
         {
             "number": 1,
+            "name": "新祥",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -59,6 +60,7 @@
         },
         {
             "number": 2,
+            "name": "神崎",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -67,6 +69,7 @@
         },
         {
             "number": 3,
+            "name": "京橋",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -75,6 +78,7 @@
         },
         {
             "number": 4,
+            "name": "柳島",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -83,6 +87,7 @@
         },
         {
             "number": 5,
+            "name": "弁天橋",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -91,6 +96,7 @@
         },
         {
             "number": 6,
+            "name": "板屋橋",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -99,6 +105,7 @@
         },
         {
             "number": 7,
+            "name": "藤崎",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -107,6 +114,7 @@
         },
         {
             "number": 8,
+            "name": "石坂町",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -115,6 +123,7 @@
         },
         {
             "number": 9,
+            "name": "深田",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -123,6 +132,7 @@
         },
         {
             "number": 10,
+            "name": "岩橋",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -131,6 +141,7 @@
         },
         {
             "number": 11,
+            "name": "日向町",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -139,6 +150,7 @@
         },
         {
             "number": 12,
+            "name": "桜台",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -147,6 +159,7 @@
         },
         {
             "number": 13,
+            "name": "愛市",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -155,6 +168,7 @@
         },
         {
             "number": 14,
+            "name": "鶴里",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -163,6 +177,7 @@
         },
         {
             "number": 15,
+            "name": "村松町",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -171,6 +186,7 @@
         },
         {
             "number": 16,
+            "name": "菊野坂",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -179,6 +195,7 @@
         },
         {
             "number": 17,
+            "name": "築石",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -187,6 +204,7 @@
         },
         {
             "number": 18,
+            "name": "西築石",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -195,6 +213,7 @@
         },
         {
             "number": 19,
+            "name": "代官町",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -203,6 +222,7 @@
         },
         {
             "number": 20,
+            "name": "西塚",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -211,6 +231,7 @@
         },
         {
             "number": 21,
+            "name": "本郷",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -219,6 +240,7 @@
         },
         {
             "number": 22,
+            "name": "常磐台",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -227,6 +249,7 @@
         },
         {
             "number": 23,
+            "name": "高野台",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -235,6 +258,7 @@
         },
         {
             "number": 24,
+            "name": "春日町",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -243,6 +267,7 @@
         },
         {
             "number": 25,
+            "name": "上落合",
             "terminal": true,
             "door": 0,
             "transfer": [
@@ -251,6 +276,7 @@
         },
         {
             "number": 26,
+            "name": "茅橋",
             "terminal": false,
             "door": 0,
             "transfer": [
@@ -259,6 +285,7 @@
         },
         {
             "number": 27,
+            "name": "伏見",
             "terminal": false,
             "door": 0,
             "transfer": [
