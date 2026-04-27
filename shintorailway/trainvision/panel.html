@@ -11,7 +11,7 @@
         <h1>トレインビジョン操作パネル</h1>
         <div class="train">
             <p class="line">路　線：
-                <select id="selectline" onchange="updateOptions()">
+                <select id="selectline" onchange="updateTypeOptions()">
                     <option value="0" selected>桜台線</option>
                     <option value="1">河島線</option>
                     <option value="2">築石線</option>
@@ -21,7 +21,7 @@
             </p>
             <div class="typedest">
                 <p class="type">種　別：
-                    <select id="selecttype">
+                    <select id="selecttype" onchange="updateDestinationOptions()">
                         <option value="0">内回り</option>
                         <option value="1">外回り</option>
                     </select>
