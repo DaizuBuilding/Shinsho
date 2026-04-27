@@ -18,6 +18,7 @@ document.getElementById('stopping').addEventListener('click', () => {
 
 let selectline = document.getElementById('selectline');
 let selecttype = document.getElementById('selecttype');
+let selectdestination = document.getElementById('selectdestination');
 
 let informations;
 let linesInfos;
@@ -37,7 +38,7 @@ function updateOptions() {
     lineinfo.forEach(type => {
         const option = document.createElement('option');
         option.value = i;
-        option.text = type;
+        option.text = [type].type;
         i++;
         selecttype.add(option);
     });

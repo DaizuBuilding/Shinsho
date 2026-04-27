@@ -2,7 +2,16 @@
     "linesinfo": [
         {
             "name": "桜台線",
-            "types": ["内回り", "外回り"]
+            "types": [
+                {
+                    "type": "内回り",
+                    "destination": ["内回り進行"]
+                },
+                {
+                    "type": "外回り",
+                    "destination": ["外回り進行"]
+                }
+            ]
         },
         {
             "name": "河島線",
