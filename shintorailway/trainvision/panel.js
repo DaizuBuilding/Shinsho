@@ -31,9 +31,8 @@ async function getInformations() {
 }
 getInformations();
 
-function updateOptions() {
+function updateTypeOptions() {
     selecttype.innerHTML = '';
-    selectdestination.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
     console.log(lineinfo);
     let i = 0;
@@ -44,6 +43,11 @@ function updateOptions() {
         i++;
         selecttype.add(typeoption);
     });
+    updateDestinationOptions();
+}
+
+function updateDestinationOptions() {
+    selectdestination.innerHTML = '';
     console.log(selecttype.value);
     const destinfo = linesInfos[selectline.value].types[selecttype.value].destination;
     let j = 0;
@@ -53,17 +57,7 @@ function updateOptions() {
         destoption.text = d
         j++;
         selectdestination.add(destoption);
-    })
-    // if (document.getElementById('selectline').value == 0) {
-        // const lineinfo = linesInfos[0].types;
-        // let i = 0;
-        // lineinfo.forEach(type => {
-            // const option = document.createElement('option');
-            // option.value = i;
-            // option.text = type;
-            // i++;
-            //  document.getElementById('selecttype').add(option);
-        // });
+    });
 }
 
 console.log(document.getElementById('selectsta').value);
