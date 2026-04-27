@@ -92,3 +92,5 @@ function returnWindow() {
     document.getElementById('selectsta').value = Number(document.getElementById('selectsta').value) + digit;
     window.opener.changeData(document.getElementById('selectsta').value, document.getElementById('selectline').value, document.getElementById('selecttype').value, document.getElementById('selectdestination').value, document.getElementById('selectcar').value);
 }
+
+selectline.selectedIndex = -1;
