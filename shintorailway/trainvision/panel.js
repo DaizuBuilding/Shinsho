@@ -72,7 +72,7 @@ function updateStationOptions() {
         console.log(s);
         const stopoption = document.createElement('option');
         stopoption.value = k;
-        stopoption.text = `${String(StationsInfos[s].number).padStart(5, '0')}_${StationsInfos[s].name}`;
+        stopoption.text = `${String(StationsInfos[s - 1].number).padStart(5, '0')}_${StationsInfos[s - 1].name}`;
         k++;
         selectdestination.add(stopoption);
     });
