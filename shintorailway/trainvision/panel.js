@@ -68,6 +68,7 @@ function updateStationOptions() {
     const stopinfo = typesInfos[String(selectline.value) + String(selecttype.value)].stops;
     let k = 0;
     stopinfo.forEach(s => {
+        console.log(s);
         const stopoption = document.createElement('option');
         stopoption.value = k;
         stopoption.text = `${String(StationsInfos[s].number).padStart(5, '0')}_${StationsInfos[s].name}`;
