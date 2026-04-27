@@ -35,8 +35,6 @@ function updateOptions() {
     selecttype.innerHTML = '';
     selectdestination.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
-    console.log(selecttype.value);
-    const destinfo = linesInfos[selectline.value].types[selecttype.value].destination;
     console.log(lineinfo);
     let i = 0;
     lineinfo.forEach(l => {
@@ -46,6 +44,8 @@ function updateOptions() {
         i++;
         selecttype.add(typeoption);
     });
+    console.log(selecttype.value);
+    const destinfo = linesInfos[selectline.value].types[selecttype.value].destination;
     let j = 0;
     destinfo.forEach(d => {
         const destoption = document.createElement('option');
