@@ -58,7 +58,11 @@ function setLineIndex(linenum, typenum, destnum) {
 
 // 停車駅インデックスの調整
 function adjustStationIndex(num) {
-    return (Number(num) + stopsLength) % stopsLength;
+    return getStationNumber((Number(num) + stopsLength) % stopsLength);
+}
+
+function getStationNumber(num) {
+    return informations.stationsinfo[num].number - 1;
 }
 
 // 行き先番号
