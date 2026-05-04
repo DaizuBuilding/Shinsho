@@ -15,3 +15,329 @@ ID: selectsta => value は駅番号を指定（！インデックスではない
 ７
 ８
 ９
+
+
+### informations.json
+
+
+```json:informations.json
+{
+    "linesinfo": [
+        {
+            "name": "桜台線",
+            "types": [
+                {
+                    "type": "内回り",
+                    "destination": ["内回り進行"]
+                },
+                {
+                    "type": "外回り",
+                    "destination": ["外回り進行"]
+                }
+            ]
+        },
+        {
+            "name": "河島線",
+            "types": [
+                {
+                    "type": "各駅停車",
+                    "destination": ["浅木"]
+                },
+                {
+                    "type": "快速",
+                    "destination": ["浅木"]
+                }
+            ]
+        }
+    ],
+    "typesinfo": {
+        "00": {
+            "line": "Sakuradai",
+            "numbering": "SS",
+            "name": "Inbound",
+            "direction": -1,
+            "destination": "",
+            "stops": [27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+        },
+        "01": {
+            "line": "Sakuradai",
+            "numbering": "SS",
+            "name": "Outbound",
+            "direction": 1,
+            "stops": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+        },
+        "10": {
+            "line": "Kawashima",
+            "numbering": "SK",
+            "name": "South",
+            "direction": 1,
+            "type": "Local", 
+            "destination": "Asagi", 
+            "stops": [25, 26, 27, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+        },
+        "11": {
+            "line": "Kawashima",
+            "numbering": "SK",
+            "name": "South",
+            "direction": 1,
+            "type": "Local", 
+            "destination": "Sakuradai", 
+            "stops": [25, 26, 27, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        },
+        "15": {
+            "line": "Kawashima",
+            "numbering": "SK",
+            "name": "North",
+            "direction": -1,
+            "type": "Local", 
+            "destination": "Miyamori", 
+            "stops": []
+        }
+    },
+    "stationsinfo": [
+        {
+            "number": 1,
+            "name": "新祥",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 2,
+            "name": "神崎",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 3,
+            "name": "京橋",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 4,
+            "name": "柳島",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 5,
+            "name": "弁天橋",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 6,
+            "name": "板屋橋",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 7,
+            "name": "藤崎",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 8,
+            "name": "石坂町",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 9,
+            "name": "深田",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 10,
+            "name": "岩橋",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 11,
+            "name": "日向町",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 12,
+            "name": "桜台",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 13,
+            "name": "愛市",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 14,
+            "name": "鶴里",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 15,
+            "name": "村松町",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 16,
+            "name": "菊野坂",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 17,
+            "name": "築石",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 18,
+            "name": "西築石",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 19,
+            "name": "代官町",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 20,
+            "name": "西塚",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 21,
+            "name": "本郷",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 22,
+            "name": "常磐台",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 23,
+            "name": "高野台",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 24,
+            "name": "春日町",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 25,
+            "name": "上落合",
+            "terminal": true,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 26,
+            "name": "茅橋",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        },
+        {
+            "number": 27,
+            "name": "伏見",
+            "terminal": false,
+            "door": 0,
+            "transfer": [
+                "Shinto"
+            ]
+        }
+    ]
+}
+```
