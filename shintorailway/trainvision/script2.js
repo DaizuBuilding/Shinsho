@@ -31,6 +31,8 @@ async function getJson(stanum, linenum) {
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
     terminalDigit = data.stationsinfo[adjustStationIndex(stanum)].terminal; // 主要駅判定
     terminalDigitBack = data.stationsinfo[adjustStationIndex(Number(stanum) + informations.typesinfo[lineIndex].direction)].terminal; // 1 つ前の主要駅判定
+    console.log(adjustStationIndex(Number(stanum) + informations.typesinfo[lineIndex].direction));
+    console.log(data.stationsinfo[adjustStationIndex(Number(stanum) + informations.typesinfo[lineIndex].direction)]);
 }
 
 // パネルからのデータ取得と変更
