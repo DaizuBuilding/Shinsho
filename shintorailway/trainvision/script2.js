@@ -25,11 +25,12 @@ async function getJson(stanum, linenum) {
     const data = await response.json();
     informations = await data;
 
+    // informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]
     lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
     terminalDigit = data.stationsinfo[adjustStationIndex(stanum)].terminal; // 主要駅判定
-    terminalDigitBack = data.stationsinfo[adjustStationIndex(stanum - 1)].terminal; // 1 つ前の主要駅判定
+    terminalDigitBack = data.stationsinfo[adjustStationIndex(Number(stanum) + informations.typesinfo[lineIndex].direction)].terminal; // 1 つ前の主要駅判定
 }
 
 // パネルからのデータ取得と変更
