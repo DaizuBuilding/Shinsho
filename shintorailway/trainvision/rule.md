@@ -4,7 +4,7 @@ ID: selectsta => value は駅番号を指定（！インデックスではない
 
 <[linenum]><[typenum]><[destnum]>
 
-### linenum
+## linenum
 ０　桜台線  
 １　河島線  
 ２　築石線  
@@ -17,7 +17,7 @@ ID: selectsta => value は駅番号を指定（！インデックスではない
 ９  
 
 
-### informations.json
+## informations.json
 
 
 ```json:informations.json
