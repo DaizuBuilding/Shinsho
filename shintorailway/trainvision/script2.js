@@ -34,8 +34,8 @@ async function getJson(stanum, linenum) {
     terminalDigitBack = data.stationsinfo[adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction) - 1].terminal; // 1 つ前の主要駅判定
     console.log(informations.typesinfo[lineIndex].direction);
     console.log(Number(stanum) - informations.typesinfo[lineIndex].direction);
-    console.log(adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction));
-    console.log(data.stationsinfo[adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction)].terminal);
+    console.log(adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction) - 1);
+    console.log(data.stationsinfo[adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction) - 1].terminal);
 }
 
 // パネルからのデータ取得と変更
