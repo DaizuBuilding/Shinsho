@@ -108,6 +108,7 @@ const destinations = document.querySelectorAll('.destination');
 const carNos = document.getElementById('carno');
 const arrow = document.querySelectorAll('.destinationarrow');
 const stationsNames = document.querySelectorAll('.stationsname');
+const stationsPoints = document.querySelectorAll('stationspoint');
 const linebars = document.querySelectorAll('.linebar');
 const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
@@ -137,7 +138,7 @@ function visionChange() {
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
     });
-    if (typeNumber == 0) { stationsNames.forEach(div => div.classList.add('in')); } else { stationsNames.forEach(div => div.classList.remove('in')); } // 内外クラス
+    if (typeNumber == 0) { stationsNames.forEach(div => div.classList.add('in')); stationsPoints.forEach(div => div.classList.add('in')); } else { stationsNames.forEach(div => div.classList.remove('in')); stationsPoints.forEach(div => div.classList.remove('in')); } // 内外クラス
     linebars.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
