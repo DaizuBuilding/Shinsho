@@ -8,6 +8,7 @@ let lineNumber; // 路線番号
 let lineIndex; // 路線インデックス（Json 参照用）
 let typeNumber; // 種別番号
 let lineName = ""; // 路線名
+let FulllineName = ""; // フル路線名（桜台線のみ内外つき）
 let lineNumbering = ""; // 路線ナンバリング
 let carNo; // 号車
 let stopsLength; // 停車駅数
@@ -27,7 +28,8 @@ async function getJson(stanum, linenum) {
     const data = await response.json();
     informations = await data;
 
-    lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
+    if (linenum == 0) { lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`} else { lineName = data.typesinfo[String(lineIndex)].line }
+    // lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
     terminalDigit = data.stationsinfo[adjustStationIndex(stanum)].terminal; // 主要駅判定
@@ -106,6 +108,7 @@ const headerNumberings = document.querySelectorAll('.headernumbering');
 const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 const carNos = document.getElementById('carno');
+const linebars = document.querySelectorAll('.linebar');
 const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
 const stationNames3 = document.querySelectorAll('.ssname3');
@@ -130,6 +133,10 @@ function visionChange() {
         img.src = `${base}${lineNumber}${typeNumber}${destinationNumber}.png`;
     });
     carNos.src = `${carNos.dataset.base}${carNo}.png`; // 号車表示
+    linebars.forEach(img => { // 各駅表示バー
+        const base = img.dataset.base;
+        img.src = `${base}${lineName}.png`;
+    })
     stationNames1.forEach(img => { 
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]}.png`;
