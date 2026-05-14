@@ -228,11 +228,6 @@ function switchLanguage() {
 switchLanguage(); // 初回実行
 setInterval(switchLanguage, 3000); // 3 秒ごとに繰り返す
 
-// 桜台線の各駅表示の配置
-function putStationsSS() {
-    document.querySelectorAll('.stationsname').forEach(div => div.classList.add('in'));
-}
-
 /*
 // コンテンツ切り替え
 const contents = document.querySelectorAll('.content');
