@@ -107,7 +107,7 @@ function visionChange() {
         const base = img.dataset.base;
         img.src = `${base}next.png`;
     });
-    arrow.forEach(div => div.classList.remove('arrowstopping'));
+    arrow.forEach(div => div.classList.remove('stopping'));
     if (typeof visionChangeLocal === 'function') {
         visionChangeLocal();
     }
@@ -120,7 +120,7 @@ function arriving() {
         const base = img.dataset.base;
         img.src = `${base}soon.png`;
     });
-    arrow.forEach(div => div.classList.remove('arrowstopping'));
+    arrow.forEach(div => div.classList.remove('stopping'));
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
@@ -133,6 +133,7 @@ function stopping() {
         const base = img.dataset.base;
         img.src = `${base}now.png`;
     });
+    arrow.forEach(div => div.classList.add('stopping'));
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
         img.src = `${base}Stopping.png`;

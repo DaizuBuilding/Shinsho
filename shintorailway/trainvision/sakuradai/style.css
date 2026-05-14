@@ -1,3 +1,13 @@
+.destinationarrow.stopping {
+    transform: rotate(120deg);
+    top: 760px;
+    right: 588px;
+}
+.destinationarrow.in.stopping {
+    transform: rotate(60deg);
+    left: 588px;
+}
+
 .ssname1 {
     right: 920px;
     top: 800px;

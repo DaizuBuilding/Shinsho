@@ -46,7 +46,15 @@ function visionChangeLocal() {
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
     });
-    if (typeNumber == 0) { stationsNames.forEach(div => div.classList.add('in')); stationsPoints.forEach(div => div.classList.add('in')); } else { stationsNames.forEach(div => div.classList.remove('in')); stationsPoints.forEach(div => div.classList.remove('in')); } // 内外クラス
+    if (typeNumber == 0) {
+        stationsNames.forEach(div => div.classList.add('in'));
+        stationsPoints.forEach(div => div.classList.add('in'));
+        arrow.forEach(div => div.classList.add('in'));
+    } else {
+        stationsNames.forEach(div => div.classList.remove('in'));
+        stationsPoints.forEach(div => div.classList.remove('in'));
+        arrow.forEach(div => div.classList.remove('in'));
+    } // 内外クラス
     linebarsSS.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
@@ -67,7 +75,6 @@ function visionChangeLocal() {
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex + 3)]}.png`;
     });
-    arrow.forEach(div => div.classList.remove('arrowstopping'));
 }
 
 /*
