@@ -138,16 +138,16 @@ img {
     height: 60px;
 }
 .ssname1.in {
-    left: 1000px;
-}
-.ssname2.in {
     left: 900px;
 }
-.ssname3.in {
+.ssname2.in {
     left: 800px;
 }
-.ssname4.in {
+.ssname3.in {
     left: 700px;
+}
+.ssname4.in {
+    left: 600px;
 }
 
 .sspoint1 {
