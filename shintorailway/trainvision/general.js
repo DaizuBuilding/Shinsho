@@ -111,6 +111,7 @@ function visionChange() {
         img.src = `${base}next.png`;
     });
     arrow.forEach(div => div.classList.remove('arrowstopping'));
+    document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 
 // 到着
@@ -194,5 +195,3 @@ function switchContent() {
 switchContent();
 setInterval(switchContent, 9000);
 */
-
-document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え

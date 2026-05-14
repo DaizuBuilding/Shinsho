@@ -1,71 +1,4 @@
-document.getElementById('loading').addEventListener('click', () => {
-    window.open('./panel.html', 'トレインビジョン操作パネル', 'width = 600, height = 400, scrollbars = 0');
-});
-
-let stationIndex; // 駅番号インデックス（0 スタート）
-let destinationNumber; // 行き先番号
-let lineNumber; // 路線番号
-let lineIndex; // 路線インデックス（Json 参照用）
-let typeNumber; // 種別番号
-let lineName = ""; // 路線名
 let FulllineName = ""; // フル路線名（桜台線のみ内外つき）
-let lineNumbering = ""; // 路線ナンバリング
-let carNo; // 号車
-let stopsLength; // 停車駅数
-let terminalDigit = 0; // 主要駅判定
-let terminalDigitBack = 0; // 1 つ前の主要駅判定
-let informations; // informations.json
-
-let announceScript; // アナウンス原稿
-let announceIndex = 0; // アナウンスインデックス
-let audio = null; // audio インスタンス
-
-// Json 読み込み
-async function getJson(stanum, linenum) {
-    const response = await fetch('../informations.json');
-    const data = await response.json();
-    informations = await data;
-
-    if (linenum == 0) { lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`} else { lineName = data.typesinfo[String(lineIndex)].line }
-    // lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
-    lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
-    stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
-    terminalDigit = data.stationsinfo[adjustStationIndex(stanum)].terminal; // 主要駅判定
-    terminalDigitBack = data.stationsinfo[adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction)].terminal; // 1 つ前の主要駅判定
-    // console.log(informations.typesinfo[lineIndex].direction);
-    // console.log(Number(stanum) - informations.typesinfo[lineIndex].direction);
-    // console.log(adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction));
-    // console.log(data.stationsinfo[adjustStationIndex(Number(stanum) - informations.typesinfo[lineIndex].direction)].terminal);
-}
-
-// パネルからのデータ取得と変更
-async function changeData(stanum, linenum, typenum, destnum, carnum) {
-    if (audio != null) { audio.pause(); }
-    lineIndex = setLineIndex(linenum, typenum, destnum);
-    await getJson(stanum, linenum); // Json データ取得
-    stationIndex = adjustStationIndex(stanum);
-    console.log(stationIndex);
-    lineNumber = linenum;
-    typeNumber = typenum;
-    destinationNumber = setDestinationNumber(stationIndex, linenum, typenum, destnum);
-    carNo = carnum;
-    visionChange();
-    announceIndex = 0;
-    // setAnnouncementScript();
-}
-
-// 路線インデックスの設定
-function setLineIndex(linenum, typenum, destnum) {
-    let num = '00';
-    if (linenum == 0) { num = String(linenum) + String(typenum); }
-    if (linenum > 0) { num = String(linenum) + String(destnum); }
-    return num;
-}
-
-// 停車駅インデックスの調整
-function adjustStationIndex(num) {
-    return (Number(num) + stopsLength) % stopsLength;
-}
 
 // 行き先番号
 function setDestinationNumber(stanum, linenum, typenum, destnum) {
@@ -100,11 +33,6 @@ function setDestinationNumber(stanum, linenum, typenum, destnum) {
 }
 
 // ビジョン情報変更
-const headerLines = document.querySelectorAll('.line');
-const headerNumberings = document.querySelectorAll('.headernumbering');
-const headerStaNames = document.querySelectorAll('.headerstaname');
-const destinations = document.querySelectorAll('.destination');
-const carNos = document.getElementById('carno');
 const arrow = document.querySelectorAll('.destinationarrow');
 const stationsNames = document.querySelectorAll('.stationsname');
 const stationsPoints = document.querySelectorAll('.stationspoint');
@@ -140,19 +68,11 @@ function visionChange() {
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex + 3)]}.png`;
     });
-    nexts.forEach(img => { // 次は
-        const base = img.dataset.base;
-        img.src = `${base}next.png`;
-    });
     arrow.forEach(div => div.classList.remove('arrowstopping'));
 }
 
 // 到着
 function arriving() {
-    nexts.forEach(img => {
-        const base = img.dataset.base;
-        img.src = `${base}soon.png`;
-    });
     arrow.forEach(div => div.classList.remove('arrowstopping'));
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
@@ -162,10 +82,6 @@ function arriving() {
 
 // 停車中
 function stopping() {
-    nexts.forEach(img => {
-        const base = img.dataset.base;
-        img.src = `${base}now.png`;
-    });
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
         img.src = `${base}stopping.png`;
