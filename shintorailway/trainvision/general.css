@@ -96,6 +96,11 @@ img {
     left: 0;
 }
 
+.contents > img {
+    top: 340px;
+    left: 0;
+}
+
 /* コンテンツ 1 */
 .linebar {
     top: 340px;
@@ -115,4 +120,13 @@ img {
     left: 48px;
     z-index: 20;
     animation: none;
+}
+
+.stationsfull {
+    top: 340px;
+    left: 0;
+}
+.staarrow {
+    top: 700px;
+    left: 60px;
 }
