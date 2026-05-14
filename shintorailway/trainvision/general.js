@@ -135,7 +135,7 @@ function stopping() {
     });
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
-        img.src = `${base}stopping.png`;
+        img.src = `${base}Stopping.png`;
     });
 }
 
