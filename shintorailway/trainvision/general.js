@@ -46,7 +46,7 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
     console.log(stationIndex);
     lineNumber = linenum;
     typeNumber = typenum;
-    destinationNumber = destnum;
+    destinationNumber = setDestinationNumber(stanum, linenum, typenum, destnum);
     carNo = carnum;
     visionChange();
     announceIndex = 0;
@@ -58,6 +58,38 @@ function setLineIndex(linenum, typenum, destnum) {
     let num = '00';
     if (linenum == 0) { num = String(linenum) + String(typenum); }
     if (linenum > 0) { num = String(linenum) + String(destnum); }
+    return num;
+}
+
+// 行き先番号
+function setDestinationNumber(stanum, linenum, typenum, destnum) {
+    let num;
+    if (linenum == 0) {
+        if (typenum == 0) {
+            if (stanum <= 2) { num = 9; }
+            else if (stanum <= 5) { num = 8; }
+            else if (stanum <= 7) { num = 7; }
+            else if (stanum <= 10) { num = 6; }
+            else if (stanum <= 12) { num = 5; }
+            else if (stanum <= 15) { num = 4; }
+            else if (stanum <= 19) { num = 3; }
+            else if (stanum <= 22) { num = 2; }
+            else if (stanum <= 24) { num = 1; }
+            else if (stanum <= 26) { num = 0; }
+        } else if (typenum == 1) {
+            if (stanum == 0 || stanum >= 25) { num = 0; }
+            else if (stanum >= 22) { num = 9; }
+            else if (stanum >= 20) { num = 8; }
+            else if (stanum >= 17) { num = 7; }
+            else if (stanum >= 15) { num = 6; }
+            else if (stanum >= 12) { num = 5; }
+            else if (stanum >= 8) { num = 4; }
+            else if (stanum >= 5) { num = 3; }
+            else if (stanum >= 3) { num = 2; }
+            else if (stanum >= 1) { num = 1; }
+        }
+    } else { num = destnum; }
+
     return num;
 }
 
