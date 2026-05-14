@@ -36,7 +36,7 @@ destinationNumber = setDestinationNumber(stationIndex, lineNumber, typeNumber, d
 // ビジョン情報変更
 const stationsNames = document.querySelectorAll('.stationsname');
 const stationsPoints = document.querySelectorAll('.stationspoint');
-const linebars = document.querySelectorAll('.linebar');
+const linebarsSS = document.querySelectorAll('.linebar');
 const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
 const stationNames3 = document.querySelectorAll('.ssname3');
@@ -48,7 +48,7 @@ function visionChangeLocal() {
         img.src = `${base}${lineName}.png`;
     });
     if (typeNumber == 0) { stationsNames.forEach(div => div.classList.add('in')); stationsPoints.forEach(div => div.classList.add('in')); } else { stationsNames.forEach(div => div.classList.remove('in')); stationsPoints.forEach(div => div.classList.remove('in')); } // 内外クラス
-    linebars.forEach(img => { // 各駅表示バー
+    linebarsSS.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
     });
