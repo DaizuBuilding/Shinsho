@@ -130,3 +130,6 @@ img {
     top: 700px;
     left: 60px;
 }
+.staarrow.in {
+    transform: rotate(180deg);
+}

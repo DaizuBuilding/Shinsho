@@ -5,23 +5,22 @@ let FulllineName = ""; // フル路線名（桜台線のみ内外つき）
 const stationsNames = document.querySelectorAll('.stationsname');
 const stationsPoints = document.querySelectorAll('.stationspoint');
 const linebarsSS = document.querySelectorAll('.linebar');
+const staArrow = document.querySelectorAll('.staarrow');
 const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
 const stationNames3 = document.querySelectorAll('.ssname3');
 const stationNames4 = document.querySelectorAll('.ssname4');
 function visionChangeLocal() {
-    arrow.forEach(img => { // 矢印
-        const base = img.dataset.base;
-        img.src = `${base}${lineName}.png`;
-    });
     if (typeNumber == 0) {
         stationsNames.forEach(div => div.classList.add('in'));
         stationsPoints.forEach(div => div.classList.add('in'));
         arrow.forEach(div => div.classList.add('in'));
+        staArrow.forEach(div => div.classList.add('in'));
     } else {
         stationsNames.forEach(div => div.classList.remove('in'));
         stationsPoints.forEach(div => div.classList.remove('in'));
         arrow.forEach(div => div.classList.remove('in'));
+        staArrow.forEach(div => div.classList.remove('in'));
     } // 内外クラス
     linebarsSS.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
