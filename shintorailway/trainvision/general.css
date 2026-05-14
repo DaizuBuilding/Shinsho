@@ -100,6 +100,9 @@ img {
     top: 340px;
     left: 0;
 }
+.content {
+    display: none;
+}
 
 /* コンテンツ 1 */
 .linebar {

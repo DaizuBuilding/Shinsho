@@ -216,7 +216,6 @@ function switchLanguage() {
 switchLanguage(); // 初回実行
 setInterval(switchLanguage, 3000); // 3 秒ごとに繰り返す
 
-/*
 // コンテンツ切り替え
 const contents = document.querySelectorAll('.content');
 let currentIndexC = 0;
@@ -227,4 +226,3 @@ function switchContent() {
 }
 switchContent();
 setInterval(switchContent, 9000);
-*/
