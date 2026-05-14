@@ -170,7 +170,7 @@ function clock() {
     let minute = String(time.getMinutes()).padStart(2, '0');
     document.getElementById('clock').innerHTML = hour + ':' + minute;
 }
-setInterval('clock()', 1000);
+setInterval(clock, 1000);
 
 // 言語切り替え
 const divisions = document.querySelectorAll('.division');
