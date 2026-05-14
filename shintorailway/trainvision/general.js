@@ -8,7 +8,6 @@ let lineNumber; // 路線番号
 let lineIndex; // 路線インデックス（Json 参照用）
 let typeNumber; // 種別番号
 let lineName = ""; // 路線名
-let FulllineName = ""; // フル路線名（桜台線のみ内外つき）
 let lineNumbering = ""; // 路線ナンバリング
 let carNo; // 号車
 let stopsLength; // 停車駅数
@@ -47,7 +46,7 @@ async function changeData(stanum, linenum, typenum, destnum, carnum) {
     console.log(stationIndex);
     lineNumber = linenum;
     typeNumber = typenum;
-    destinationNumber = setDestinationNumber(stationIndex, linenum, typenum, destnum);
+    destinationNumber = destnum;
     carNo = carnum;
     visionChange();
     announceIndex = 0;

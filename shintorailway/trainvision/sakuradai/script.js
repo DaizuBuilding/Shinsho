@@ -31,6 +31,7 @@ function setDestinationNumber(stanum, linenum, typenum, destnum) {
 
     return num;
 }
+destinationNumber = setDestinationNumber(stationIndex, lineNumber, typeNumber, destinationNumber);
 
 // ビジョン情報変更
 const arrow = document.querySelectorAll('.destinationarrow');
