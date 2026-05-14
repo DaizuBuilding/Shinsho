@@ -36,7 +36,6 @@ getInformations();
 function updateTypeOptions() {
     selecttype.innerHTML = '';
     const lineinfo = linesInfos[selectline.value].types;
-    console.log(lineinfo);
     let i = 0;
     lineinfo.forEach(l => {
         const typeoption = document.createElement('option');
@@ -50,7 +49,6 @@ function updateTypeOptions() {
 
 function updateDestinationOptions() {
     selectdestination.innerHTML = '';
-    console.log(selecttype.value);
     const destinfo = linesInfos[selectline.value].types[selecttype.value].destination;
     let j = 0;
     destinfo.forEach(d => {
@@ -66,11 +64,9 @@ function updateDestinationOptions() {
 function updateStationOptions() {
     selectsta.innerHTML = '';
     let num = String(selectline.value) + String(selecttype.value);
-    console.log(num);
     const stopinfo = typesInfos[num].stops;
     let k = 0;
     stopinfo.forEach(s => {
-        console.log(s);
         const stopoption = document.createElement('option');
         stopoption.value = k;
         stopoption.text = `${String(StationsInfos[s - 1].number).padStart(5, '0')}_${StationsInfos[s - 1].name}`;
