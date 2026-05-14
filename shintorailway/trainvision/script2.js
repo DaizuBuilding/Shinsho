@@ -25,8 +25,6 @@ async function getJson(stanum, linenum) {
     const data = await response.json();
     informations = await data;
 
-    // informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]
-    // informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex + 1)]
     lineName = `${data.typesinfo[String(lineIndex)].line}_${data.typesinfo[lineIndex].name}`; // 路線名
     lineNumbering = data.typesinfo[lineIndex].numbering; // 路線ナンバリング
     stopsLength = data.typesinfo[lineIndex].stops.length; // 停車駅数
@@ -72,16 +70,16 @@ function setDestinationNumber(stanum, linenum, typenum, destnum) {
     let num;
     if (linenum == 0) {
         if (typenum == 0) {
-            if (stanum >= 24) { num = 9; }
-            else if (stanum >= 21) { num = 8; }
-            else if (stanum >= 19) { num = 7; }
-            else if (stanum >= 16) { num = 6; }
-            else if (stanum >= 14) { num = 5; }
-            else if (stanum >= 11) { num = 4; }
-            else if (stanum >= 7) { num = 3; }
-            else if (stanum >= 4) { num = 2; }
-            else if (stanum >= 2) { num = 1; }
-            else if (stanum >= 0) { num = 0; }
+            if (stanum <= 2) { num = 9; }
+            else if (stanum <= 5) { num = 8; }
+            else if (stanum <= 7) { num = 7; }
+            else if (stanum <= 10) { num = 6; }
+            else if (stanum <= 12) { num = 5; }
+            else if (stanum <= 15) { num = 4; }
+            else if (stanum <= 19) { num = 3; }
+            else if (stanum <= 22) { num = 2; }
+            else if (stanum <= 24) { num = 1; }
+            else if (stanum <= 26) { num = 0; }
         } else if (typenum == 1) {
             if (stanum == 0 || stanum >= 25) { num = 0; }
             else if (stanum >= 22) { num = 9; }
@@ -169,6 +167,7 @@ function stopping() {
     });
 }
 
+/*
 // アナウンス原稿
 let aLineName = '';
 let aLineDestination = '';
@@ -190,6 +189,7 @@ function announce(script) {
         };
     }
 }
+*/
 
 // 時刻表示
 function clock() {
@@ -202,11 +202,24 @@ setInterval('clock()', 1000);
 
 // 言語切り替え
 const divisions = document.querySelectorAll('.division');
-let currentIndex = 0;
-function switchClass() {
+let currentIndexL = 0;
+function switchLanguage() {
     divisions.forEach(div => div.classList.remove('displayed')); // 全てのクラスを一旦削除
-    divisions[currentIndex].classList.add('displayed'); // 現在の要素にだけクラス付与
-    currentIndex = (currentIndex + 1) % divisions.length; // 次のインデックスへ（ループさせる）
+    divisions[currentIndexL].classList.add('displayed'); // 現在の要素にだけクラス付与
+    currentIndexL = (currentIndexL + 1) % divisions.length; // 次のインデックスへ
 }
-switchClass(); // 初回実行
-setInterval(switchClass, 3000); // 3 秒ごとに繰り返す
+switchLanguage(); // 初回実行
+setInterval(switchLanguage, 3000); // 3 秒ごとに繰り返す
+
+/*
+// コンテンツ切り替え
+const contents = document.querySelectorAll('.content');
+let currentIndexC = 0;
+function switchContent() {
+    contents.forEach(div => div.classList.remove('displayed'));
+    contents[currentIndexC].classList.add('displayed');
+    currentIndexC = (currentIndexC + 1) % contents.length;
+}
+switchContent();
+setInterval(switchContent, 9000);
+*/

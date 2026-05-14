@@ -2,6 +2,10 @@
 
 ID: selectsta => value は駅番号を指定（！インデックスではない！）
 
+## stationIndex
+駅番号インデックス（始発から数えて何番目か）
+
+
 <[linenum]><[typenum]><[destnum]>
 
 ## linenum
