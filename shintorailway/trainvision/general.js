@@ -222,7 +222,7 @@ let currentIndexC = 0;
 function switchContent() {
     contents.forEach(div => div.classList.remove('displayed'));
     contents[currentIndexC].classList.add('displayed');
-    currentIndexC = (currentIndexC + 1) % contents.length;
+    currentIndexC = (currentIndexC + 1) % (contents.length / 3);
 }
 switchContent();
 setInterval(switchContent, 9000);
