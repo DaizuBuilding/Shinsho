@@ -74,8 +74,6 @@ const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 const carNos = document.getElementById('carno');
 const arrow = document.querySelectorAll('.destinationarrow');
-const stationsNames = document.querySelectorAll('.stationsname');
-const stationsPoints = document.querySelectorAll('.stationspoint');
 const linebars = document.querySelectorAll('.linebar');
 const nexts = document.querySelectorAll('.next');
 function visionChange() {
