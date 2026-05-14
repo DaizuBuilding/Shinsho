@@ -110,6 +110,7 @@ function visionChange() {
         img.src = `${base}next.png`;
     });
     arrow.forEach(div => div.classList.remove('arrowstopping'));
+    visionChangeLocal();
     document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 

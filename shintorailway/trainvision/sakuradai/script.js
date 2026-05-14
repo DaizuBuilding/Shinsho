@@ -42,7 +42,7 @@ const stationNames2 = document.querySelectorAll('.ssname2');
 const stationNames3 = document.querySelectorAll('.ssname3');
 const stationNames4 = document.querySelectorAll('.ssname4');
 const nexts = document.querySelectorAll('.next');
-function visionChange() {
+function visionChangeLocal() {
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
@@ -71,6 +71,7 @@ function visionChange() {
     arrow.forEach(div => div.classList.remove('arrowstopping'));
 }
 
+/*
 // 到着
 function arriving() {
     arrow.forEach(div => div.classList.remove('arrowstopping'));
@@ -87,60 +88,4 @@ function stopping() {
         img.src = `${base}stopping.png`;
     });
 }
-
-/*
-// アナウンス原稿
-let aLineName = '';
-let aLineDestination = '';
-function setAnnouncementScript() {
-    if (lineNumber == 0) { aLineName = lineName } else { aLineName = lineNumbering; }
-    aLineDestination = `destination/${lineNumber}${typeNumber}${destinationNumber}`;
-    let announceScript = [...(terminalDigitBack ? ['./announcement/00100.wav', './announcement/00201.wav', `./announcement/lines/Shinto_${aLineName}.wav`, `./announcement/${aLineDestination}.mp3`] : []), './announcement/00600.wav', `./announcement/stations/${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]}.wav`, `./announcement/stations/${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]}.wav`, './announcement/00702.wav'];
-    announce(announceScript);
-}
-
-// アナウンス放送
-function announce(script) {
-    if (announceIndex < script.length) {
-        audio = new Audio(script[announceIndex]);
-        audio.play();
-        audio.onended = () => {
-            announceIndex++;
-            announce(script);
-        };
-    }
-}
-*/
-
-// 時刻表示
-function clock() {
-    let time = new Date();
-    let hour = String(time.getHours()).padStart(2, '0');
-    let minute = String(time.getMinutes()).padStart(2, '0');
-    document.getElementById('clock').innerHTML = hour + ':' + minute;
-}
-setInterval('clock()', 1000);
-
-// 言語切り替え
-const divisions = document.querySelectorAll('.division');
-let currentIndexL = 0;
-function switchLanguage() {
-    divisions.forEach(div => div.classList.remove('displayed')); // 全てのクラスを一旦削除
-    divisions[currentIndexL].classList.add('displayed'); // 現在の要素にだけクラス付与
-    currentIndexL = (currentIndexL + 1) % divisions.length; // 次のインデックスへ
-}
-switchLanguage(); // 初回実行
-setInterval(switchLanguage, 3000); // 3 秒ごとに繰り返す
-
-/*
-// コンテンツ切り替え
-const contents = document.querySelectorAll('.content');
-let currentIndexC = 0;
-function switchContent() {
-    contents.forEach(div => div.classList.remove('displayed'));
-    contents[currentIndexC].classList.add('displayed');
-    currentIndexC = (currentIndexC + 1) % contents.length;
-}
-switchContent();
-setInterval(switchContent, 9000);
 */
