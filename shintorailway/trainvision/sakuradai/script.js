@@ -107,6 +107,7 @@ const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 const carNos = document.getElementById('carno');
 const arrow = document.querySelectorAll('.destinationarrow');
+const stationsNames = document.querySelectorAll('.stationsname');
 const linebars = document.querySelectorAll('.linebar');
 const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
@@ -135,11 +136,12 @@ function visionChange() {
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
-    })
+    });
+    if (typeNumber == 0) { stationsNames.forEach(div => div.classList.add('in')); } else { stationsNames.forEach(div => div.classList.remove('in')); }    
     linebars.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
-    })
+    });
     stationNames1.forEach(img => { 
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]}.png`;
@@ -225,6 +227,11 @@ function switchLanguage() {
 }
 switchLanguage(); // 初回実行
 setInterval(switchLanguage, 3000); // 3 秒ごとに繰り返す
+
+// 桜台線の各駅表示の配置
+function putStationsSS() {
+    document.querySelectorAll('.stationsname').forEach(div => div.classList.add('in'));
+}
 
 /*
 // コンテンツ切り替え
