@@ -20,8 +20,6 @@ let announceScript; // アナウンス原稿
 let announceIndex = 0; // アナウンスインデックス
 let audio = null; // audio インスタンス
 
-const arrow = document.querySelectorAll('.destinationarrow');
-
 // Json 読み込み
 async function getJson(stanum, linenum) {
     const response = await fetch('../informations.json');
@@ -108,6 +106,7 @@ const headerNumberings = document.querySelectorAll('.headernumbering');
 const headerStaNames = document.querySelectorAll('.headerstaname');
 const destinations = document.querySelectorAll('.destination');
 const carNos = document.getElementById('carno');
+const arrow = document.querySelectorAll('.destinationarrow');
 const linebars = document.querySelectorAll('.linebar');
 const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
@@ -133,6 +132,10 @@ function visionChange() {
         img.src = `${base}${lineNumber}${typeNumber}${destinationNumber}.png`;
     });
     carNos.src = `${carNos.dataset.base}${carNo}.png`; // 号車表示
+    arrow.forEach(img => { // 矢印
+        const base = img.dataset.base;
+        img.src = `${base}${lineName}.png`;
+    })
     linebars.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
