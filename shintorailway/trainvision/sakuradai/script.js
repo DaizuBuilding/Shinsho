@@ -137,7 +137,7 @@ function visionChange() {
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
     });
-    if (typeNumber == 0) { stationsNames.forEach(div => div.classList.add('in')); } else { stationsNames.forEach(div => div.classList.remove('in')); }    
+    if (typeNumber == 0) { stationsNames.forEach(div => div.classList.add('in')); } else { stationsNames.forEach(div => div.classList.remove('in')); } // 内外クラス
     linebars.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
