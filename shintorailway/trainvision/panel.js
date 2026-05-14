@@ -23,7 +23,7 @@ let selectdestination = document.getElementById('selectdestination');
 let informations;
 let linesInfos;
 async function getInformations() {
-    const response = await fetch('./informations.json');
+    const response = await fetch('../informations.json');
     const data = await response.json();
     informations = data;
 
