@@ -20,6 +20,7 @@ p {
 a {
     position: fixed;
     padding: 20px;
+    text-decoration: none;
     background-color: #176184;
     color: #ffffff;
     width: 100px;
