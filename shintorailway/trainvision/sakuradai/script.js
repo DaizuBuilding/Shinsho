@@ -41,7 +41,6 @@ const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
 const stationNames3 = document.querySelectorAll('.ssname3');
 const stationNames4 = document.querySelectorAll('.ssname4');
-const nexts = document.querySelectorAll('.next');
 function visionChangeLocal() {
     arrow.forEach(img => { // 矢印
         const base = img.dataset.base;
