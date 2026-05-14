@@ -24,7 +24,7 @@ const arrow = document.querySelectorAll('.destinationarrow');
 
 // Json 読み込み
 async function getJson(stanum, linenum) {
-    const response = await fetch('./informations.json');
+    const response = await fetch('../informations.json');
     const data = await response.json();
     informations = await data;
 
@@ -115,7 +115,7 @@ const stationNames3 = document.querySelectorAll('.ssname3');
 const stationNames4 = document.querySelectorAll('.ssname4');
 const nexts = document.querySelectorAll('.next');
 function visionChange() {
-    border.src = `./img/Linecolor_${lineNumbering}.png`;
+    border.src = `../img/Linecolor_${lineNumbering}.png`;
     headerLines.forEach(img => { // 路線名
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
