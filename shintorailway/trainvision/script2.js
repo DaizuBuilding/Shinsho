@@ -19,6 +19,8 @@ let announceScript; // アナウンス原稿
 let announceIndex = 0; // アナウンスインデックス
 let audio = null; // audio インスタンス
 
+const arrow = document.querySelectorAll('.destinationarrow');
+
 // Json 読み込み
 async function getJson(stanum, linenum) {
     const response = await fetch('./informations.json');
@@ -148,6 +150,7 @@ function visionChange() {
         const base = img.dataset.base;
         img.src = `${base}next.png`;
     });
+    arrow.forEach(div => div.classList.remove('arrowstopping'));
     document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 
@@ -157,6 +160,7 @@ function arriving() {
         const base = img.dataset.base;
         img.src = `${base}soon.png`;
     });
+    arrow.forEach(div => div.classList.remove('arrowstopping'));
 }
 
 // 停車中
@@ -165,6 +169,7 @@ function stopping() {
         const base = img.dataset.base;
         img.src = `${base}now.png`;
     });
+    arrow.forEach(div => div.classList.add('arrowstopping'));
 }
 
 /*

@@ -110,6 +110,12 @@ img {
     left: 0;
     animation: blink 1s step-start infinite;
 }
+.arrowstopping {
+    top: 622px;
+    left: 48px;
+    z-index: 20;
+    animation: none;
+}
 
 .ssname1 {
     right: 920px;
