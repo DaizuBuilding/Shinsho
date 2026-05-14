@@ -174,6 +174,10 @@ function arriving() {
         img.src = `${base}soon.png`;
     });
     arrow.forEach(div => div.classList.remove('arrowstopping'));
+    arrow.forEach(img => { // 矢印
+        const base = img.dataset.base;
+        img.src = `${base}${lineName}.png`;
+    });
 }
 
 // 停車中
@@ -182,7 +186,10 @@ function stopping() {
         const base = img.dataset.base;
         img.src = `${base}now.png`;
     });
-    arrow.forEach(div => div.classList.add('arrowstopping'));
+    arrow.forEach(img => { // 矢印
+        const base = img.dataset.base;
+        img.src = `${base}stopping.png`;
+    });
 }
 
 /*
