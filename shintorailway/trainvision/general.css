@@ -9,6 +9,9 @@ html {
 img {
     position: fixed;
 }
+.content, .header {
+    display: none;
+}
 .displayed {
     display: block;
 }
@@ -96,9 +99,6 @@ img {
 .contents > img {
     top: 340px;
     left: 0;
-}
-.content, .header {
-    display: none;
 }
 
 /* コンテンツ 1 */
