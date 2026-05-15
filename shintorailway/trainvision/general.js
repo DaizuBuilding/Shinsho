@@ -215,7 +215,6 @@ function switchHeader() {
     currentIndexH = (currentIndexH + 1) % headers.length; // 次のインデックスへ
 }
 let intervalH = setInterval(switchHeader, 3000);
-let intervalC = setInterval(switchContent, 6000);
 
 // コンテンツ切り替え
 const contents = document.querySelectorAll('.content');
@@ -225,6 +224,7 @@ function switchContent() {
     contents[currentIndexC].classList.add('displayed');
     currentIndexC = (currentIndexC + 1) % contents.length;
 }
+let intervalC = setInterval(switchContent, 6000);
 
 // リフレッシュ
 function refresh() {
