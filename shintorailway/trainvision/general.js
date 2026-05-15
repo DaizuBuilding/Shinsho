@@ -143,9 +143,9 @@ function visionChange() {
     if (typeof visionChangeLocal === 'function') {
         visionChangeLocal();
     }
+    refresh();
     switchHeader();
     switchContent();
-    refresh();
     document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 
