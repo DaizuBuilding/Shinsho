@@ -233,4 +233,3 @@ function refresh() {
     intervalH = setInterval(switchHeader, 3000);
     intervalC = setInterval(switchContent, 6000);
 }
-refresh();
