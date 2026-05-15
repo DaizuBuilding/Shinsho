@@ -2,6 +2,7 @@
     transform: rotate(120deg);
     top: 780px;
     right: 622px;
+    left: auto;
     animation: none;
 }
 .destinationarrow.in.stopping {
