@@ -9,9 +9,6 @@ html {
 img {
     position: fixed;
 }
-.division {
-    display: none;
-}
 .displayed {
     display: block;
 }
@@ -100,7 +97,7 @@ img {
     top: 340px;
     left: 0;
 }
-.content {
+.content, .header {
     display: none;
 }
 
