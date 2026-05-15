@@ -143,6 +143,7 @@ function visionChange() {
     if (typeof visionChangeLocal === 'function') {
         visionChangeLocal();
     }
+    refresh();
     document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 
@@ -213,8 +214,6 @@ function switchHeader() {
     headers[currentIndexH].classList.add('displayed'); // 現在の要素にだけクラス付与
     currentIndexH = (currentIndexH + 1) % headers.length; // 次のインデックスへ
 }
-switchHeader(); // 初回実行
-setInterval(switchHeader, 3000); // 3 秒ごとに繰り返す
 
 // コンテンツ切り替え
 const contents = document.querySelectorAll('.content');
@@ -224,5 +223,12 @@ function switchContent() {
     contents[currentIndexC].classList.add('displayed');
     currentIndexC = (currentIndexC + 1) % contents.length;
 }
-switchContent();
-setInterval(switchContent, 6000);
+
+// リフレッシュ
+function refresh() {
+    switchHeader();
+    setInterval(switchHeader, 3000);
+    switchContent();
+    setInterval(switchContent, 6000);
+}
+refresh();
