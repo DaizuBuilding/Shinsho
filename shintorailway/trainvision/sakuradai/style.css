@@ -1,12 +1,12 @@
 .destinationarrow.stopping {
     transform: rotate(120deg);
     top: 780px;
-    right: 618px;
+    right: 622px;
     animation: none;
 }
 .destinationarrow.in.stopping {
     transform: rotate(60deg);
-    left: 618px;
+    left: 622px;
 }
 
 .ssname1 {
