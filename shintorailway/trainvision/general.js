@@ -205,16 +205,16 @@ function clock() {
 }
 setInterval(clock, 1000);
 
-// 言語切り替え
-const divisions = document.querySelectorAll('.division');
-let currentIndexL = 0;
-function switchLanguage() {
-    divisions.forEach(div => div.classList.remove('displayed')); // 全てのクラスを一旦削除
-    divisions[currentIndexL].classList.add('displayed'); // 現在の要素にだけクラス付与
-    currentIndexL = (currentIndexL + 1) % divisions.length; // 次のインデックスへ
+// ヘッダー切り替え
+const headers = document.querySelectorAll('.header');
+let currentIndexH = 0;
+function switchHeader() {
+    headers.forEach(div => div.classList.remove('displayed')); // 全てのクラスを一旦削除
+    headers[currentIndexH].classList.add('displayed'); // 現在の要素にだけクラス付与
+    currentIndexH = (currentIndexH + 1) % headers.length; // 次のインデックスへ
 }
-switchLanguage(); // 初回実行
-setInterval(switchLanguage, 3000); // 3 秒ごとに繰り返す
+switchHeader(); // 初回実行
+setInterval(switchHeader, 3000); // 3 秒ごとに繰り返す
 
 // コンテンツ切り替え
 const contents = document.querySelectorAll('.content');
@@ -222,7 +222,7 @@ let currentIndexC = 0;
 function switchContent() {
     contents.forEach(div => div.classList.remove('displayed'));
     contents[currentIndexC].classList.add('displayed');
-    currentIndexC = (currentIndexC + 1) % (contents.length / 3);
+    currentIndexC = (currentIndexC + 1) % contents.length;
 }
 switchContent();
-setInterval(switchContent, 9000);
+setInterval(switchContent, 6000);
