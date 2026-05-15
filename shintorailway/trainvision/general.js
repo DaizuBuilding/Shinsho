@@ -209,19 +209,23 @@ setInterval(clock, 1000);
 // ヘッダー切り替え
 const headers = document.querySelectorAll('.header');
 let currentIndexH = 0;
+let digitH = 1;
 function switchHeader() {
     headers.forEach(div => div.classList.remove('displayed')); // 全てのクラスを一旦削除
-    headers[currentIndexH].classList.add('displayed'); // 現在の要素にだけクラス付与
+    headers[currentIndexH + digitH].classList.add('displayed'); // 現在の要素にだけクラス付与
     currentIndexH = (currentIndexH + 1) % headers.length; // 次のインデックスへ
+    digitH = 0;
 }
 
 // コンテンツ切り替え
 const contents = document.querySelectorAll('.content');
 let currentIndexC = 0;
+let digitC = 1;
 function switchContent() {
     contents.forEach(div => div.classList.remove('displayed'));
-    contents[currentIndexC].classList.add('displayed');
+    contents[currentIndexC + digitC].classList.add('displayed');
     currentIndexC = (currentIndexC + 1) % contents.length;
+    digitC = 0;
 }
 
 // リフレッシュ
