@@ -214,7 +214,6 @@ function switchHeader() {
     headers[currentIndexH].classList.add('displayed'); // 現在の要素にだけクラス付与
     currentIndexH = (currentIndexH + 1) % headers.length; // 次のインデックスへ
 }
-let intervalH = setInterval(switchHeader, 3000);
 
 // コンテンツ切り替え
 const contents = document.querySelectorAll('.content');
@@ -224,14 +223,14 @@ function switchContent() {
     contents[currentIndexC].classList.add('displayed');
     currentIndexC = (currentIndexC + 1) % contents.length;
 }
-let intervalC = setInterval(switchContent, 6000);
 
 // リフレッシュ
+let intervalH;
+let intervalC;
 function refresh() {
-    clearInterval(intervalH, intervalC);
-    switchHeader();
+    clearInterval(intervalH);
+    clearInterval(intervalC);
     intervalH = setInterval(switchHeader, 3000);
-    switchContent();
     intervalC = setInterval(switchContent, 6000);
 }
 refresh();
