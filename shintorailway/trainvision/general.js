@@ -232,6 +232,8 @@ let intervalC;
 function refresh() {
     clearInterval(intervalH);
     clearInterval(intervalC);
+    currentIndexH = 0;
+    currentIndexC = 0;
     intervalH = setInterval(switchHeader, 3000);
     intervalC = setInterval(switchContent, 6000);
 }
