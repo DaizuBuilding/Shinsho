@@ -131,5 +131,5 @@ img {
     left: 60px;
 }
 .staarrow.in {
-    transform: rotate(180deg);
+    transform: scaleY(-1);
 }
