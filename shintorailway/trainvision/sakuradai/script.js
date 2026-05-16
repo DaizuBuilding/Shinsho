@@ -2,6 +2,7 @@ let FulllineName = ""; // フル路線名（桜台線のみ内外つき）
 let positionSFX = 0;
 let positionSFY = 0;
 let positionSFR = 0;
+let adjustFSPosition = 0;
 
 // ビジョン情報変更
 const stationsNames = document.querySelectorAll('.stationsname');
@@ -50,7 +51,7 @@ function visionChangeLocal() {
     setFullStationPosition();
     destArrowSS.forEach(element => {
         element.style.top = `${positionSFY + 340}px`;
-        element.style.left = `${positionSFX - (Checkstopping ? 85 : -85)}px`;
+        element.style.left = `${positionSFX + (Checkstopping ? adjustFSPosition : 0)}px`;
         element.style.transform = `scale(${positionSFR})`;
     });
 }
@@ -62,34 +63,34 @@ function setFullStationPosition() {
             positionSFX = 810 - 120 * stationIndex;
             positionSFY = 254;
             positionSFR = 1;
-            //if (element.classList.contains('stopping')) { positionSFX -= 85 }
+            adjustFSPosition = -85;
         } else if (stationIndex < 19) {
             positionSFX = 120 * stationIndex - 560;
             positionSFY = 414;
             positionSFR = -1;
-            //if (element.classList.contains('stopping')) { positionSFX += 85 }
+            adjustFSPosition = 85;
         } else {
             positionSFX = 4050 - 120 * stationIndex;
             positionSFY = 254;
             positionSFR = 1;
-            //if (element.classList.contains('stopping')) { positionSFX -= 85 }
+            adjustFSPosition = -85;
         }
     } else {
         if (stationIndex < 8) {
             positionSFX = 120 * stationIndex + 820;
             positionSFY = 254;
             positionSFR = -1;
-            //if (element.classList.contains('stopping')) { positionSFX += 85 }
+            adjustFSPosition = 85;
         } else if (stationIndex < 21) {
             positionSFX = 2670 - 120 * stationIndex;
             positionSFY = 414;
             positionSFR = 1;
-            //if (element.classList.contains('stopping')) { positionSFX -= 85 }
+            adjustFSPosition = -85;
         } else {
             positionSFX = 120 * stationIndex - 2420;
             positionSFY = 254;
             positionSFR = -1;
-            //if (element.classList.contains('stopping')) { positionSFX += 85 }
+            adjustFSPosition = 85;
         }
     }
 }

@@ -14,7 +14,7 @@ let stopsLength; // 停車駅数
 let terminalDigit = 0; // 主要駅判定
 let terminalDigitBack = 0; // 1 つ前の主要駅判定
 let informations; // informations.json
-let Checkstopping;
+let checkStopping;
 
 let announceScript; // アナウンス原稿
 let announceIndex = 0; // アナウンスインデックス
@@ -147,7 +147,7 @@ function visionChange() {
     refresh();
     switchHeader();
     switchContent();
-    Checkstopping = false;
+    checkStopping = false;
     document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 
@@ -162,7 +162,7 @@ function arriving() {
         const base = div.dataset.base;
         div.src = `${base}Sakuradai.png`;
     });
-    Checkstopping = false;
+    checkStopping = false;
 }
 
 // 停車中
@@ -176,7 +176,7 @@ function stopping() {
         const base = div.dataset.base;
         div.src = `${base}Stopping.png`;
     });
-    Checkstopping = true;
+    checkStopping = true;
 }
 
 /*
