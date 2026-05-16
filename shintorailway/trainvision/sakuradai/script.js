@@ -1,5 +1,7 @@
 let FulllineName = ""; // フル路線名（桜台線のみ内外つき）
-
+let positionSFX = 0;
+let positionSFY = 0;
+let positionSFR = 0;
 
 // ビジョン情報変更
 const stationsNames = document.querySelectorAll('.stationsname');
@@ -17,13 +19,13 @@ function visionChangeLocal() {
         stationsPoints.forEach(div => div.classList.add('in'));
         arrow.forEach(div => div.classList.add('in'));
         staArrow.forEach(div => div.classList.add('in'));
-        destArrowSS.forEach(div => div.classList.add('in'));
+        // destArrowSS.forEach(div => div.classList.add('in'));
     } else {
         stationsNames.forEach(div => div.classList.remove('in'));
         stationsPoints.forEach(div => div.classList.remove('in'));
         arrow.forEach(div => div.classList.remove('in'));
         staArrow.forEach(div => div.classList.remove('in'));
-        destArrowSS.forEach(div => div.classList.remove('in'));
+        // destArrowSS.forEach(div => div.classList.remove('in'));
     } // 内外クラス
     linebarsSS.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
@@ -45,8 +47,46 @@ function visionChangeLocal() {
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex + 3)]}.png`;
     });
+    setFullStationPosition();
+    destArrowSS.forEach(element => {
+        element.style.top = positionSFY;
+        element.style.left = positionSFX;
+        element.style.transform = `scale(${positionSFR})`;
+    })
 }
 
+// 全駅表示の位置取得
+function setFullStationPosition() {
+    if (typeNumber == 0) {
+        if (stationIndex < 6) {
+            positionSFX = 810 - 120 * stationIndex;
+            positionSFY = 254;
+            positionSFR = 1;
+        } else if (stationIndex < 19) {
+            positionSFX = 120 * stationIndex - 560;
+            positionSFY = 414;
+            positionSFR = -1;
+        } else {
+            positionSFX = 4050 - 120 * stationIndex;
+            positionSFY = 254;
+            positionSFR = 1;
+        }
+    } else {
+        if (stationIndex < 8) {
+            positionSFX = 120 * stationIndex + 820;
+            positionSFY = 254;
+            positionSFR = -1;
+        } else if (stationIndex < 21) {
+            positionSFX = 2670 - 120 * stationIndex;
+            positionSFY = 414;
+            positionSFR = 1;
+        } else {
+            positionSFX = 120 * stationIndex - 2420;
+            positionSFY = 254;
+            positionSFR = -1;
+        }
+    }
+}
 /*
 // 到着
 function arriving() {
