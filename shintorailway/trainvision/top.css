@@ -25,6 +25,7 @@ a {
     color: #ffffff;
     width: 100px;
     text-align: center;
+    user-select: none;
 }
 a.sakuradai {
     top: 120px;
