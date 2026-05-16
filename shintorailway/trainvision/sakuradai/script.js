@@ -51,7 +51,7 @@ function visionChangeLocal() {
     setFullStationPosition();
     destArrowSS.forEach(element => {
         element.style.top = `${positionSFY + 340}px`;
-        element.style.left = `${positionSFX + (Checkstopping ? adjustFSPosition : 0)}px`;
+        element.style.left = `${positionSFX + (checkStopping ? adjustFSPosition : 0)}px`;
         element.style.transform = `scale(${positionSFR})`;
     });
 }
