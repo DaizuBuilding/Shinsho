@@ -127,15 +127,12 @@ img {
     animation: none;
 }
 .destarrowss {
+    transform: none;
     height: 72px;
-    /* transform: scaleX(-1);
-    top: 594px;
-    left: 820px; */
-    animation: blink 1s step-start infinite;
-}/*
-.destarrowss.in {
-    transform: scaleX(1);
-}*/
+}
+.destarrowss {
+    animation: none;
+}
 
 .stationsfull {
     top: 340px;

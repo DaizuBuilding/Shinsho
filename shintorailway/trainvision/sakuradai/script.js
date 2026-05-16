@@ -62,6 +62,7 @@ function setFullStationPosition() {
             positionSFX = 810 - 120 * stationIndex;
             positionSFY = 254;
             positionSFR = 1;
+            // if (element.classList.contains('stopping')) { positionSFX -=  }
         } else if (stationIndex < 19) {
             positionSFX = 120 * stationIndex - 560;
             positionSFY = 414;
