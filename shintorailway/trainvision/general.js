@@ -148,6 +148,7 @@ function visionChange() {
     switchHeader();
     switchContent();
     checkStopping = false;
+    fullStation();
     document.getElementById('loading').classList.add('hidden'); // 起動画面の切り替え
 }
 
