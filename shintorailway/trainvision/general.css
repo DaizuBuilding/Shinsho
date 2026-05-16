@@ -126,6 +126,18 @@ img {
     z-index: 20;
     animation: none;
 }
+.destarrowss {
+    transform: scaleX(-1);
+    top: 254px;
+    left: 920px;
+    animation: blink 1s step-start infinite;
+}
+.destarrowss.in {
+    transform: scaleX(1);
+    top: 254px;
+    left: 920px;
+    animation: blink 1s step-start infinite;
+}
 
 .stationsfull {
     top: 340px;
