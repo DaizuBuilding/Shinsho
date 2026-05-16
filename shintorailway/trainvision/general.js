@@ -169,7 +169,7 @@ function stopping() {
         img.src = `${base}now.png`;
     });
     arrow.forEach(div => {
-        div.classList.remove('stopping');
+        div.classList.add('stopping');
         const base = div.dataset.base;
         div.src = `${base}Stopping.png`;
     });
