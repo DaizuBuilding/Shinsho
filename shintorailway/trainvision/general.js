@@ -127,10 +127,6 @@ function visionChange() {
         img.src = `${base}${lineNumber}${typeNumber}${destinationNumber}.png`;
     });
     carNos.src = `${carNos.dataset.base}${carNo}.png`; // 号車表示
-    arrow.forEach(img => { // 矢印
-        const base = img.dataset.base;
-        img.src = `${base}${lineName}.png`;
-    });
     linebars.forEach(img => { // 各駅表示バー
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
