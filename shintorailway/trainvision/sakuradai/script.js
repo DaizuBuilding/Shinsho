@@ -49,10 +49,10 @@ function visionChangeLocal() {
     });
     setFullStationPosition();
     destArrowSS.forEach(element => {
-        element.style.top = String(positionSFY);
-        element.style.left = String(positionSFX);
+        element.style.top = `${positionSFY}px`;
+        element.style.left = `${positionSFX}px`;
         element.style.transform = `scale(${positionSFR})`;
-    })
+    });
 }
 
 // 全駅表示の位置取得
