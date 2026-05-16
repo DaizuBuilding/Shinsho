@@ -49,7 +49,7 @@ function visionChangeLocal() {
     });
     setFullStationPosition();
     destArrowSS.forEach(element => {
-        element.style.top = `${positionSFY}px`;
+        element.style.top = `${positionSFY + 340}px`;
         element.style.left = `${positionSFX}px`;
         element.style.transform = `scale(${positionSFR})`;
     });
