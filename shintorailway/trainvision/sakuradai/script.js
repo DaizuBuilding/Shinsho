@@ -48,12 +48,7 @@ function visionChangeLocal() {
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex + 3)]}.png`;
     });
-    setFullStationPosition();
-    destArrowSS.forEach(element => {
-        element.style.top = `${positionSFY + 340}px`;
-        element.style.left = `${positionSFX + (checkStopping ? adjustFSPosition : 0)}px`;
-        element.style.transform = `scale(${positionSFR})`;
-    });
+    fullStation();
 }
 
 // 全駅表示の位置取得
@@ -93,6 +88,15 @@ function setFullStationPosition() {
             adjustFSPosition = 45;
         }
     }
+}
+
+function fullStation() {
+    setFullStationPosition();
+    destArrowSS.forEach(element => {
+        element.style.top = `${positionSFY + 340}px`;
+        element.style.left = `${positionSFX + (checkStopping ? adjustFSPosition : 0)}px`;
+        element.style.transform = `scale(${positionSFR})`;
+    });
 }
 /*
 // 到着
