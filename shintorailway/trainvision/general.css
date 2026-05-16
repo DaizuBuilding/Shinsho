@@ -112,13 +112,13 @@ img {
 }
 .destinationarrow {
     transform: rotate(116deg);
-    top: 940px;
-    left: 710px;
+    top: 910px;
+    right: 710px;
     animation: blink 1s step-start infinite;
 }
 .destinationarrow.in {
     transform: rotate(64deg);
-    left: 710px;
+    left: 730px;
 }
 .arrowstopping {
     top: 622px;
