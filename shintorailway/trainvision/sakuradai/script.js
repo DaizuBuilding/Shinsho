@@ -68,7 +68,7 @@ function setFullStationPosition() {
             positionSFX = 120 * stationIndex - 560;
             positionSFY = 414;
             positionSFR = -1;
-            adjustFSPosition = 85;
+            adjustFSPosition = 45;
         } else {
             positionSFX = 4050 - 120 * stationIndex;
             positionSFY = 254;
@@ -80,7 +80,7 @@ function setFullStationPosition() {
             positionSFX = 120 * stationIndex + 820;
             positionSFY = 254;
             positionSFR = -1;
-            adjustFSPosition = 85;
+            adjustFSPosition = 45;
         } else if (stationIndex < 21) {
             positionSFX = 2670 - 120 * stationIndex;
             positionSFY = 414;
@@ -90,7 +90,7 @@ function setFullStationPosition() {
             positionSFX = 120 * stationIndex - 2420;
             positionSFY = 254;
             positionSFR = -1;
-            adjustFSPosition = 85;
+            adjustFSPosition = 45;
         }
     }
 }
