@@ -152,10 +152,6 @@ function arriving() {
         img.src = `${base}soon.png`;
     });
     arrow.forEach(div => div.classList.remove('stopping'));
-    arrow.forEach(img => { // 矢印
-        const base = img.dataset.base;
-        img.src = `${base}${lineName}.png`;
-    });
 }
 
 // 停車中
