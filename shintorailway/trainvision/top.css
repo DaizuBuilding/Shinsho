@@ -26,6 +26,7 @@ a {
     width: 100px;
     text-align: center;
     user-select: none;
+    cursor: pointer;
 }
 a.sakuradai {
     top: 120px;
