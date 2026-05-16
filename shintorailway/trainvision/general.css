@@ -127,16 +127,14 @@ img {
     animation: none;
 }
 .destarrowss {
+    height: 72px;
     transform: scaleX(-1);
-    top: 254px;
+    top: 594px;
     left: 920px;
     animation: blink 1s step-start infinite;
 }
 .destarrowss.in {
     transform: scaleX(1);
-    top: 254px;
-    left: 920px;
-    animation: blink 1s step-start infinite;
 }
 
 .stationsfull {
