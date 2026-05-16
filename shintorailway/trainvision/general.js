@@ -135,7 +135,11 @@ function visionChange() {
         const base = img.dataset.base;
         img.src = `${base}next.png`;
     });
-    arrow.forEach(div => div.classList.remove('stopping'));
+    arrow.forEach(div => {
+        div.classList.remove('stopping');
+        const base = div.dataset.base;
+        div.src = `${base}Sakuradai.png`;
+    });
     if (typeof visionChangeLocal === 'function') {
         visionChangeLocal();
     }
@@ -151,7 +155,11 @@ function arriving() {
         const base = img.dataset.base;
         img.src = `${base}soon.png`;
     });
-    arrow.forEach(div => div.classList.remove('stopping'));
+    arrow.forEach(div => {
+        div.classList.remove('stopping');
+        const base = div.dataset.base;
+        div.src = `${base}Sakuradai.png`;
+    });
 }
 
 // 停車中
@@ -160,10 +168,10 @@ function stopping() {
         const base = img.dataset.base;
         img.src = `${base}now.png`;
     });
-    arrow.forEach(div => div.classList.add('stopping'));
-    arrow.forEach(img => { // 矢印
-        const base = img.dataset.base;
-        img.src = `${base}Stopping.png`;
+    arrow.forEach(div => {
+        div.classList.remove('stopping');
+        const base = div.dataset.base;
+        div.src = `${base}Stopping.png`;
     });
 }
 
