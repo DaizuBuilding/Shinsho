@@ -130,7 +130,7 @@ img {
     transform: none;
     height: 72px;
 }
-.destarrowss {
+.destarrowss.stopping {
     animation: none;
 }
 
