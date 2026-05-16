@@ -163,6 +163,7 @@ function arriving() {
         div.src = `${base}Sakuradai.png`;
     });
     checkStopping = false;
+    fullStation();
 }
 
 // 停車中
@@ -177,6 +178,7 @@ function stopping() {
         div.src = `${base}Stopping.png`;
     });
     checkStopping = true;
+    fullStation();
 }
 
 /*
