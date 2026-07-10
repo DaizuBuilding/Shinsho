@@ -1,3 +1,32 @@
+.linebar {
+    top: 340px;
+    left: 0;
+}
+
+.destinationarrow {
+    transform: rotate(116deg);
+    top: 910px;
+    right: 730px;
+    animation: blink 1s step-start infinite;
+}
+.destinationarrow.in {
+    transform: rotate(64deg);
+    left: 730px;
+}
+.arrowstopping {
+    top: 622px;
+    left: 48px;
+    z-index: 20;
+    animation: none;
+}
+.destarrowss {
+    transform: none;
+    height: 72px;
+}
+.destarrowss.stopping {
+    animation: none;
+}
+
 .destinationarrow.stopping {
     transform: rotate(120deg);
     top: 780px;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex" />
+        <title>トレインビジョン操作パネル</title>
+        <link rel="stylesheet" href="../panel.css">
+    </head>
+    <body>
+        <h1>トレインビジョン操作パネル</h1>
+        <div class="train">
+            <p class="line">路　線：
+                <select id="selectline" onchange="updateTypeOptions()">
+                    <option value="0">河島線</option>
+                </select>
+            </p>
+            <div class="typedest">
+                <p class="type">種　別：
+                    <select id="selecttype" onchange="updateDestinationOptions()"></select>
+                </p>
+                <p class="destination">行　先：
+                    <select id="selectdestination" class="dest"></select>
+                </p>
+            </div>
+            <p class="sta">次　駅：
+                <select id="selectsta"></select>
+            </p>
+        </div>
+        
+        <p class="car">号　車：
+            <select id="selectcar">
+                <option value="1">０１号車</option>
+                <option value="2">０２号車</option>
+                <option value="3">０３号車</option>
+                <option value="4">０４号車</option>
+                <option value="5">０５号車</option>
+                <option value="6">０６号車</option>
+                <option value="7">０７号車</option>
+                <option value="8">０８号車</option>
+                <option value="9">０９号車</option>
+                <option value="10">１０号車</option>
+                <option value="11">１１号車</option>
+                <option value="12">１２号車</option>
+                <option value="13">１３号車</option>
+                <option value="14">１４号車</option>
+                <option value="15">１５号車</option>
+                <option value="16">１６号車</option>
+            </select>
+        </p>
+        <a id="update">更　新</a>
+        <a id="arrive">到　着</a>
+        <a id="stopping">停車中</a>
+        <a id="departure">発　車</a>
+        <p id="error"></p>
+        <script src="../panel.js"></script>
+    </body>
+</html>

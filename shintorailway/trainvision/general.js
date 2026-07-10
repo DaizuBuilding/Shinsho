@@ -56,7 +56,7 @@ function setLineIndex(linenum, typenum, destnum) {
     return num;
 }
 
-// 行き先番号
+// 行き先番号（移動不可）
 function setDestinationNumber(stanum, linenum, typenum, destnum) {
     let num;
     if (linenum == 0) {
@@ -90,7 +90,7 @@ function setDestinationNumber(stanum, linenum, typenum, destnum) {
 
 // 停車駅インデックスの調整
 function adjustStationIndex(num) {
-    return (Number(num) + stopsLength) % stopsLength;
+    if (!informations.typesinfo[lineIndex].stops.includes(num)) { return null; } else { return num; }
 }
 
 // ビジョン情報変更
@@ -133,11 +133,9 @@ function visionChange() {
     arrow.forEach(div => {
         div.classList.remove('stopping');
         const base = div.dataset.base;
-        div.src = `${base}Sakuradai.png`;
+        div.src = `${base}Default.png`;
     });
-    if (typeof visionChangeLocal === 'function') {
-        visionChangeLocal();
-    }
+    if (typeof visionChangeLocal === 'function') { visionChangeLocal(); }
     refresh();
     switchHeader();
     switchContent();
@@ -155,8 +153,9 @@ function arriving() {
     arrow.forEach(div => {
         div.classList.remove('stopping');
         const base = div.dataset.base;
-        div.src = `${base}Sakuradai.png`;
+        div.src = `${base}Default.png`;
     });
+    if (typeof arrivingLocal === 'function') { arrivingLocal(); }
     checkStopping = false;
     fullStation();
 }
@@ -172,6 +171,7 @@ function stopping() {
         const base = div.dataset.base;
         div.src = `${base}Stopping.png`;
     });
+    if (typeof stoppingLocal === 'function') { stoppingLocal(); }
     checkStopping = true;
     fullStation();
 }

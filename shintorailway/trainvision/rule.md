@@ -2,6 +2,10 @@
 
 ID: selectsta => value は駅番号を指定（！インデックスではない！）
 
+
+stapoint -> 画像にまとめてもよいのでは？
+
+
 ## stationIndex
 駅番号インデックス（始発から数えて何番目か）
 

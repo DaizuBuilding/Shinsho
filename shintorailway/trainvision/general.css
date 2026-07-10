@@ -126,13 +126,6 @@ img {
     z-index: 20;
     animation: none;
 }
-.destarrowss {
-    transform: none;
-    height: 72px;
-}
-.destarrowss.stopping {
-    animation: none;
-}
 
 .stationsfull {
     top: 340px;

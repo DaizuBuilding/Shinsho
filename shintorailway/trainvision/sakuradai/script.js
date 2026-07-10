@@ -4,6 +4,13 @@ let positionSFY = 0;
 let positionSFR = 0;
 let adjustFSPosition = 0;
 
+// 停車駅インデックスの調整
+function adjustStationIndex(num) {
+    if (Number(lineIndex) > 1) {
+        if (!informations.typesinfo[lineIndex].stops.includes(num)) { return null; } else { return num; }
+    } else { return (Number(num) + stopsLength) % stopsLength; }    
+}
+
 // ビジョン情報変更
 const stationsNames = document.querySelectorAll('.stationsname');
 const stationsPoints = document.querySelectorAll('.stationspoint');
@@ -47,6 +54,11 @@ function visionChangeLocal() {
     stationNames4.forEach(img => {
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex + 3)]}.png`;
+    });
+    arrow.forEach(div => {
+        div.classList.remove('stopping');
+        const base = div.dataset.base;
+        div.src = `${base}Sakuradai.png`;
     });
     fullStation();
 }
@@ -98,21 +110,21 @@ function fullStation() {
         element.style.transform = `scale(${positionSFR})`;
     });
 }
-/*
+
 // 到着
-function arriving() {
-    arrow.forEach(div => div.classList.remove('arrowstopping'));
-    arrow.forEach(img => { // 矢印
-        const base = img.dataset.base;
-        img.src = `${base}${lineName}.png`;
+function arrivingLocal() {
+    arrow.forEach(div => {
+        div.classList.remove('stopping');
+        const base = div.dataset.base;
+        div.src = `${base}Sakuradai.png`;
     });
 }
 
 // 停車中
-function stopping() {
-    arrow.forEach(img => { // 矢印
-        const base = img.dataset.base;
-        img.src = `${base}stopping.png`;
+function stoppingLocal() {
+    arrow.forEach(div => {
+        div.classList.add('stopping');
+        const base = div.dataset.base;
+        div.src = `${base}Stopping.png`;
     });
 }
-*/
