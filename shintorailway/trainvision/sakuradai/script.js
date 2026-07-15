@@ -28,12 +28,14 @@ function visionChangeLocal() {
         stationsPoints.forEach(div => div.classList.add('in'));
         arrow.forEach(div => div.classList.add('in'));
         staArrow.forEach(div => div.classList.add('in'));
+        transfers.forEach(div => div.classList.add('in'));
         // destArrowSS.forEach(div => div.classList.add('in'));
     } else {
         stationsNames.forEach(div => div.classList.remove('in'));
         stationsPoints.forEach(div => div.classList.remove('in'));
         arrow.forEach(div => div.classList.remove('in'));
         staArrow.forEach(div => div.classList.remove('in'));
+        transfers.forEach(div => div.classList.remove('in'));
         // destArrowSS.forEach(div => div.classList.remove('in'));
     } // 内外クラス
     linebarsSS.forEach(img => { // 各駅表示バー
