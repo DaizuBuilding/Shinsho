@@ -1,27 +1,27 @@
 .linebar {
-    top: calc(340px / 1080 * 100%);
+    top: calc(340 / 1080 * 100%);
     left: 0;
 }
 
 .destinationarrow {
     transform: rotate(116deg);
-    top: calc(910px / 1080 * 100%);
-    right: calc(730px / 1920 * 100%);
+    top: calc(910 / 1080 * 100%);
+    right: calc(730 / 1920 * 100%);
     animation: blink 1s step-start infinite;
 }
 .destinationarrow.in {
     transform: rotate(64deg);
-    left: calc(730px / 1920 * 100%);
+    left: calc(730 / 1920 * 100%);
 }
 .arrowstopping {
-    top: calc(622px / 1080 * 100%);
-    left: calc(48px / 1920 * 100%);
+    top: calc(622 / 1080 * 100%);
+    left: calc(48 / 1920 * 100%);
     z-index: 20;
     animation: none;
 }
 .destarrowss {
     transform: none;
-    height: calc(72px / 1080 * 100%);
+    height: calc(72 / 1080 * 100%);
 }
 .destarrowss.stopping {
     animation: none;
@@ -29,87 +29,87 @@
 
 .destinationarrow.stopping {
     transform: rotate(120deg);
-    top: calc(780px / 1080 * 100%);
-    right: calc(622px / 1920 * 100%);
+    top: calc(780 / 1080 * 100%);
+    right: calc(622 / 1920 * 100%);
     left: auto;
     animation: none;
 }
 .destinationarrow.in.stopping {
     transform: rotate(60deg);
-    left: calc(622px / 1920 * 100%);
+    left: calc(622 / 1920 * 100%);
 }
 
 .ssname1 {
-    right: calc(920px / 1920 * 100%);
-    top: calc(800px / 1080 * 100%);
-    height: calc(100px / 1080 * 100%);
+    right: calc(920 / 1920 * 100%);
+    top: calc(800 / 1080 * 100%);
+    height: calc(100 / 1080 * 100%);
 }
 .ssname2 {
-    right: calc(820px / 1920 * 100%);
-    top: calc(660px / 1080 * 100%);
-    height: calc(80px / 1080 * 100%);
+    right: calc(820 / 1920 * 100%);
+    top: calc(660 / 1080 * 100%);
+    height: calc(80 / 1080 * 100%);
 }
 .ssname3 {
-    right: calc(720px / 1920 * 100%);
-    top: calc(530px / 1080 * 100%);
-    height: calc(70px / 1080 * 100%);
+    right: calc(720 / 1920 * 100%);
+    top: calc(530 / 1080 * 100%);
+    height: calc(70 / 1080 * 100%);
 }
 .ssname4 {
-    right: calc(620px / 1920 * 100%);
-    top: calc(420px / 1080 * 100%);
-    height: calc(60px / 1080 * 100%);
+    right: calc(620 / 1920 * 100%);
+    top: calc(420 / 1080 * 100%);
+    height: calc(60 / 1080 * 100%);
 }
 .ssname1.in {
-    left: calc(900px / 1920 * 100%);
+    left: calc(900 / 1920 * 100%);
 }
 .ssname2.in {
-    left: calc(800px / 1920 * 100%);
+    left: calc(800 / 1920 * 100%);
 }
 .ssname3.in {
-    left: calc(700px / 1920 * 100%);
+    left: calc(700 / 1920 * 100%);
 }
 .ssname4.in {
-    left: calc(600px / 1920 * 100%);
+    left: calc(600 / 1920 * 100%);
 }
 
 .sspoint1 {
-    left: calc(1140px / 1920 * 100%);
-    top: calc(820px / 1080 * 100%);
-    height: calc(100px / 1080 * 100%);
+    left: calc(1140 / 1920 * 100%);
+    top: calc(820 / 1080 * 100%);
+    height: calc(100 / 1080 * 100%);
 }
 .sspoint2 {
-    left: calc(1250px / 1920 * 100%);
-    top: calc(680px / 1080 * 100%);
-    height: calc(80px / 1080 * 100%);
+    left: calc(1250 / 1920 * 100%);
+    top: calc(680 / 1080 * 100%);
+    height: calc(80 / 1080 * 100%);
 }
 .sspoint3 {
-    left: calc(1360px / 1920 * 100%);
-    top: calc(550px / 1080 * 100%);
-    height: calc(70px / 1080 * 100%);
+    left: calc(1360 / 1920 * 100%);
+    top: calc(550 / 1080 * 100%);
+    height: calc(70 / 1080 * 100%);
 }
 .sspoint4 {
-    left: calc(1480px / 1920 * 100%);
-    top: calc(440px / 1080 * 100%);
-    height: calc(60px / 1080 * 100%);
+    left: calc(1480 / 1920 * 100%);
+    top: calc(440 / 1080 * 100%);
+    height: calc(60 / 1080 * 100%);
 }
 .sspoint1.in {
-    left: calc(680px / 1920 * 100%);
+    left: calc(680 / 1920 * 100%);
 }
 .sspoint2.in {
-    left: calc(590px / 1920 * 100%);
+    left: calc(590 / 1920 * 100%);
 }
 .sspoint3.in {
-    left: calc(490px / 1920 * 100%);
+    left: calc(490 / 1920 * 100%);
 }
 .sspoint4.in {
-    left: calc(380px / 1920 * 100%);
+    left: calc(380 / 1920 * 100%);
 }
 
 .transfer {
-    top: calc(380px / 1080 * 100%);
-    left: calc(60px / 1920 * 100%);
+    top: calc(380 / 1080 * 100%);
+    left: calc(60 / 1920 * 100%);
 }
 .transfer.in {
-    right: calc(60px / 1080 * 100%);
+    right: calc(60 / 1080 * 100%);
     left: auto;
 }

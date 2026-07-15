@@ -25,11 +25,11 @@ img {
 #clock {
     position: fixed;
     z-index: 100;
-    top: calc(30px / 1080 * 100%);
-    right: calc(280px / 1920 * 100%);
+    top: calc(30 / 1080 * 100%);
+    right: calc(280 / 1920 * 100%);
     color: #ffffff;
-    line-height: calc(80px / 1080 * 100%);
-    font-size: calc(80px / 1080 * 100%);
+    line-height: calc(80 / 1080 * 100%);
+    font-size: calc(80 / 1080 * 100%);
     font-family: 'Myriad Pro Semibold', 'Myriad', 'Frutiger Medium', 'Frutiger', 'Segoe UI', sans-serif;
 }
 
@@ -38,7 +38,7 @@ img {
     z-index: 999;
 }
 #loadinginfo {
-    top: calc(720px / 1080 * 100%);
+    top: calc(720 / 1080 * 100%);
     left: 0;
 }
 .hidden {
@@ -53,60 +53,60 @@ img {
 
 /* ヘッダー左サイド */
 .traintype {
-    top: calc(40px / 1080 * 100%);
-    left: calc(60px / 1920 * 100%);
+    top: calc(40 / 1080 * 100%);
+    left: calc(60 / 1920 * 100%);
 }
 .destination {
-    top: calc(140px / 1080 * 100%);
-    left: calc(70px / 1920 * 100%);
+    top: calc(140 / 1080 * 100%);
+    left: calc(70 / 1920 * 100%);
 }
 .yuki {
-    bottom: calc(780px / 1080 * 100%);
-    right: calc(1440px / 1920 * 100%);
+    bottom: calc(780 / 1080 * 100%);
+    right: calc(1440 / 1920 * 100%);
 }
 .for {
-    top: calc(80px / 1080 * 100%);
-    left: calc(70px / 1920 * 100%);
+    top: calc(80 / 1080 * 100%);
+    left: calc(70 / 1920 * 100%);
 }
 
 /* ヘッダーメイン */
 .line {
-    top: calc(50px / 1080 * 100%);
-    left: calc(620px / 1920 * 100%);
+    top: calc(50 / 1080 * 100%);
+    left: calc(620 / 1920 * 100%);
 }
 .next {
-    bottom: calc(780px / 1080 * 100%);
-    left: calc(620px / 1920 * 100%);
+    bottom: calc(780 / 1080 * 100%);
+    left: calc(620 / 1920 * 100%);
 }
 .headernumbering {
-    bottom: calc(780px / 1080 * 100%);
-    left: calc(760px / 1920 * 100%);
+    bottom: calc(780 / 1080 * 100%);
+    left: calc(760 / 1920 * 100%);
 }
 .headerstaname {
-    bottom: calc(760px / 1080 * 100%);
-    left: calc(900px / 1920 * 100%);
+    bottom: calc(760 / 1080 * 100%);
+    left: calc(900 / 1920 * 100%);
 }
 
 /* 号車 */
 .carno_text {
-    top: calc(30px / 1080 * 100%);
-    left: calc(1690px / 1920 * 100%);
+    top: calc(30 / 1080 * 100%);
+    left: calc(1690 / 1920 * 100%);
 }
 
 /* 路線色ボーダー */
 .lineborder > img {
-    top: calc(320px / 1080 * 100%);
+    top: calc(320 / 1080 * 100%);
     left: 0;
 }
 
 .contents > img {
-    top: calc(340px / 1080 * 100%);
+    top: calc(340 / 1080 * 100%);
     left: 0;
 }
 
 /* コンテンツ 1 */
 .linebar {
-    top: calc(340px / 1080 * 100%);
+    top: calc(340 / 1080 * 100%);
     left: 0;
 }
 @keyframes blink {
@@ -115,28 +115,28 @@ img {
 }
 .destinationarrow {
     transform: rotate(116deg);
-    top: calc(910px / 1080 * 100%);
-    right: calc(730px / 1920 * 100%);
+    top: calc(910 / 1080 * 100%);
+    right: calc(730 / 1920 * 100%);
     animation: blink 1s step-start infinite;
 }
 .destinationarrow.in {
     transform: rotate(64deg);
-    left: calc(730px / 1920 * 100%);
+    left: calc(730 / 1920 * 100%);
 }
 .arrowstopping {
-    top: calc(622px / 1080 * 100%);
-    left: calc(48px / 1920 * 100%);
+    top: calc(622 / 1080 * 100%);
+    left: calc(48 / 1920 * 100%);
     z-index: 20;
     animation: none;
 }
 
 .stationsfull {
-    top: calc(340px / 1080 * 100%);
+    top: calc(340 / 1080 * 100%);
     left: 0;
 }
 .staarrow {
-    top: calc(700px / 1080 * 100%);
-    left: calc(60px / 1920 * 100%);
+    top: calc(700 / 1080 * 100%);
+    left: calc(60 / 1920 * 100%);
 }
 .staarrow.in {
     transform: scaleY(-1);
