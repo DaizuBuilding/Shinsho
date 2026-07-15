@@ -17,6 +17,7 @@ const stationsPoints = document.querySelectorAll('.stationspoint');
 const linebarsSS = document.querySelectorAll('.linebar');
 const staArrow = document.querySelectorAll('.staarrow');
 const destArrowSS = document.querySelectorAll('.destarrowss');
+const transfers = document.querySelectorAll('.transfer');
 const stationNames1 = document.querySelectorAll('.ssname1');
 const stationNames2 = document.querySelectorAll('.ssname2');
 const stationNames3 = document.querySelectorAll('.ssname3');
@@ -39,6 +40,10 @@ function visionChangeLocal() {
         const base = img.dataset.base;
         img.src = `${base}${lineName}.png`;
     });
+    transfers.forEach(img => {
+        const base = img.dataset.base;
+        img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]}.png`;
+    })
     stationNames1.forEach(img => { 
         const base = img.dataset.base;
         img.src = `${base}${informations.typesinfo[lineIndex].stops[adjustStationIndex(stationIndex)]}.png`;
