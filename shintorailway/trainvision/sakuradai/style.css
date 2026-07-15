@@ -1,27 +1,27 @@
 .linebar {
-    top: 340px;
+    top: calc(340px / 1080 * 100%);
     left: 0;
 }
 
 .destinationarrow {
     transform: rotate(116deg);
-    top: 910px;
-    right: 730px;
+    top: calc(910px / 1080 * 100%);
+    right: calc(730px / 1920 * 100%);
     animation: blink 1s step-start infinite;
 }
 .destinationarrow.in {
     transform: rotate(64deg);
-    left: 730px;
+    left: calc(730px / 1920 * 100%);
 }
 .arrowstopping {
-    top: 622px;
-    left: 48px;
+    top: calc(622px / 1080 * 100%);
+    left: calc(48px / 1920 * 100%);
     z-index: 20;
     animation: none;
 }
 .destarrowss {
     transform: none;
-    height: 72px;
+    height: calc(72px / 1080 * 100%);
 }
 .destarrowss.stopping {
     animation: none;
@@ -29,87 +29,87 @@
 
 .destinationarrow.stopping {
     transform: rotate(120deg);
-    top: 780px;
-    right: 622px;
+    top: calc(780px / 1080 * 100%);
+    right: calc(622px / 1920 * 100%);
     left: auto;
     animation: none;
 }
 .destinationarrow.in.stopping {
     transform: rotate(60deg);
-    left: 622px;
+    left: calc(622px / 1920 * 100%);
 }
 
 .ssname1 {
-    right: 920px;
-    top: 800px;
-    height: 100px;
+    right: calc(920px / 1920 * 100%);
+    top: calc(800px / 1080 * 100%);
+    height: calc(100px / 1080 * 100%);
 }
 .ssname2 {
-    right: 820px;
-    top: 660px;
-    height: 80px;
+    right: calc(820px / 1920 * 100%);
+    top: calc(660px / 1080 * 100%);
+    height: calc(80px / 1080 * 100%);
 }
 .ssname3 {
-    right: 720px;
-    top: 530px;
-    height: 70px;
+    right: calc(720px / 1920 * 100%);
+    top: calc(530px / 1080 * 100%);
+    height: calc(70px / 1080 * 100%);
 }
 .ssname4 {
-    right: 620px;
-    top: 420px;
-    height: 60px;
+    right: calc(620px / 1920 * 100%);
+    top: calc(420px / 1080 * 100%);
+    height: calc(60px / 1080 * 100%);
 }
 .ssname1.in {
-    left: 900px;
+    left: calc(900px / 1920 * 100%);
 }
 .ssname2.in {
-    left: 800px;
+    left: calc(800px / 1920 * 100%);
 }
 .ssname3.in {
-    left: 700px;
+    left: calc(700px / 1920 * 100%);
 }
 .ssname4.in {
-    left: 600px;
+    left: calc(600px / 1920 * 100%);
 }
 
 .sspoint1 {
-    left: 1140px;
-    top: 820px;
-    height: 100px;
+    left: calc(1140px / 1920 * 100%);
+    top: calc(820px / 1080 * 100%);
+    height: calc(100px / 1080 * 100%);
 }
 .sspoint2 {
-    left: 1250px;
-    top: 680px;
-    height: 80px;
+    left: calc(1250px / 1920 * 100%);
+    top: calc(680px / 1080 * 100%);
+    height: calc(80px / 1080 * 100%);
 }
 .sspoint3 {
-    left: 1360px;
-    top: 550px;
-    height: 70px;
+    left: calc(1360px / 1920 * 100%);
+    top: calc(550px / 1080 * 100%);
+    height: calc(70px / 1080 * 100%);
 }
 .sspoint4 {
-    left: 1480px;
-    top: 440px;
-    height: 60px;
+    left: calc(1480px / 1920 * 100%);
+    top: calc(440px / 1080 * 100%);
+    height: calc(60px / 1080 * 100%);
 }
 .sspoint1.in {
-    left: 680px;
+    left: calc(680px / 1920 * 100%);
 }
 .sspoint2.in {
-    left: 590px;
+    left: calc(590px / 1920 * 100%);
 }
 .sspoint3.in {
-    left: 490px;
+    left: calc(490px / 1920 * 100%);
 }
 .sspoint4.in {
-    left: 380px;
+    left: calc(380px / 1920 * 100%);
 }
 
 .transfer {
-    top: 380px;
-    left: 60px;
+    top: calc(380px / 1080 * 100%);
+    left: calc(60px / 1920 * 100%);
 }
 .transfer.in {
-    right: 60px;
+    right: calc(60px / 1080 * 100%);
     left: auto;
 }
