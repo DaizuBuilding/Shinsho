@@ -19,6 +19,8 @@ img {
     display: block;
 }
 #carno {
+    width: (100 / 1920 * 100%);
+    height: auto;
     bottom: calc(970 / 1080 * 100%);
     right: calc(60 / 1920 * 100%);
 }
@@ -37,6 +39,10 @@ img {
     position: fixed;
     z-index: 999;
 }
+#loading > img {
+    width: 100%;
+    height: auto;
+}
 #loadinginfo {
     top: calc(720 / 1080 * 100%);
     left: 0;
@@ -47,6 +53,8 @@ img {
 
 /* バックグラウンド */
 #background {
+    width: 100%;
+    height: auto;
     top: 0;
     left: 0;
 }
@@ -57,44 +65,62 @@ img {
     left: calc(60 / 1920 * 100%);
 }
 .destination {
+    width: calc(400 / 1920 * 100%);
+    height: auto;
     top: calc(140 / 1080 * 100%);
     left: calc(70 / 1920 * 100%);
 }
 .yuki {
+    width: calc(100 / 1920 * 100%);
+    height: auto;
     bottom: calc(780 / 1080 * 100%);
     right: calc(1440 / 1920 * 100%);
 }
 .for {
+    width: calc(60 / 1920 * 100%);
+    height: auto;
     top: calc(80 / 1080 * 100%);
     left: calc(70 / 1920 * 100%);
 }
 
 /* ヘッダーメイン */
 .line {
+    width: calc(800 / 1920 * 100%);
+    height: auto;
     top: calc(50 / 1080 * 100%);
     left: calc(620 / 1920 * 100%);
 }
 .next {
+    width: calc(120 / 1920 * 100%);
+    height: auto;
     bottom: calc(780 / 1080 * 100%);
     left: calc(620 / 1920 * 100%);
 }
 .headernumbering {
+    width: calc(120 / 1920 * 100%);
+    height: auto;
     bottom: calc(780 / 1080 * 100%);
     left: calc(760 / 1920 * 100%);
 }
 .headerstaname {
+    width: calc(940 / 1920 * 100%);
+    height: auto;
     bottom: calc(760 / 1080 * 100%);
     left: calc(900 / 1920 * 100%);
 }
 
 /* 号車 */
 .carno_text {
+    width: calc(80 / 1920 * 100%);
+    height: auto;
     top: calc(30 / 1080 * 100%);
     left: calc(1690 / 1920 * 100%);
 }
 
 /* 路線色ボーダー */
 .lineborder > img {
+    width: 100%;
+    height: auto;
     top: calc(320 / 1080 * 100%);
     left: 0;
 }
@@ -114,6 +140,8 @@ img {
   50% { opacity: 1; }
 }
 .destinationarrow {
+    width: calc(110 / 1920 * 100%);
+    height: auto;
     transform: rotate(116deg);
     top: calc(910 / 1080 * 100%);
     right: calc(730 / 1920 * 100%);
@@ -131,10 +159,14 @@ img {
 }
 
 .stationsfull {
+    width: 100%;
+    height: auto;
     top: calc(340 / 1080 * 100%);
     left: 0;
 }
 .staarrow {
+    width: calc(1800 / 1920 * 100%);
+    height: auto;
     top: calc(700 / 1080 * 100%);
     left: calc(60 / 1920 * 100%);
 }
